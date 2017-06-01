@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Document Object</title>
+
+<script>
+	function innerWord() {
+		var p = document.getElementById("text");
+		p.innerHTML = "<b>Hello World!!</>";
+	}
+
+	function getBook() {
+		console.log("開始執行");
+		var m = document.getElementById("book");
+		alert(m.value);
+		console.log("結束執行");
+
+	}
+</script>
+
+</head>
+<body>
+	<p id="text"></p>
+	<button onclick="innerWord();">新增</button>
+	<br>
+	<br> 
+	書名:	<input type="text" id="book">
+	<button onclick="getBook();">取得書名</button>
+</body>
+
+</html>
