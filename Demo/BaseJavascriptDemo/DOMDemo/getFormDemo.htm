@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Get Form Demo</title>
+
+<script>
+	function validate() {
+		//取得所有 name="answer" 單選的物件
+		var all = document.forms["form1"].elements["answer"];
+
+		if (all[1].checked) {
+			alert("Good Job!");
+
+		} else {
+			alert("Try Again!");
+
+		}
+
+	}
+</script>
+
+</head>
+<body>
+	<h3>小學生加法練習</h3>
+	<form name="form1" action="" onsubmit="validate();return false;">
+		20 + 16 = ?
+		<input type="radio" name="answer" value="2016" required> 2016
+		<input type="radio" name="answer" value="36" required> 36
+		<input type="radio" name="answer" value="216" required> 216
+		<input type="submit">
+	</form>
+
+
+</body>
+
+</html>

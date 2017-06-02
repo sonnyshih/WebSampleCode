@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<script>
+	function calculateBMI() {
+		var inputH = document.getElementById("height");
+		var height = parseFloat(inputH.value); // 字串轉浮點數 (parseInt()是字串轉整數)
+
+		var inputW = document.getElementById("weight");
+		var weight = parseFloat(inputW.value); // 字串轉浮點數
+
+		// height 與 weight其中一個為非數字，即結束函數
+		if (isNaN(height) || isNaN(weight)) {
+			return;
+		}
+
+		if (height < 0 || weight < 0) {
+			return;
+		}
+
+		height = height / 100;
+
+		//BMI計算
+		document.getElementById("bmi").innerHTML = weight / (height * height);
+
+	}
+</script>
+
+</head>
+<body>
+	<p>
+		身高(公分): <input id="height" type="number">
+	</p>
+	<p>
+		體重(公斤): <input id="weight" type="number">
+	</p>
+	<p>
+		<button onclick="calculateBMI();">計算BMI</button>
+		BMI指數 = <span id="bmi">0</span>
+	</p>
+</body>
+
+</html>
