@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+	//簡寫法 (取代<body onload="...">)
+	$(function() {
+		//在網頁載入完成後，開始初始化工作
+		$("button").click(function() {
+			//測試網址
+			var url = "http://httpbin.org/";
+			if ($(this).attr("id") == "btn1") {
+				url += "html";
+			} else {
+				url += "encoding/utf8";
+			}
+
+			//用load() 載入檔案內容，並指定到  #test 元素中顯示
+			$("#test").load(url);
+
+		});
+
+	});
+</script>
+<style>
+#test {
+	background: #CCC;
+}
+</style>
+</head>
+
+<body>
+	<button id="btn1">載入HTML測試頁</button>
+	<button id="btn2">載入Unicode測試頁</button>
+	
+	<div id="test"></div>
+	<br>
+	<br>
+	
+</body>
+
+</html>

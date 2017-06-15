@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+	// 完整寫法 (取代<body onload="...">)
+	$(document).ready(function(){
+		//在網頁載入完成後，開始初始化工作
+		alert("網頁載入完成後，開始初始化工作");
+		
+	});
+	
+	//簡寫法
+//	$(function(){
+//		在網頁載入完成後，開始初始化工作
+//	});
+</script>
+
+</head>
+<body>
+	<h1>使用ID選擇器與元素選擇器</h1>
+	<h3>Hello World 1</h3>
+
+	<button id="button1">取得 第1組 H3 內容</button>
+	<script>
+		$("#button1").click(function() { // $("#test1"): 使用ID選擇器
+			alert("Get Data=" + $("h3").text()); // $("h1"): 使用元素選擇器
+		});
+	</script>
+	<br>
+	<br>
+
+	<h1>變更jQuery變更網頁內容</h1>
+
+	<table border="1">
+		<tr>
+			<td><b>* text() 範例</b></td>
+		</tr>
+		<tr>
+			<td>
+				<h4>Hello World 1</h4>
+				<button id="button2">改變內容</button>
+				<button id="button3">取得內容</button>
+				
+				<script>
+					$("#button2").click(function() { 
+						$("h4").text("good hello world");
+					});
+				
+					$("#button3").click(function() { 
+						alert($("h4").text());
+					});
+					
+				</script>
+			</td>
+		</tr>
+
+		<tr>
+			<td><b>* val() 範例</b></td>
+		</tr>
+		<tr>
+			<td>
+				<input id="text1" type="text" value="hello world!!">
+				<button id="button4">改變內容</button>
+				<button id="button5">取得內容</button>
+				 <script>
+					$("#button4").click(function() { 
+						$("#text1").val("good hello world123");
+					});
+					$("#button5").click(function() { 
+						alert($("#text1").val());
+					});
+				</script>
+			</td>
+		</tr>
+
+		<tr>
+			<td><b>* attr() 範例</b></td>
+		</tr>
+		<tr>
+			<td>
+				<a id="url" href="http://tw.yahoo.com">yahoo</a>
+				<button id="button6">目前內容</button>
+				<button id="button7">改變內容</button>
+				 <script>
+					$("#button6").click(function() { 
+						alert("目前: URL = "+$("#url").attr('href') + "  內容 = " + $("#url").text());
+					});
+					$("#button7").click(function() {
+						$("#url").attr("href","http://www.google.com.tw");
+						$("#url").text("Google");
+						alert("目前: URL = "+$("#url").attr('href') + "  內容 = " + $("#url").text());
+					});
+				</script>
+			</td>
+		</tr>
+
+		<tr>
+			<td><b>* 建立新元素物件 (配合append)範例</b></td>
+		</tr>
+		<tr>
+			<td>
+				<span id="span1"></span>
+			
+				<br>
+				<button id="button8">改變內容</button>
+				 <script>
+					$("#button8").click(function() {
+						var elem1 = $("<h1>hello!!</h1>");
+						var elem2 = $("<span></span>").text("world");
+						
+						$("#span1").append(elem1);
+						$("#span1").append(elem2);
+
+					});
+					
+				</script>
+			</td>
+		</tr>
+
+		<tr>
+			<td><b>* 使用 prepend 範例</b></td>
+		</tr>
+		<tr>
+			<td>
+				<span id="span2">good!!</span>
+			
+				<br>
+				<button id="button9">改變內容</button>
+				 <script>
+					$("#button9").click(function() {
+						var elem1 = $("<h1>hello!!</h1>");
+						var elem2 = $("<span></span>").text("world");
+						
+						$("#span2").prepend(elem1);
+						$("#span2").prepend(elem2);
+
+					});
+					
+				</script>
+			</td>
+		</tr>
+
+		<tr>
+			<td><b>* 使用 after 範例 (加入新的相鄰元素-同層元素)</b></td>
+		</tr>
+		<tr>
+			<td>
+				<span id="span3">good good!!</span>
+			
+				<br>
+				<button id="button10">改變內容</button>
+				 <script>
+					$("#button10").click(function() {
+						var elem1 = $("<h1>Hi hi!!</h1>");
+						var elem2 = $("<span></span>").text("world");
+						
+						$("#span3").after(elem1);
+						$("#span3").after(elem2);
+
+					});
+					
+				</script>
+			</td>
+		</tr>
+
+		<tr>
+			<td><b>* 使用 before 範例 (加入新的相鄰元素-同層元素)</b></td>
+		</tr>
+		<tr>
+			<td>
+				<span id="span4">nice!!</span>
+			
+				<br>
+				<button id="button11">改變內容</button>
+				 <script>
+					$("#button11").click(function() {
+						var elem1 = $("<h1>Hi hi!!</h1>");
+						var elem2 = $("<span></span>").text("world");
+						
+						$("#span4").before(elem1);
+						$("#span4").before(elem2);
+
+					});
+					
+				</script>
+			</td>
+		</tr>
+
+		<tr>
+			<td><b>* 使用 wrap 範例 (目前元素外層加上一層父元素)</b></td>
+		</tr>
+		<tr>
+			<td>
+				<span id="span5">nice nice!!</span>
+			
+				<br>
+				<button id="button12">改變內容</button>
+				 <script>
+					$("#button12").click(function() {
+						$("#span5").wrap("<h1></h1>");
+
+					});
+					
+				</script>
+			</td>
+		</tr>
+
+		<tr>
+			<td><b>* 使用 remove 範例 </b></td>
+		</tr>
+		<tr>
+			<td>
+				<span id="span6">把我移除吧!!</span>
+			
+				<br>
+				<button id="button13">改變內容</button>
+				 <script>
+					$("#button13").click(function() {
+						$("#span6").remove();
+
+					});
+					
+				</script>
+			</td>
+		</tr>
+
+	</table>
+
+
+
+</body>
+
+</html>
