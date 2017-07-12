@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+	//簡寫法 (取代<body onload="...">)
+	$(function() {
+		//在網頁載入完成後，開始初始化工作
+		
+		//取得ip json 資料
+		$("#btn1").click(function(){
+			var url = "http://httpbin.org/ip";
+			$.getJSON(url, function(data){
+				$("#jsonString").text(JSON.stringify(data));
+				$("#ip").text(data.origin);
+			});
+		});
+		
+		$("#btn2").click(function(){
+			var url = "http://httpbin.org/headers";
+
+			var table = $("<table border='1'></table>");
+
+			$.getJSON(url, function(data){
+				
+				$("#repeatJsonData").text(JSON.stringify(data));
+				
+				$.each(data.headers, function(property, value){
+					var th = $('<th></th>').text(property);
+					var td = $('<td></td>').text(value);
+					
+					var row = $('<tr></tr>').append(th).append(td);
+					
+					table.append(row);
+				});
+				
+				$("#table").append(table);
+				
+			});
+		});
+		
+		
+	});
+</script>
+
+</head>
+
+<body>
+
+	<button id="btn1">取得JSON資料</button>
+	<br>
+	<span id="jsonString">??</span>
+	<br>
+	<span id="ip">??</span>
+	<br>
+	<br>
+	
+	<button id="btn2">處理重複JSON資料</button>
+	<br>
+	<span id="repeatJsonData"></span><br>
+	<div id="table"></div>
+	
+</body>
+
+</html>
