@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>另開視窗，傳送資料 (POST)</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function fx(frmAction,//url the form has to be sended to
+		frmMethod,//post||get
+		winName,//name used for window and form-target
+		winOpts,//options for window.open
+		jsonName,//the name of the json inside _POST
+		json//the object to send
+		) {
+			//open the window
+			var win = window.open('about:blank', winName, winOpts);
+			win.focus();
+
+			//create form & input and append it to the body
+			var form = document.createElement('form');
+			form.setAttribute('action', frmAction);
+			form.style.display = 'none';
+			form.setAttribute('target', winName);
+			form.setAttribute('method', frmMethod);
+
+			var e = document.createElement('input');
+			e.setAttribute('name', jsonName);
+			e.setAttribute('value', JSON.stringify(json));
+			form.appendChild(e);
+			document.body.appendChild(form);
+
+			//send the form 
+			form.submit();
+
+			//remove the form after a moment
+			setTimeout(function() {
+				form.parentNode.removeChild(form);
+			}, 1000);
+
+		}
+
+		function sendHtmlUrl() {
+			var frmAction = "http://jsfiddle.net//echo/html/";
+			var frmMethod = "post";
+			var winName = "someNameWithoutSpaces";
+			var winOpts = "width=400,height=300,toolbar=yes";
+			var jsonName = "JsonData";
+			var json = {
+				'foo' : 'bar'
+			};
+
+			fx(frmAction, frmMethod, winName, winOpts, jsonName, json);
+
+		}
+
+		function sendPhpUrl() {
+			var frmAction = "post.php";
+			var frmMethod = "post";
+			var winName = "someNameWithoutSpaces";
+			var winOpts = "width=400,height=300,toolbar=yes";
+			var jsonName = "JsonData";
+			var json = {
+				'foo' : 'bar'
+			};
+
+			fx(frmAction, frmMethod, winName, winOpts, jsonName, json);
+
+		}
+	</script>
+
+	<button id="checkButton" onclick="sendPhpUrl();">傳送</button>
+
+	<form action="post.php?hh=hello" method="post">
+		<input type="text" name="html" id="html"> <input type="submit"
+			id="button" name="button" value="post">
+	</form>
+
+</body>
+</html>
