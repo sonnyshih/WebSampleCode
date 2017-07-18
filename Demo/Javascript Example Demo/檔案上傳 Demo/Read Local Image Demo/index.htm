@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>上傳檔案</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script type="text/javascript">
+	//參考網頁: http://blog.johnsonlu.org/htmlfile-api-with-jquery/
+
+	$(document).ready(function() {
+		//在網頁載入完成後，開始初始化工作
+
+		$("#checkButton").click(function() {
+			checkSupportFileApi(this);
+		});
+
+		$('#attachFile').change(function(event) {
+			//Filelist Object
+			showFileData(event);
+
+			//顯示選擇照片
+			preViewPicture(event)
+		});
+		
+		
+		$('#uploadAjax').click(function(event) {
+			upload();
+		});
+
+	});
+
+	// Check Browser supports File API or not.
+	function checkSupportFileApi(input) {
+		// Check for the various File API support.
+		if (window.File && window.FileReader && window.FileList && window.Blob) {
+			// Great success! All the File APIs are supported.
+			alert('Great success! All the File APIs are supported.');
+		} else {
+			alert('The File APIs are not fully supported in this browser.');
+		}
+	}
+
+	var filesArray = [];
+	function showFileData(event) {
+		var filelist = event.target.files;
+		filesArray = filelist;
+		
+		var str = "";
+		for (var i = 0; i < filelist.length; i++) {
+			var file = filelist[i]
+			str += "name：" + escape(file.name) + "\n" + //檔名
+			"type：" + file.type + "\n" + //檔案類型
+			"size：" + file.size + "\n" + //檔案大小
+			"lastModifiedDate：" + file.lastModifiedDate.toLocaleDateString()
+					+ "\n\n\n"; //最後修改日期
+		}
+		alert(str);
+	}
+
+	function preViewPicture(event) {
+		var filelist = event.target.files;
+
+		for (var i = 0; i < filelist.length; i++) {
+			var file = filelist[i]
+			//判斷是否為圖片
+			if (!file.type.match('image.*')) {
+				continue;
+			}
+			//FileReader Object
+			var reader = new FileReader();
+			//定義執行動作
+			reader.onload = (function(file) {
+				return function(event) {
+					//event.target.result為檔案的編碼
+					var str = '<img class="thumb" src="' + event.target.result
+							+ '" title="' + escape(file.name) + '"/>';
+					$('#list').append(str);
+				};
+			})(file);
+
+			//利用DataURL的方式讀取圖片
+			reader.readAsDataURL(file);
+		}
+	}
+	
+
+	function upload() {
+
+		console.log('files = ', filesArray);
+
+		var formData = new FormData();
+		
+		$.each(filesArray, function(key, value) {
+			formData.append("attachFile[]", value);
+		});
+		
+		formData.append("hello", "Hello World");
+
+
+		$.ajax({
+	        url: 'upload.php',
+	        type: 'POST',
+	        data: formData,
+	        cache: false,
+	        //dataType: 'json',
+	        processData: false, // Don't process the files
+	        contentType: false, // Set content type to false as jQuery will tell the server its a query string request
+	        success: function(data, textStatus, jqXHR) {
+	        	
+	            if(typeof data.error === 'undefined') {
+	            	
+	                // Success so call function to process the form
+	                jsonString = JSON.stringify(data);
+	                var obj = JSON.parse(data);
+	                
+	            	console.log('Success='+jsonString);
+	            	alert("Success="+data + " #response="+obj.response);
+	            	
+	            } else {
+	                // Handle errors here
+	                console.log('ERRORS: ' + data.error);
+	            }
+	        },
+	        error: function(jqXHR, textStatus, errorThrown) {
+	            // Handle errors here
+	            console.log('ERRORS: ' + textStatus);
+	            // STOP LOADING SPINNER
+	        }
+	    });
+		
+	}
+</script>
+
+</head>
+<body>
+
+	<button id="checkButton" name="checkButton">Check Browser
+		supports File API</button>
+
+	<br>
+	<br>
+
+	<form id="form1" runat="server" enctype="multipart/form-data" action="upload.php" method="post">
+		<input id="attachFile" name="attachFile[]" type="file" multiple alt="你的圖片" /><br>
+		<output id="list"></output>
+		<br>
+		<button id="uploadForm" name="uploadForm" type='submit'>form 上傳</button>
+	</form>
+	<br>
+	<button id="uploadAjax" name="uploadAjax" type='button'>ajax 上傳</button>
+
+
+
+
+</body>
+</html>
