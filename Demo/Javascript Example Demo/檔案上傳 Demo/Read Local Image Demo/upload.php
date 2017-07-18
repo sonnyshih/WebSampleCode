@@ -27,7 +27,7 @@
         
         echo "<pre>_FILES = " . print_r($_FILES['attachFile'], TRUE). "</pre>";
         
-        
+    // 使用ajax 上傳  
     } else {
         
         $jsonArray = array(
