@@ -3,7 +3,7 @@
 
     header ('Content-Type: text/html; charset=utf-8');
     Vzaar::$secret = 'interwood';
-    Vzaar::$token = 'RiSIDEQptsUOo4fnazzquZoVLTvPTjJdeDkhQFzUUdI';
+    Vzaar::$token = 'RiSIDEQdptsUOo4fnazzquZoVLTvPTjJdeDkhQFzUUdI';
     $user = Vzaar::whoAmI();
     echo $user."<br>";
 
