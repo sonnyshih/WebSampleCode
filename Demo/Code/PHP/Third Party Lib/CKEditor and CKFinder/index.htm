@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>CKEditor Demo</title>
+
+<script src="ckeditor_4.7.3_standard/ckeditor.js"></script>
+<script src="ckfinder_3.4.2/ckfinder.js"></script>
+<script>
+   function processData(){
+   // getting data
+   var data = CKEDITOR.instances.content.getData()
+   //alert(data);
+   form.submit();
+  }
+ </script>
+ 
+</head>
+<body>
+    CKEditor 設定參考網站: https://pjchender.blogspot.tw/2015/11/ckeditor.html <br>
+	CKEditor 的CKFinder 設定參考網站: https://pjchender.blogspot.tw/2015/11/ckeditorckfinder.html <br>
+	檢查php的版本是否有支援 CKFinder [ <a href="checkCKFiderSupport.php">Check</a> ]
+	<form name="form" action="post.php" method="post">
+		<textarea name="content" id="content" rows="10" cols="80"> </textarea>
+		<script>
+			CKFinder.setupCKEditor();	// 整合CKFinder
+			CKEDITOR.replace('content',{
+				//輸入客制化條件
+				width:1000, //設定內容編輯器寬度
+			});
+		</script>
+		
+		<input type="button" value="送出" onClick="processData()">
+	</form>
+	
+</body>	
+</html>
