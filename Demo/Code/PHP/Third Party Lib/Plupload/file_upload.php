@@ -7,21 +7,25 @@ $act = $_POST['act'];
 
 
 switch ($act) {
-    case 'insert':
+    case 'add':
         echo uploadFile($_FILES,$targetDir);
         break;
 
+    case 'delete':
+        echo deleteFile($fileName,$targetDir);
+        break;
+        
     default:
         break;
 }
 
 // Only upload one file.
-function uploadFile($file, $uploadPath){
+function uploadFile($file, $targetDir){
     
         // Upload path is not a directory or not exist.
-    if (!is_dir($uploadPath)) {
-        mkdir($uploadPath, 0755);
-//         die('{"error" : {"code": 100, "message": "Failed to open directory."}, "DirPath" : "'. $uploadPath .'"}');
+    if (!is_dir($targetDir)) {
+        mkdir($targetDir, 0755);
+//         die('{"error" : {"code": 100, "message": "Failed to open directory."}, "DirPath" : "'. $targetDir .'"}');
     }
     
     // Just upload one file one time.
@@ -44,7 +48,7 @@ function uploadFile($file, $uploadPath){
         echo 'Temp File Name: ' . $file['file']['tmp_name'] . '<br/>';
 
         // 原檔名上傳
-//         $dest = $uploadPath.'/' . $file['file']['name'];
+//         $dest = $targetDir.'/' . $file['file']['name'];
 //         // Check the file is exist or not
 //         if (file_exists($dest)){
 //             die('{"code": 103, "message": "File is exist.", "id" : "id"}');
@@ -64,7 +68,7 @@ function uploadFile($file, $uploadPath){
         
         // Create the dynamin name to be the file name.
         $newFileName = uniqid() .".". $extension;
-        $dest = $uploadPath.'/' . $newFileName;
+        $dest = $targetDir.'/' . $newFileName;
         
         // Move the file to destination
         move_uploaded_file($file['file']['tmp_name'], $dest);
@@ -74,6 +78,30 @@ function uploadFile($file, $uploadPath){
         return false;
         die('{"code": 104, "message": "Failed to move uploaded file.", "id" : "id"}');
     }
+}
+
+function deleteFile($fileName,$targetDir){
+    
+    // Check the dir is exist
+    if (!is_dir($targetDir)) {
+        return false;        
+        die('{"error" : {"code": 100, "message": "Failed to open directory."}, "DirPath" : "'. $targetDir .'"}');
+    }
+    
+    // Check the file is exist
+    $fileDestination = $targetDir.'/' . $fileName;
+    if (!file_exists($fileDestination)) {
+        return false;
+        die('{"error" : {"code": 105, "message": "Failed to open file."}, "DirPath" : "'. $fileDestination .'"}');
+    }
+    
+    // Delete the file
+    if (unlink($fileDestination)) {
+        return true;
+    }
+    
+    return false;
+    
 }
 
 ?>

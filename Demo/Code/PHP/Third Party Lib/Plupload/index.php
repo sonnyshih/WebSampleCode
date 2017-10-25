@@ -79,7 +79,7 @@ function initUploader(){
 
 		// Send with field name and value (Like <input type="text" name="act" value="insert">)
 		multipart_params:{
-			'act': 'insert'	
+			'act': 'add'	
 		}
 	});
 	
