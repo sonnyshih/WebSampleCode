@@ -43,6 +43,7 @@ function uploadFile($file, $uploadPath){
         echo 'File Size: ' . ($file['file']['size'] / 1024) . ' KB<br/>';
         echo 'Temp File Name: ' . $file['file']['tmp_name'] . '<br/>';
 
+        // 原檔名上傳
 //         $dest = $uploadPath.'/' . $file['file']['name'];
 //         // Check the file is exist or not
 //         if (file_exists($dest)){
@@ -57,6 +58,7 @@ function uploadFile($file, $uploadPath){
 //             return true;
 //         }
         
+        // 產生random 檔案名
         $fileName = $file['file']['name'];
         $extension = pathinfo($fileName, PATHINFO_EXTENSION);
         
