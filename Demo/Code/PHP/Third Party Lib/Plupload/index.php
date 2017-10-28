@@ -79,7 +79,7 @@ function initUploader(){
 
 		// Send with field name and value (Like <input type="text" name="act" value="insert">)
 		multipart_params:{
-			'act': 'insert'	
+			'act': 'add'	
 		}
 	});
 	
@@ -92,12 +92,13 @@ function initSendButtonClick(){
 		// Files in queue upload them first
 		if ($('#uploader').plupload('getFiles').length > 0) {
 
+			$('#uploader').plupload('start');
+			
 			// When all files are uploaded submit form
 			$('#uploader').on('complete', function() {
 				$('#form')[0].submit();
 			});
 
-			$('#uploader').plupload('start');
 		} else {
 			alert("You must have at least one file in the queue.");
 		}
