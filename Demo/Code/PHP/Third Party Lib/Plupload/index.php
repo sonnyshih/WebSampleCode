@@ -14,6 +14,7 @@
 <!-- production -->
 <script type="text/javascript" src="plupload-2.3.4/plupload.full.min.js"></script>
 <script type="text/javascript" src="plupload-2.3.4/jquery.ui.plupload/jquery.ui.plupload.js"></script>
+<script type="text/javascript" src="plupload-2.3.4/i18n/zh_TW.js"></script>
 
 
 <script type="text/javascript">
@@ -32,6 +33,9 @@ function initUploader(){
 		runtimes : 'html5,flash,silverlight,html4',
 		url : 'file_upload.php',
 
+		// show/hide the browse, start, stop button.
+		buttons : {browse:true,start:false,stop:false},
+		
 		// User can upload no more then 20 files in one go (sets multiple_queues to false)
 		max_file_count: 20,
 		
