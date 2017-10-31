@@ -24,7 +24,7 @@
 
 			var table = $("<table border='1'></table>");
 
-			$.getJSON(url, function(data){
+			$.get(url, function(data){
 				
 				$("#repeatJsonData").text(JSON.stringify(data));
 				

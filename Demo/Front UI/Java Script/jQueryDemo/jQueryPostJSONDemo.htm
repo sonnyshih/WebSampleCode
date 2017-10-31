@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" />
+
+<script>
+	//簡寫法 (取代<body onload="...">)
+	$(function() {
+		//在網頁載入完成後，開始初始化工作
+	
+		$("#btn1").click(function() {
+			ajaxPost();
+		});
+
+		$("#btn2").click(function() {
+			jqueryPost();
+		});
+
+	});
+	
+	function jqueryPost(){
+		 $.post("post_json.php", 
+				 	{   name: $("#staffName").val(),
+         				number: $("#staffNumber").val(),
+                		sex: $("#staffSex").val()               
+     				},
+	                function (data, status) {
+	                	jsonData = JSON.parse(data);
+	                	if (jsonData.name) {
+		                	alert('員工：' + jsonData.name + '，儲存成功！'+ "\nstatus = " + status);
+		                } else {
+		                	jsonData = JSON.parse(data);
+		                	alert(jsonData.msg + "\nstatus = " + status);
+		                }   
+	                });
+	}
+	
+	// 使用ajax
+	function ajaxPost(){
+		// 參考: 
+		//		1. http://www.smalljacky.com/programming-language/php/ajax-javascript-jquery-example-for-php/
+		//      2. http://codweb.net/blog/article/073383906679/
+		/**
+				type：可以選擇 POST 或 GET 方式，但一般而言若是需要寫入資料庫，接收的頁面還是建議用 POST 接收比較安全。
+				 url：欲接收資料之頁面網址
+				data：欲傳送之資料，有兩種模式可以編寫。
+					　data: { field1 : data1 , field2 : data2 , field3 : data3 },
+　　　			  	  data: 'field1=data1&field2=data2&field3=data3',（不能有空格）
+			dataType：可選 xml，html，json，jsonp，script，text 等六種型態。
+			 success：若目標網頁順利連結，並有回傳值，則 response 就是該頁面傳回之資料串。
+			   error：若目標頁面無法連結或連結錯誤，可將該選項回傳的錯誤值用來偵錯。
+		*/
+		
+		
+		 $.ajax({
+	            type:"POST",
+	            url: "post_json.php",
+	            dataType: "json",
+	            data: {   name: $("#staffName").val(),
+	                	number: $("#staffNumber").val(),
+	                       sex: $("#staffSex").val()               
+	            },
+	            success: function(data) {
+	                if (data.name) {
+	                	alert('員工：' + data.name + '，儲存成功！');
+	                } else {
+	                	alert(data.msg);
+	                }                   
+	            },
+	            error: function(jqXHR) {
+	                alert("發生錯誤: " + jqXHR.status);
+	            }
+	        });
+	}
+
+</script>
+
+</head>
+
+<body>
+
+	<h1>新建員工</h1>
+	<label for="staffNumber">請輸入員工編號：</label>
+	<input type="text" id="staffNumber">
+	<br>
+
+	<label for="staffName">請輸入員工姓名：</label>
+	<input type="text" id="staffName">
+	<br>
+
+	<label for="staffSex">請輸入員工性別：</label>
+	<select id="staffSex">
+		<option value="男">男</option>
+		<option value="女">女</option>
+	</select>
+	<br>
+	
+	<button id="btn1">用ajax Post 資料</button> <br>
+	<button id="btn2">用 post 送資料</button>
+	
+</body>
+
+</html>
