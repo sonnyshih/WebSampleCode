@@ -10,7 +10,7 @@
 // include('/reCaptcha1.1.3/autoload.php');
 
 // 請注意一下，是 Invisible reCAPTCHA 類型的 site key 跟 secret key 別搞錯了。
-$siteKey = '6Les6TkUAAAAAOrClweKtY8hRXScq8pqzku4DWLy';
+$siteKey = '6LemEzoUAAAAACMHLwZelPr47KaUsEKe0gP0pvUp';
 
 
 // 語言 https://developers.google.com/recaptcha/docs/language

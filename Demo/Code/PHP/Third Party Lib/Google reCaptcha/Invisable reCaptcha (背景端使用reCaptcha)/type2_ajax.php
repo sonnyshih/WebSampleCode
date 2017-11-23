@@ -3,7 +3,7 @@
     include('reCaptcha1.1.3/autoload.php');
     
     // secret key
-    $secret = '6Les6TkUAAAAAMNZXY852fKpxnRHiqwIadOgrdYo';
+    $secret = '6LemEzoUAAAAANQgkG2vnqgmVTuJlOjympOmsGzz';
     
     // 初始化變數為空值
     $resp = '';

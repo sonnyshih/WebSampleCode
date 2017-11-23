@@ -9,7 +9,7 @@
  * */
 
 // site key 跟 secret key
-$siteKey = '6Les6TkUAAAAAOrClweKtY8hRXScq8pqzku4DWLy';
+$siteKey = '6LemEzoUAAAAACMHLwZelPr47KaUsEKe0gP0pvUp';
 
 // 語言 https://developers.google.com/recaptcha/docs/language
 $lang = 'zh-TW';

@@ -12,7 +12,7 @@
 include('reCaptcha1.1.3/autoload.php');
 
 // 請注意一下，是 Invisible reCAPTCHA 類型的 site key 跟 secret key 別搞錯了。
-$secret = '6Les6TkUAAAAAMNZXY852fKpxnRHiqwIadOgrdYo';
+$secret = '6LemEzoUAAAAANQgkG2vnqgmVTuJlOjympOmsGzz';
 
 // 判斷提交過來的 g-recaptcha-response 參數，是否存在
 if (isset($_POST['g-recaptcha-response'])) {
