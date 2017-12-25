@@ -36,7 +36,7 @@ if (isset($_POST['uploadForm'])) {
     
     $jsonArray = array(
         'response' => $_POST['hello'],
-        'file number' => sizeof($_FILES['attachFile'])
+        'fileNumber' => sizeof($_FILES['attachFile'])
     );
     
     $arttachFile = array();

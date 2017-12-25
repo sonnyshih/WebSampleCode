@@ -77,7 +77,7 @@
         //allowedFileTypes: ['image', 'video', 'flash'],
  		layoutTemplates:{
             //actionDelete:'', //設定刪除按鈕的值為空字串，則去掉圖片上面的縮略刪除按鈕
-            //actionUpload:'', //設定上傳按鈕的值為空字串，則去掉圖片上面的縮略上傳按鈕
+            actionUpload:'', //設定上傳按鈕的值為空字串，則去掉圖片上面的縮略上傳按鈕
             actionZoom:''	 //設定zoom按鈕的值為空字串，則去掉圖片上面的縮略Zoom按鈕
         },        
         slugCallback: function (filename) {
@@ -108,36 +108,21 @@
     }).on('filedeleted', function(event, key, jqXHR, data) {
         console.log('Key = ' + key);
         
-    }).on('fileuploaded', function(event, data, previewId, index) {
-        console.log('fileuploaded = '+data.response.success);
+    }).on('fileuploaded', function(event, data, previewId, index) {	//一個檔案上傳完成後
+    	
+    	jsonString = JSON.stringify(data.response); // Oject -> String
+    	jsonData = JSON.parse(jsonString);			// String -> JSON data
+    	
+        console.log('jsonString = '+jsonString);
+        console.log('jsonData = '+jsonData.fileNumber);
         
-        var result = data.response;
-        if( result.success){
-           // $("#uiIdcardNumberImg1").val(result.fileName);
-            console.log('fileuploaded='+result.fileName);
-
-        }
-        
-    }).on('filesuccessremove', function(event, id) {//上傳成功後刪除觸發
-    	alert("上傳成功");
-    	/*
-        var v = $("#uiIdcardNumberImg1").val();
-        if (v != null && v != "" && v != undefined) {
-            $.ajax({
-                type: "POST",
-                cache:false,
-                async : true,
-                dataType : "json",
-                url:  "/uact/deletefile",
-                data: {fileid:v,type:'1012-0001'},
-                success: function(data){
-                    $("#uiIdcardNumberImg1").val("");
-                }
-           });
-         } else {
-             return false; // abort the thumbnail removal
-         }*/
-     });
+    }).on('filesuccessremove', function(event, id) {//刪除已經上傳完成的檔案
+    	alert("刪除已經上傳完成的檔案");
+    
+    }).on('filebatchuploadcomplete', function(event, files, extra) {	// 檔案批次上傳完成
+	    console.log('File batch upload complete');
+	    alert("File batch upload complete");
+	});
 
             
 
