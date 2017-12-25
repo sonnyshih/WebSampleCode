@@ -68,7 +68,11 @@
         language: 'zh-TW',		// 設定語系
         uploadUrl: 'upload_file.php', // you must set a valid URL here else you will get an error
         enctype: 'multipart/form-data',
-        allowedFileExtensions: ['jpg', 'png', 'gif'],	//可以上傳的檔案類垼
+        allowedFileExtensions: ['jpg', 'png', 'gif'],	//可以上傳的檔案類型
+        uploadExtraData: function (previewId, index) {
+            var info = {"tags": "somestuff"};	// tags: 為欄位名稱, somestuff:為傳送的值
+            return info;
+        },
         //overwriteInitial: false,
         //maxFileSize: 1000,
         //maxFilesNum: 3,

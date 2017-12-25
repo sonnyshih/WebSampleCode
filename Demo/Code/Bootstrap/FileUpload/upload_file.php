@@ -3,9 +3,13 @@
 //  define('PATH_ROOT', dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR);
 define('PATH_ROOT', dirname(__DIR__).DIRECTORY_SEPARATOR);
 define('PATH_UPLOAD', PATH_ROOT."upload".DIRECTORY_SEPARATOR);
-
 //     echo PATH_UPLOAD;
 
+
+// foreach ($_POST as $key=>$value) {
+//     echo "Key=".$key. "<br>\n";
+//     echo "Value=".$value. "<br>\n";
+// }
 
 foreach ($_FILES["attachFile"]["error"] as $key => $error) {
     // UPLOAD_ERR所有說明: http://php.net/manual/en/features.file-upload.errors.php
