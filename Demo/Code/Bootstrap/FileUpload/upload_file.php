@@ -11,7 +11,6 @@ foreach ($_FILES["attachFile"]["error"] as $key => $error) {
     // UPLOAD_ERR所有說明: http://php.net/manual/en/features.file-upload.errors.php
     if ($error == UPLOAD_ERR_OK) {
         
-        
         $tmp_name = $_FILES["attachFile"]["tmp_name"][$key];
         
         // basename() may prevent filesystem traversal attacks;
@@ -21,13 +20,18 @@ foreach ($_FILES["attachFile"]["error"] as $key => $error) {
     }
 }
 
+/* ##### 注意事項 ##### 
+ * 1. 如果是用form 上傳，圖片分次選時，雖UI是顯示多張，但直實圖片只會上傳最後選的那張
+ * 2. 如果是用AJAX上傳，圖片會分次上傳。
+ * #####*/
+
 
 // 使用form 上傳
 if (isset($_POST['uploadForm'])) {
     
     echo "<pre>_FILES = " . print_r($_FILES['attachFile'], TRUE). "</pre>";
     
-    // 使用ajax 上傳
+// 使用ajax 上傳
 } else {
     
     $jsonArray = array(
