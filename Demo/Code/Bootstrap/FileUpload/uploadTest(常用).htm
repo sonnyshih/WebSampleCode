@@ -67,6 +67,7 @@
         theme: 'fa',			// 使用 Font Awesome Theme
         language: 'zh-TW',		// 設定語系
         uploadUrl: 'upload_file.php', // you must set a valid URL here else you will get an error
+        enctype: 'multipart/form-data',
         allowedFileExtensions: ['jpg', 'png', 'gif'],	//可以上傳的檔案類垼
         //overwriteInitial: false,
         //maxFileSize: 1000,
@@ -82,7 +83,61 @@
         slugCallback: function (filename) {
             return filename.replace('(', '_').replace(']', '_');
         }
-    });
+        
+    }).on('fileclear', function(event) {
+        console.log("fileclear");
+        
+    }).on('filecleared', function(event) {
+        console.log("filecleared");
+        
+    }).on('fileloaded', function(event, file, previewId, index, reader) {
+        console.log("fileloaded");
+        
+    }).on('filereset', function(event) {
+        console.log("filereset");
+        
+    }).on('filepreremove', function(event, id, index) {
+        console.log('id = ' + id + ', index = ' + index);
+        
+    }).on('fileremoved', function(event, id, index) {
+        console.log('id = ' + id + ', index = ' + index);
+        
+    }).on('filepredelete', function(event, key, jqXHR, data) {
+        console.log('Key = ' + key);
+        
+    }).on('filedeleted', function(event, key, jqXHR, data) {
+        console.log('Key = ' + key);
+        
+    }).on('fileuploaded', function(event, data, previewId, index) {
+        console.log('fileuploaded = '+data.response.success);
+        
+        var result = data.response;
+        if( result.success){
+           // $("#uiIdcardNumberImg1").val(result.fileName);
+            console.log('fileuploaded='+result.fileName);
+
+        }
+        
+    }).on('filesuccessremove', function(event, id) {//上傳成功後刪除觸發
+    	alert("上傳成功");
+    	/*
+        var v = $("#uiIdcardNumberImg1").val();
+        if (v != null && v != "" && v != undefined) {
+            $.ajax({
+                type: "POST",
+                cache:false,
+                async : true,
+                dataType : "json",
+                url:  "/uact/deletefile",
+                data: {fileid:v,type:'1012-0001'},
+                success: function(data){
+                    $("#uiIdcardNumberImg1").val("");
+                }
+           });
+         } else {
+             return false; // abort the thumbnail removal
+         }*/
+     });
 
             
 
