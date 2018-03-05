@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Sortable - Display as grid</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+  #sortable { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+  #sortable li { margin: 3px 3px 3px 0; padding: 1px; float: left; width: 100px; height: 90px; font-size: 4em; text-align: center; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    
+    $( "#sortable" ).sortable({
+        start: function(event, ui) { 
+            //console.log('start: ' + ui.item.index())	//啟始位置
+            
+        },
+
+    	update: function(event, ui) { 
+            //console.log('update: '+ui.item.index())	//移動完成位置
+            for (var i=1; i<13; i++) {
+            	console.log($("ul li:nth-child("+i+")").data("id"));
+            }
+            
+        }
+    });
+
+    $( "#sortable" ).disableSelection();
+
+  } );
+  </script>
+</head>
+<body>
+ 
+<ul id="sortable">
+  <li data-id="data_1" class="ui-state-default">1</li>
+  <li data-id="data_2" class="ui-state-default">2</li>
+  <li data-id="data_3" class="ui-state-default">3</li>
+  <li data-id="data_4" class="ui-state-default">4</li>
+  <li data-id="data_5" class="ui-state-default">5</li>
+  <li data-id="data_6" class="ui-state-default">6</li>
+  <li data-id="data_7" class="ui-state-default">7</li>
+  <li data-id="data_8" class="ui-state-default">8</li>
+  <li data-id="data_9" class="ui-state-default">9</li>
+  <li data-id="data_10" class="ui-state-default">10</li>
+  <li data-id="data_11" class="ui-state-default">11</li>
+  <li data-id="data_12" class="ui-state-default">12</li>
+</ul>
+ 
+ 
+</body>
+</html>
