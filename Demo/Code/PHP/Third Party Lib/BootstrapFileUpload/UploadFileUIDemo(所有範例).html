@@ -25,7 +25,8 @@
 
 	<!-- sortable.min.js is only needed if you wish to sort / rearrange files in initial preview. 
 		This must be loaded before fileinput.min.js -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/js/plugins/sortable.min.js" type="text/javascript"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/js/plugins/sortable.min.js" type="text/javascript"></script>-->
+	<script src="js/plugins/sortable.min.js" type="text/javascript"></script>
 
 	<!-- popper.min.js below is needed if you use bootstrap 4.x. You can also use the bootstrap js 
 	3.3.x versions without popper.min.js. -->
@@ -120,6 +121,7 @@
             </div>
         </div>
         <hr>
+        
         <div class="form-group">
             <div class="file-loading">
                 <label>Preview File Icon</label>
@@ -127,6 +129,15 @@
             </div>
         </div>
         <hr>
+
+        <div class="form-group">
+            <div class="file-loading">
+                <label>Preview File Icon</label>
+                <input id="input-pd" type="file" multiple>
+            </div>
+        </div>
+        <hr>
+        
         <div class="form-group">
             <div class="file-loading">
                 <input id="file-4" type="file" class="file" data-upload-url="#">
@@ -243,6 +254,77 @@
             {caption: "transport-3.jpg", size: 632762, width: "120px", url: "{$url}", key: 3}
         ]
     });
+    
+     $("#input-pd").fileinput({
+         theme: 'fa',
+         //theme: 'explorer-fa',
+         showUpload: false,
+         showCaption: false,
+         browseClass: "btn btn-primary btn-lg",
+         fileType: "any",
+         previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+         overwriteInitial: false,
+         initialPreviewAsData: true,
+         initialPreview: [
+        	 // IMAGE DATA
+ 	         "http://kartik-v.github.io/bootstrap-fileinput-samples/samples/Desert.jpg",
+ 	        // IMAGE DATA
+ 	        "http://kartik-v.github.io/bootstrap-fileinput-samples/samples/Lighthouse.jpg",
+	        // VIDEO DATA
+	        "http://kartik-v.github.io/bootstrap-fileinput-samples/samples/small.mp4",
+	        // PDF DATA
+	        'http://kartik-v.github.io/bootstrap-fileinput-samples/samples/pdf-sample.pdf',
+	        // TEXT DATA
+	        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut mauris ut libero fermentum feugiat eu et dui. Mauris condimentum rhoncus enim, sed semper neque vestibulum id. Nulla semper, turpis ut consequat imperdiet, enim turpis aliquet orci, eget venenatis elit sapien non ante. Aliquam neque ipsum, rhoncus id ipsum et, volutpat tincidunt augue. Maecenas dolor libero, gravida nec est at, commodo tempor massa. Sed id feugiat massa. Pellentesque at est eu ante aliquam viverra ac sed est.",
+
+             "http://lorempixel.com/1920/1080/transport/1",
+             "http://lorempixel.com/1920/1080/transport/2",
+             "http://lorempixel.com/1920/1080/transport/3",
+ 	        // HTML DATA
+ 	        '<div class="text-center">' + 
+ 	        '<h3>Lorem Ipsum</h3>' + 
+ 	        '<p><em>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</em></p>' + 
+ 	        '<h5><small>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</small></h5>' + 
+ 	        '<hr>' + 
+ 	        '</div>' + 
+ 	        '<div class="text-justify">' + 
+ 	        '<p>' + 
+ 	        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis convallis dolor sed dignissim. Phasellus euismod mauris vel dolor maximus, sed fermentum mauris lobortis. Aliquam luctus, diam in luctus egestas, magna lacus luctus libero, scelerisque mattis ante dolor ac nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse varius orci ultricies massa euismod, at semper turpis fermentum. Quisque vitae augue vel lectus viverra facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla lacinia molestie diam, et volutpat nunc bibendum a. Cras a est sed augue commodo accumsan quis vitae nisi.' + 
+ 	        '</p>' + 
+ 	        '<p>' + 
+ 	        'Nunc sit amet metus et dui aliquet feugiat. Praesent lobortis, ipsum et elementum dignissim, urna libero fringilla justo, at tincidunt nisi mi sed mi. Integer vel est porttitor, tempor tortor non, lobortis felis. Curabitur porttitor nisi et volutpat iaculis. Fusce nec feugiat lectus, vitae ullamcorper lorem. Ut ultrices nunc imperdiet placerat malesuada. Proin commodo erat in egestas maximus.' + 
+ 	        '</p>' +
+ 	        '</div>'
+
+         ],
+         initialPreviewConfig: [
+        	 {caption: "Desert.jpg", size: 827000, width: "120px", url: "/file-upload-batch/2", key: 1},
+ 	        {caption: "Lighthouse.jpg", size: 549000, width: "120px", url: "/file-upload-batch/2", key: 2},
+	        {   
+	            type: "video", 
+	            size: 375000,
+	            filetype: "video/mp4",
+	            caption: "KrajeeSample.mp4", 
+	            url: "/file-upload-batch/2",
+	            key: 3,
+	            downloadUrl: 'http://kartik-v.github.io/bootstrap-fileinput-samples/samples/small.mp4', // override url
+	            filename: 'KrajeeSample.mp4' // override download filename
+	        }, 
+	        {type: "pdf", size: 8000, caption: "About.pdf", url: "/file-upload-batch/2", key: 10, downloadUrl: false}, // disable download
+	        {type: "text", size: 1430, caption: "LoremIpsum.txt", url: "/file-upload-batch/2", key: 11, downloadUrl: false},  // disable download
+
+             {caption: "transport-1.jpg", size: 329892, width: "120px", url: "{$url}", key: 1},
+             {caption: "transport-2.jpg", size: 872378, width: "120px", url: "{$url}", key: 2},
+             {caption: "transport-3.jpg", size: 632762, width: "120px", url: "{$url}", key: 3},
+             {type: "html", size: 3550, caption: "LoremIpsum.html", url: "/file-upload-batch/2", key: 12, downloadUrl: false}  // disable download
+         ]
+     }).on('filesorted', function(e, params) {
+ 	    console.log('File sorted params', params);
+ 	}).on('fileuploaded', function(e, params) {
+ 	    console.log('File uploaded params', params);
+ 	});
+ 
+
     $("#file-4").fileinput({
         theme: 'fa',
         uploadExtraData: {kvId: '10'}
