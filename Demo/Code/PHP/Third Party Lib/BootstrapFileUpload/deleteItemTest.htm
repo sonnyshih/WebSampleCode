@@ -96,21 +96,30 @@
 
          ],
          initialPreviewConfig: [
-        	 {key: {id:1}},		//key是post到deleteUrl 程式的json資料
-        	 {key: {id:2}},
-        	 {key: {id:3}},
-        	 {key: {id:4}},
-        	 {key: {id:5}},
+        	 {key: 1},		//key是post到deleteUrl 程式的json資料
+        	 {key: 2},
+        	 {key: 3},
+        	 {key: 4},
+        	 {key: 5},
          ]
      }).on('filesorted', function(e, params) {
     	 
     	 for(var i=0; i<params.stack.length; i++){
-    		alert(params.stack[i]["key"]["id"]);
+    		alert(params.stack[i]["key"]);
     	}
     	 
  	    console.log('File sorted params', params);
+ 	    
  	}).on('fileuploaded', function(e, params) {
  	    console.log('File uploaded params', params);
+ 	    
+ 	}).on('filedeleted', function(event, key, jqXHR, data) {
+ 	    console.log('Key = ' + key);
+ 	    console.log('jqXHR = ' + JSON.stringify(jqXHR));
+ 	    console.log('data = ' + JSON.stringify(data));
+ 	    
+ 	    // delete 程式回傳的內容
+ 	    alert(jqXHR["responseJSON"]["Respone"] + " #### " + jqXHR["responseJSON"]["ID"]);
  	});
 
             
