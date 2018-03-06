@@ -96,7 +96,7 @@
 
          ],
          initialPreviewConfig: [
-        	 {key: 1},		//key是post到deleteUrl 程式的json資料
+        	 {key: 1},		//key是post到deleteUrl 程式的資料
         	 {key: 2},
         	 {key: 3},
         	 {key: 4},
@@ -109,9 +109,6 @@
     	}
     	 
  	    console.log('File sorted params', params);
- 	    
- 	}).on('fileuploaded', function(e, params) {
- 	    console.log('File uploaded params', params);
  	    
  	}).on('filedeleted', function(event, key, jqXHR, data) {
  	    console.log('Key = ' + key);

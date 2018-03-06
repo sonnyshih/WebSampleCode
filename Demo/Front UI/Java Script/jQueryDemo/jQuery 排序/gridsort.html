@@ -24,7 +24,8 @@
     	update: function(event, ui) { 
             //console.log('update: '+ui.item.index())	//移動完成位置
             for (var i=1; i<13; i++) {
-            	console.log($("ul li:nth-child("+i+")").data("id"));
+            	console.log($("#sortable li:nth-child("+i+")").data("id"));
+            	alert($("#sortable li:nth-child("+i+")").data("id"));
             }
             
         }
@@ -38,20 +39,19 @@
 <body>
  
 <ul id="sortable">
-  <li data-id="data_1" class="ui-state-default">1</li>
-  <li data-id="data_2" class="ui-state-default">2</li>
-  <li data-id="data_3" class="ui-state-default">3</li>
-  <li data-id="data_4" class="ui-state-default">4</li>
-  <li data-id="data_5" class="ui-state-default">5</li>
-  <li data-id="data_6" class="ui-state-default">6</li>
-  <li data-id="data_7" class="ui-state-default">7</li>
-  <li data-id="data_8" class="ui-state-default">8</li>
-  <li data-id="data_9" class="ui-state-default">9</li>
-  <li data-id="data_10" class="ui-state-default">10</li>
-  <li data-id="data_11" class="ui-state-default">11</li>
-  <li data-id="data_12" class="ui-state-default">12</li>
-</ul>
- 
+  <li id="item1" data-id="data_1" class="ui-state-default">1</li>
+  <li id="item2" data-id="data_2" class="ui-state-default">2</li>
+  <li id="item3" data-id="data_3" class="ui-state-default">3</li>
+  <li id="item4" data-id="data_4" class="ui-state-default">4</li>
+  <li id="item5" data-id="data_5" class="ui-state-default">5</li>
+  <li id="item6" data-id="data_6" class="ui-state-default">6</li>
+  <li id="item7" data-id="data_7" class="ui-state-default">7</li>
+  <li id="item8" data-id="data_8" class="ui-state-default">8</li>
+  <li id="item9" data-id="data_9" class="ui-state-default">9</li>
+  <li id="item10" data-id="data_10" class="ui-state-default">10</li>
+  <li id="item11" data-id="data_11" class="ui-state-default">11</li>
+  <li id="item12" data-id="data_12" class="ui-state-default">12</li>
+</ul>           						 
  
 </body>
 </html>
