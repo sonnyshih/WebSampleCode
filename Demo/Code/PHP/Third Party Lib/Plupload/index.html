@@ -24,6 +24,14 @@ $(function() {
 	initUploader();
 	initSendButtonClick();
 
+	// 列出Queue中所有的檔案
+	$("#getFileList").click(function(){
+		var uploader = $("#uploader").plupload("getUploader");
+		console.log(uploader.files);
+		console.log(uploader.files[0].id + " ## " + uploader.files[0].name);
+	});
+	
+    
 });
 
 function initUploader(){
@@ -34,7 +42,10 @@ function initUploader(){
 		url : 'file_upload.php',
 
 		// show/hide the browse, start, stop button.
-		buttons : {browse:true,start:false,stop:false},
+		buttons : {
+			browse:true,
+			start:false,
+			stop:false},
 		
 		// User can upload no more then 20 files in one go (sets multiple_queues to false)
 		max_file_count: 20,
@@ -71,7 +82,7 @@ function initUploader(){
 		// Views to activate
 		views: {
 			list: true,
-			thumbs: true, // Show thumbs
+			thumbs: true, // Show thumbs 顯示縮圖
 			active: 'thumbs'
 		},
 
@@ -84,8 +95,31 @@ function initUploader(){
 		// Send with field name and value (Like <input type="text" name="act" value="insert">)
 		multipart_params:{
 			'act': 'add'	
+		},
+		init:{
+			"QueueChanged": function(up){
+// 				alert("Queue Changed");
+			},
+			"FilesAdded": function(up, files){
+// 				alert("Files Added");
+				
+			},
+// 			"FilesRemoved": function(up, files){
+// 				alert("Files Removed");
+// 			}
 		}
 	});
+
+
+	//用bind 增加file add
+	var uploader = $("#uploader").plupload("getUploader");
+	
+	uploader.bind("FilesRemoved", function(up,files){
+		alert("Files Removed");
+		console.log(up.files);
+	});
+
+	
 	
 }
 
@@ -96,7 +130,7 @@ function initSendButtonClick(){
 		// Files in queue upload them first
 		if ($('#uploader').plupload('getFiles').length > 0) {
 
-			$('#uploader').plupload('start');
+			$('#uploader').plupload('start');	//開始上傳
 			
 			// When all files are uploaded submit form
 			$('#uploader').on('complete', function() {
@@ -119,17 +153,22 @@ function initSendButtonClick(){
 
 
 <form id="form" method="post" action="send.php">
-	Your Nikcname: <input type="text" name="nickname" id="nickname">
+	Your Nikcname: <input type="text" name="nickname" id="nickname"><br>
+	
 	<div id="uploader">
 		<p>Your browser doesn't have Flash, Silverlight or HTML5 support.</p>
 	</div>
-	<br />
+	<br>
+	
 	<input type="submit" value="Submit" />
 </form>
+
+<br><br>
+<input type="button" id="getFileList" name="getFileList" value="列出 Queue中的檔案">
+
+<br><br>
+<input type="button" id="addFile" name="addFile" value="動態加檔案">
 
 </body>
 </html>
 
-
-<?php
-?>

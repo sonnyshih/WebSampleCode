@@ -1,2 +1,2 @@
-ckfinder_3.0.0 ¬°¯}¸Ñª© (¤U¸ü: https://github.com/Fork-From-Others/CKEditor-CKFinder)
-ckfinder_3.4.2 ©xºô ¥¼¯}¸Ñ
+ckfinder_3.0.0 ç‚ºç ´è§£ç‰ˆ (ä¸‹è¼‰: https://github.com/Fork-From-Others/CKEditor-CKFinder)
+ckfinder_3.4.2 å®˜ç¶² æœªç ´è§£
