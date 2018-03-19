@@ -1,0 +1,62 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script src="https://code.jquery.com/jquery-1.12.2.js"></script>
+<script>
+var ajax_upload = {
+    files : [],
+
+    init : function (){
+        var _self = this;
+
+        // 綁定檔案變更時的處理
+        $('input[type=file]').on('change', function(event) {
+        	_self.prepareUpload(event); 
+        });
+
+        // 上傳
+        $('#upload_ajax').bind('click', function (event) {
+            _self.upload(event);
+        });
+    },
+
+    prepareUpload : function (event) {
+      this.files = event.target.files;
+      console.log(this.files);
+    },
+
+    upload : function () {
+        console.log('files = ', this.files);
+
+        var data = new FormData();
+        $.each(this.files, function(key, value) {
+            console.log("sasdf:"+key + ' = ', value);
+            data.append(key, value);
+        });
+        
+        $.ajax({
+            url         : "ajax_post_file.php",
+            type        : "POST",
+            data        : data,
+            cache       : false,
+            dataType    : "json",
+            processData : false,
+            contentType : false,
+            success: function(data, textStatus, jqXHR) {
+                console.log('upload success!!');
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log('ERRORS: ' + textStatus);
+            }
+        });
+    }
+};
+
+$(function(){
+    ajax_upload.init();
+});
+
+</script>
+<form  method="post" enctype="multipart/form-data" action="ajax_post_file.php" id="fupForm">
+    <input type="file" name='photo' id='photo'><br>
+    <button id='upload_form' name='upload_form' type='submit'>form 上傳</button>
+    <button id='upload_ajax' name='upload_ajax' type='button'>ajax 上傳</button>
+</form>
