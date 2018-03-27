@@ -68,8 +68,8 @@
 //         $password = $request->getParam('Password');
 //         $email = $request->getParam('Email');
         
-        $sql = "INSERT INTO customer(Account, Name, Password, Email) 
-                VALUES(:Account, :Name, :Password, :Email)";
+        $sql = "INSERT INTO customer(Account, Name, Password, Email, CreateTime) 
+                VALUES(:Account, :Name, :Password, :Email, now())";
         
         try{
             // Get DB Object
@@ -84,9 +84,11 @@
             
             $stmt->execute();
             
+            $id = $db->lastInsertId();
+
             $db = null;
             
-            echo "{'notice':{'text':'Customer Added'}}";
+            echo "{'notice':{'text':'Customer Added'}, 'ID':'". $id ."'}";
             
         } catch(PDOException $e) {
             echo "{'error':{'text':'". $e->getMessage() ."'}";
