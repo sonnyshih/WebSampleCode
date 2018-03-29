@@ -1,8 +1,9 @@
 RewriteEngine On
+RewriteCond %api/test/{REQUEST_FILENAME} !-f
+RewriteCond %api/test/{REQUEST_FILENAME} !-d
+RewriteRule ^api/test/ api/test/index.php [QSA,L]
+
 RewriteCond %api/public/{REQUEST_FILENAME} !-f
 RewriteCond %api/public/{REQUEST_FILENAME} !-d
 RewriteRule ^api/public/ api/public/index.php [QSA,L]
 
-RewriteCond %api/test/{REQUEST_FILENAME} !-f
-RewriteCond %api/test/{REQUEST_FILENAME} !-d
-RewriteRule ^api/test/ api/test/index.php [QSA,L]

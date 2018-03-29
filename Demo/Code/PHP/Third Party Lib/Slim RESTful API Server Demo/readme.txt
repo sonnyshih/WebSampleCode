@@ -1,6 +1,6 @@
 ﻿
 1. 第一個範例的網址 (因為還沒有設定.htaccess檔案)
-http://domain/api/public/index.php/hello/world
+  http://apidemo.sonny-tech.com/api/test/index.php/hello/world
 
 2. 設定完.htaccess檔案
 * 範例1:
