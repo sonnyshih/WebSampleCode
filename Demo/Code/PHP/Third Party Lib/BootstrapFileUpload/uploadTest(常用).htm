@@ -46,10 +46,11 @@
     
     <form enctype="multipart/form-data" method="post" action="upload_file.php">
        
+
         <div class="form-group">
-            <div class="file-loading">
-                <input name='attachFile[]' id="attachFile" type="file" class="file" multiple>
-            </div>
+            
+        	<input name='attachFile[]' id="attachFile" type="file" class="file-loading" multiple>
+            
         </div>
         
         <br>
@@ -58,79 +59,90 @@
  
     </form>
 
+	<br><br>
+    <button type="button" name="clickUpload" id="clickUpload" class="btn btn-primary" >Click Upload</button>
+	
 
 
 </div>
 </body>
 <script>
 
-	// 只能放html最後面，且不可放在 $(function(){ }); 中, 不然會失效
-    $("#attachFile").fileinput({
-        theme: 'fa',			// 使用 Font Awesome Theme
-        language: 'zh-TW',		// 設定語系
-        uploadUrl: 'upload_file.php', // you must set a valid URL here else you will get an error
-        enctype: 'multipart/form-data',
-        allowedFileExtensions: ['jpg', 'png', 'gif'],	//可以上傳的檔案類型
-        uploadExtraData: function (previewId, index) {
-            var info = {"tags": "somestuff"};	// tags: 為欄位名稱, somestuff:為傳送的值
-            return info;
-        },
-        //overwriteInitial: false,
-        //maxFileSize: 1000,
-        //maxFilesNum: 3,
-        maxFileCount: 2,	// 最多選擇多少檔案
-        showUpload: true,
-        //allowedFileTypes: ['image', 'video', 'flash'],
- 		layoutTemplates:{
-            //actionDelete:'', //設定刪除按鈕的值為空字串，則去掉圖片上面的縮略刪除按鈕
-            actionUpload:'', //設定上傳按鈕的值為空字串，則去掉圖片上面的縮略上傳按鈕
-            actionZoom:''	 //設定zoom按鈕的值為空字串，則去掉圖片上面的縮略Zoom按鈕
-        },        
-        slugCallback: function (filename) {
-            return filename.replace('(', '_').replace(']', '_');
-        }
-        
-    }).on('fileclear', function(event) {
-        console.log("fileclear");
-        
-    }).on('filecleared', function(event) {
-        console.log("filecleared");
-        
-    }).on('fileloaded', function(event, file, previewId, index, reader) {
-        console.log("fileloaded");
-        
-    }).on('filereset', function(event) {
-        console.log("filereset");
-        
-    }).on('filepreremove', function(event, id, index) {
-        console.log('id = ' + id + ', index = ' + index);
-        
-    }).on('fileremoved', function(event, id, index) {
-        console.log('id = ' + id + ', index = ' + index);
-        
-    }).on('filepredelete', function(event, key, jqXHR, data) {
-        console.log('Key = ' + key);
-        
-    }).on('filedeleted', function(event, key, jqXHR, data) {
-        console.log('Key = ' + key);
-        
-    }).on('fileuploaded', function(event, data, previewId, index) {	//一個檔案上傳完成後
-    	
-    	jsonString = JSON.stringify(data.response); // Oject -> String
-    	jsonData = JSON.parse(jsonString);			// String -> JSON data
-    	
-        console.log('jsonString = '+jsonString);
-        console.log('jsonData = '+jsonData.fileNumber);
-        
-    }).on('filesuccessremove', function(event, id) {//刪除已經上傳完成的檔案
-    	alert("刪除已經上傳完成的檔案");
-    
-    }).on('filebatchuploadcomplete', function(event, files, extra) {	// 檔案批次上傳完成
-	    console.log('File batch upload complete');
-	    alert("File batch upload complete");
+	$(function() {
+		initUploadfile();
+		
+		$("#clickUpload").on("click", function(){
+			$("#attachFile").fileinput("upload");
+		});
 	});
+	function initUploadfile() {
+		
+	    $("#attachFile").fileinput({
+	        theme: 'fa',			// 使用 Font Awesome Theme
+	        language: 'zh-TW',		// 設定語系
+	        uploadUrl: 'upload_file.php', // you must set a valid URL here else you will get an error
+	        enctype: 'multipart/form-data',
+	        allowedFileExtensions: ['jpg', 'png', 'gif'],	//可以上傳的檔案類型
+	        uploadExtraData: function (previewId, index) {
+	            var info = {"tags": "somestuff"};	// tags: 為欄位名稱, somestuff:為傳送的值
+	            return info;
+	        },
+	        //overwriteInitial: false,
+	        //maxFileSize: 1000,
+	        //maxFilesNum: 3,
+	        maxFileCount: 2,	// 最多選擇多少檔案
+	        showUpload: true,
+	        //allowedFileTypes: ['image', 'video', 'flash'],
+	 		layoutTemplates:{
+	            //actionDelete:'', //設定刪除按鈕的值為空字串，則去掉圖片上面的縮略刪除按鈕
+	            actionUpload:'', //設定上傳按鈕的值為空字串，則去掉圖片上面的縮略上傳按鈕
+	            actionZoom:''	 //設定zoom按鈕的值為空字串，則去掉圖片上面的縮略Zoom按鈕
+	        },        
+	        slugCallback: function (filename) {
+	            return filename.replace('(', '_').replace(']', '_');
+	        }
+	        
+	    }).on('fileclear', function(event) {
+	        console.log("fileclear");
+	        
+	    }).on('filecleared', function(event) {
+	        console.log("filecleared");
+	        
+	    }).on('fileloaded', function(event, file, previewId, index, reader) {
+	        console.log("fileloaded");
+	        
+	    }).on('filereset', function(event) {
+	        console.log("filereset");
+	        
+	    }).on('filepreremove', function(event, id, index) {
+	        console.log('id = ' + id + ', index = ' + index);
+	        
+	    }).on('fileremoved', function(event, id, index) {
+	        console.log('id = ' + id + ', index = ' + index);
+	        
+	    }).on('filepredelete', function(event, key, jqXHR, data) {
+	        console.log('Key = ' + key);
+	        
+	    }).on('filedeleted', function(event, key, jqXHR, data) {
+	        console.log('Key = ' + key);
+	        
+	    }).on('fileuploaded', function(event, data, previewId, index) {	//一個檔案上傳完成後
+	    	
+	    	jsonString = JSON.stringify(data.response); // Oject -> String
+	    	jsonData = JSON.parse(jsonString);			// String -> JSON data
+	    	
+	        console.log('jsonString = '+jsonString);
+	        console.log('jsonData = '+jsonData.fileNumber);
+	        
+	    }).on('filesuccessremove', function(event, id) {//刪除已經上傳完成的檔案
+	    	alert("刪除已經上傳完成的檔案");
+	    
+	    }).on('filebatchuploadcomplete', function(event, files, extra) {	// 檔案批次上傳完成
+		    console.log('File batch upload complete');
+		    alert("File batch upload complete");
+		});
 
-            
+	}    
 
  
 
