@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery TreeTable - Display as grid</title>
+  
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <!-- Plugin Lib  -->
+  <link rel="stylesheet" href="css/jquery.treetable.css" />  
+  <link rel="stylesheet" href="css/jquery.treetable.theme.custom.css" />
+  <!-- <link rel="stylesheet" href="css/jquery.treetable.theme.default.css" /> --> 
+   
+  <script src="js/jquery.treetable.js"></script> 
+  
+
+   <script>
+   
+	   $(function(){  
+		   $("#demo_table").treetable({
+               stringCollapse: "收起",  
+               stringExpand: "展开",  
+               expandable: true,
+//               expanderTemplate: "<a href='#'></a>",
+//               indenterTemplate: "<class='intro'></span>"
+
+		   });
+          
+		   $("#demo_table").treetable("expandAll");
+       });
+       
+	</script>
+
+</head>
+<body>
+ 
+	<table id="demo_table">
+		<tr data-tt-id="1">
+			<td>Node 1: Click on the icon in front of me to expand this
+				branch.</td>
+			<td>I live in the second column.</td>
+		</tr>
+		<tr data-tt-id="12" data-tt-parent-id="1">
+			<td>
+				<input name="form-field-checkbox" class="ace ace-checkbox-2" type="checkbox" />
+				Node 1.1: Look, I am a table row
+				<em>and</em> I am part of a tree!
+			</td>
+			<td>Interesting.</td>
+		</tr>
+		<tr data-tt-id="13" data-tt-parent-id="12">
+			<td><input name="form-field-checkbox" class="ace ace-checkbox-2" type="checkbox" />Node 1.1.1: I am part of the tree
+				too!</td>
+			<td>That's it!</td>
+		</tr>
+		<tr data-tt-id="14" data-tt-parent-id="1">
+			<td><span class='file'></span>Node 1.2: Look, I am a table row <em>and</em>
+				I am part of a tree!</td>
+			<td>Interesting.</td>
+		</tr>
+		<tr data-tt-id="2">
+			<td><span class='file'></span>Node 2: I am another root node,
+				but without children</td>
+			<td>Hurray!</td>
+		</tr>
+
+	</table>
+
+
+ 
+ 
+  
+</body>
+</html>
