@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery TreeTable - Display as grid</title>
+  
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+  <!-- Plugin Lib  -->
+  <link rel="stylesheet" href="css/bootstrap-treefy.css">
+  <script src="js/bootstrap-treefy.js"></script> 
+  
+
+   <script>
+   
+	   $(function(){  
+		   $("#table").treeFy({
+	         	// Custom template
+	            expanderTemplate: '<span class="treetable-expander"></span>',
+	            indentTemplate: '<span class="treetable-indent"></span>',
+
+	            // CSS classes for expander
+	            expanderExpandedClass: 'fa fa-angle-double-down',
+	            expanderCollapsedClass: 'fa fa-angle-double-right',
+
+				// Index of the column which expander should be added to.
+	            treeColumn: 1,
+
+		         // Initial CSS class
+	            //initStatusClass: 'treetable-expanded'
+
+	        });	
+		   
+		  // $("#table").treeFy("treetable-expander");
+       });
+       
+	</script>
+
+</head>
+<body>
+ 
+<table class="table table-striped" id="table">
+  <thead>
+    <tr>
+      <th>Column A</th>
+      <th>Column B</th>
+      <th>Column C</th>
+      <th>Column D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr data-node="treetable-1">
+      <td>Node</td>
+      <td>1</td>
+      <td>c</td>
+      <td>info</td>
+    </tr>
+    <tr data-node="treetable-2" data-pnode="treetable-parent-1">
+      <td>Node</td>
+      <td>1-1</td>
+      <td>c</td>
+      <td>info</td>
+    </tr>
+    <tr data-node="treetable-3" data-pnode="treetable-parent-1">
+      <td>Node</td>
+      <td>1-2</td>
+      <td>c</td>
+      <td>info</td>
+    </tr>
+    <tr data-node="treetable-5" data-pnode="treetable-parent-3">
+      <td>Node</td>
+      <td>1-2</td>
+      <td>c</td>
+      <td>info</td>
+    </tr>
+    <tr data-node="treetable-4">
+      <td>Node</td>
+      <td>2</td>
+      <td>c</td>
+      <td>info</td>
+    </tr>
+  </tbody>
+</table>
+ 
+ 
+  
+</body>
+</html>
