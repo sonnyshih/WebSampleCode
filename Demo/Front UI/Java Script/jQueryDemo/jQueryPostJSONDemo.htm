@@ -41,7 +41,8 @@
 		 $.post("post_json.php", 
 				 	{   name: $("#staffName").val(),
          				number: $("#staffNumber").val(),
-                		sex: $("#staffSex").val()               
+                		sex: $("#staffSex").val(),
+                		hello:'{"child":[{ "id":"1", "name":"bob"},{ "id":"2", "name":"jonas"}]}'
      				},
 	                function (data, status) {	// 回傳的data是 字串
 	                	jsonData = JSON.parse(data);
@@ -50,7 +51,11 @@
 		                } else {
 		                	jsonData = JSON.parse(data);
 		                	alert(jsonData.msg + "\nstatus = " + status);
-		                }   
+		                } 
+	                	
+	                	if (jsonData.child) {
+	                		alert(JSON.stringify(jsonData.child));
+	                	}
 	                });
 	}
 	
