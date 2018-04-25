@@ -15,13 +15,22 @@
 		//在網頁載入完成後，開始初始化工作
 	
 		$("#btn1").click(function() {
-			ajaxPost();
-		});
-
-		$("#btn2").click(function() {
 			jqueryPost();
 		});
 
+		$("#btn2").click(function() {
+			ajaxPost();
+		});
+
+		$("#btn3").click(function() {
+			ajaxPostText();
+		});
+
+		$("#btn4").click(function() {
+			ajaxGetText();
+		});
+
+		
 	});
 	
 	function jqueryPost(){
@@ -30,7 +39,7 @@
          				number: $("#staffNumber").val(),
                 		sex: $("#staffSex").val()               
      				},
-	                function (data, status) {
+	                function (data, status) {	// 回傳的data是 字串
 	                	jsonData = JSON.parse(data);
 	                	if (jsonData.name) {
 		                	alert('員工：' + jsonData.name + '，儲存成功！'+ "\nstatus = " + status);
@@ -66,7 +75,7 @@
 	                	number: $("#staffNumber").val(),
 	                       sex: $("#staffSex").val()               
 	            },
-	            success: function(data) {
+	            success: function(data) {	// 回傳的data是 object
 	                if (data.name) {
 	                	alert('員工：' + data.name + '，儲存成功！');
 	                } else {
@@ -79,6 +88,52 @@
 	        });
 	}
 
+	
+	// 使用ajax post Text
+	function ajaxPostText(){
+		 $.ajax({
+	            type:"POST",
+	            url: "post_json.php",
+	            dataType: "text",
+	            data:  "&name=" + $("#staffName").val()
+	                	+"&number=" + $("#staffNumber").val()
+	                     + "&sex=" + $("#staffSex").val(),
+	            success: function(data) {	// 回傳的data是字串
+	            	jsonData = JSON.parse(data);
+	                if (jsonData.name) {
+	                	alert('員工：' + jsonData.name + '，儲存成功！');
+	                } else {
+	                	alert(jsonData.msg);
+	                }            
+	            },
+	            error: function(jqXHR) {
+	                alert("發生錯誤: " + jqXHR.status);
+	            }
+	        });
+	}
+	
+	
+	// 使用ajax get Text
+	function ajaxGetText(){
+		 $.ajax({
+	            type:"GET",
+	            url: "post_json.php?name=" + $("#staffName").val()
+            			+"&number=" + $("#staffNumber").val()
+                		+ "&sex=" + $("#staffSex").val(),
+	            dataType: "text",
+	            success: function(data) {	// 回傳的data是字串
+	            	jsonData = JSON.parse(data);
+	                if (jsonData.name) {
+	                	alert('員工：' + jsonData.name + '，儲存成功！');
+	                } else {
+	                	alert(jsonData.msg);
+	                }            
+	            },
+	            error: function(jqXHR) {
+	                alert("發生錯誤: " + jqXHR.status);
+	            }
+	        });
+	}
 </script>
 
 </head>
@@ -101,8 +156,13 @@
 	</select>
 	<br>
 	
-	<button id="btn1">用ajax Post 資料</button> <br>
-	<button id="btn2">用 post 送資料</button>
+	<button id="btn1">用jQuery Post 資料</button> <br><br>
+	
+	<button id="btn2">用 ajax post 送JSON資料</button><br><br>
+	
+	<button id="btn3">用 ajax post 送text資料</button><br><br>
+	
+	<button id="btn4">用 ajax get 送text資料</button>
 	
 </body>
 
