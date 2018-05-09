@@ -15,28 +15,52 @@
 		//在網頁載入完成後，開始初始化工作
 		
 
-	dialog = $("#dialog-message").dialog({
-			autoOpen: false,
-			draggable : false,
-			modal : true,
-			buttons : {
-				Ok : function() {
-					alert("Click Ok Button");
-					$(this).dialog("close");
+		dialog = $("#dialog-message").dialog({
+				autoOpen: false,
+				draggable : true,
+				modal : true,
+				buttons : {
+					Ok : function() {
+						alert("Click Ok Button");
+						$(this).dialog("close");
+					},
+					"Search": function(){
+						search();
+					}
 				}
-			}
-		});
-
-		// 關閉Dialog後的Event
-		$("#dialog-message").on("dialogclose", function(event, ui) {
-			alert("按 x 關閉視窗");
-		});
-
-		$("#btn1").click(function() {
-			dialog.dialog("open");
-		});
+			});
+	
+			// 關閉Dialog後的Event
+			$("#dialog-message").on("dialogclose", function(event, ui) {
+				alert("按 x 關閉視窗");
+			});
+	
+			$("#btn1").click(function() {
+				dialog.dialog("open");
+			});
 
 	});
+	
+	function search(){
+		$("#search_result").empty();
+
+// 		html ="<table>";
+// 		for(var i=0; i<100; i++){
+// 			html +="<tr>";
+// 			html +="	<td>adsfd</td>";
+// 			html +="</tr>";
+// 		}
+			
+// 		html +="</table>";
+
+		html = "";
+		for(var i=0; i<100; i++){
+			html +="adsfdaa<br>";
+		}
+
+
+		$("#search_result").append(html);
+	}
 </script>
 
 </head>
@@ -45,13 +69,15 @@
 
 	<div id="dialog-message" title="Download complete">
 		<p>
-			<span class="ui-icon ui-icon-circle-check"
-				style="float: left; margin: 0 7px 50px 0;"></span> Your files have
+			<span class="ui-icon ui-icon-circle-check"	style="float: left; margin: 0 7px 50px 0;"></span> 
+			Your files have
 			downloaded successfully into the My Downloads folder.
 		</p>
 		<p>
 			Currently using <b>36% of your storage space</b>.
 		</p>
+		<div id="search_result">
+		</div>
 	</div>
 
 	參考: https://nknuahuang.wordpress.com/2014/07/21/jquery-dialog%E5%8F%83%E6%95%B8%E8%A8%AD%E5%AE%9A%E8%88%87%E6%95%99%E5%AD%B8/;
