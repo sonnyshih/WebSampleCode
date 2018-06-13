@@ -5,7 +5,10 @@
     echo hidestr('0911345678', 7, 0). "<br>"; //186****5940
     
     //只保留姓名的最後一個字
-    echo hidestr('小馬哥', 1, 0). "<br>"; //**哥
+    echo hidestr('小馬哥', 0, -1). "<br>"; //**哥
+    
+    //只保留姓名的第一個字
+    echo hidestr('小馬哥', 1, 0). "<br>"; //小**
     
     // 隱藏email部份內容
     $email = "helloworld@gmail.com";
