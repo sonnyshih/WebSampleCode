@@ -3,6 +3,8 @@
     
     //隱藏手機號碼中間4位
     echo hidestr('0911345678', 7, 0). "<br>"; //186****5940
+    echo hidestr('0911345678', 6, 0). "<br>"; //**哥
+    
     
     //只保留姓名的最後一個字
     echo hidestr('小馬哥', 0, -1). "<br>"; //**哥
@@ -18,6 +20,13 @@
     // 字串
     $company = "魚門設計有限公司";
     echo hidestr($company, 4, 0). "<br>";
+    echo getMaskString($company)."<br>";
+    
+    function getMaskString($string){
+        $len = mb_strlen($string,'utf8');
+        $maskLength= ceil($len/3);  //只顯示1/3字串
+        return hidestr($string, $maskLength, 0);
+    }
     
     // 地址
     $address = "金山路100號之1";
