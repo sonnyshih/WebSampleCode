@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>json 範例</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+	//簡寫法 (取代<body onload="...">)
+	$(function() {
+		//在網頁載入完成後，開始初始化工作
+
+		$("#demo1").click(function(){
+			var data = [];
+			
+			for(var i=0; i<10; i++){
+				data.push({"ID":i, "Name": "Name_"+i});
+			}
+			
+			// javascript array 轉換為字串
+			var jsonString = JSON.stringify(data);
+			alert(jsonString);
+		});
+		
+		$("#demo2").click(function(){
+			var data = { "name":"John", "age":30, "city":"New York"};
+			// javascript json 物件 轉換為字串
+			var jsonString = JSON.stringify(data);
+			alert(jsonString);
+
+		});
+
+		$("#demo3").click(function(){
+			var data = { "name":"John", "age":30, "city":"New York"};
+			
+			// javascript json 物件 轉換為字串
+			var jsonString = JSON.stringify(data);
+			
+			// 把所"換成\"
+			jsonString = jsonString.replace(/\"/g, "\\\"");
+			
+			alert(jsonString);
+
+		});
+
+	});
+	
+
+</script>
+
+</head>
+
+<body>
+
+<button type="button" id="demo1" name="demo1" >印出array json內容</button>	
+<br>
+<br>
+
+<button type="button" id="demo2" name="demo2" >印出json物件內容</button>
+<br>
+<br>
+
+<button type="button" id="demo3" name="demo3" >把"改成\" (為了.post傳值用)</button>
+
+
+</body>
+
+</html>

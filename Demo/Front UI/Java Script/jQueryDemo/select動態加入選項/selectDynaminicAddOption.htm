@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Select 動態加入 option</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+	//簡寫法 (取代<body onload="...">)
+	$(function() {
+		//在網頁載入完成後，開始初始化工作
+		
+		data = [];
+		
+		initAdvancedSearch();
+
+	});
+	
+	function initAdvancedSearch(){
+		$("#status_type").on("change", function(){
+			
+			// 取值
+			var typeValue = $(this).val();
+			//alert("Value=" + typeValue);
+			
+			// 取text
+			var typeText = $('#status_type :selected').text();
+			//alert("Text=" + typeText);
+			
+			switch(typeValue){
+				case "OrderStatus":
+					initOrderStatus();
+					break;
+			
+				case "PaymentStatus":
+					break;
+			
+				case "PaymentMethod":
+					break;
+			
+				case "ShippingStatus":
+					break;
+		
+				default:
+					break;
+			}
+			
+		});
+		
+		$("#status").on("change", function(){
+
+			//alert($("#status_type").val());
+
+			
+			// 取值
+			var value = $(this).val();
+			//alert("Status Value=" + value);
+			
+			var text = $("#status :selected").text();
+			
+			// 取得自定的attribute值
+			var attribute = $("#status :selected").attr("item_id");
+			//alert("attribute = " + attribute);
+
+			
+			var object = { "StatusType":$("#status_type").val(),
+					   	   "ID": attribute,
+					       "Value": value,
+					       "Text": text
+					      }; 
+			
+			// 判斷是否已經有在array 裡了
+			var isExist = isObjectExist(object, data);
+			
+			alert(isExist);
+			if (isExist==false){
+				data.push(object);
+			}
+			
+			showSelectOption();
+			
+		});
+		
+	}
+	
+	function initOrderStatus(){
+		// 清空 status 所有的option
+		//$("#status").empty();
+		$('option', $("#status")).remove();
+
+		$('#status').append('<option value="">請選擇</option>');
+
+		// 第一種加入方式
+		$('#status').append('<option value="1" item_id="123">One</option>');
+		$('#status').append('<option value="2" item_id="456">Two</option>');
+
+		// 第二種加入方式
+		$('#status').append($('<option>', { value: 1, text: 'My option'	}));
+
+		// 第三種加入方式
+		var newOptions = {
+                'elephant' : '大象',
+                'lion' : '獅子',
+                'tiger' : '老虎',
+                'dog' : '小狗'
+            };
+
+		$.each(newOptions, function(value, text) {
+			//alert("value content="+value);
+			
+		    var option = new Option(text, value);	// new Option("option text", "value")
+		    $("#status").append($(option));
+		});
+		
+
+		// 第四種加入方式 (和第三種寫法一樣，只是items的array寫法不一樣)
+		var items={option1:{value:"red",text:"Red"},
+				   option2:{value:"blue",text:"Blue"},
+				   option3:{value:"green",text:"Green"},
+				   option4:{value:"yellow",text:"yellow"},
+				};
+		
+		
+		$.each(items, function (i, item) {
+			//alert(i);
+		    $('#status').append($('<option>', { 
+		        value: item.value,
+		        text : item.text 
+		    }));
+		});
+
+	}
+	
+	function isObjectExist(obj, dataArray) {
+	    var i;
+	    for (i = 0; i < dataArray.length; i++) {
+	        if (JSON.stringify(dataArray[i]) === JSON.stringify(obj)) {
+	            return true;
+	        }
+	    }
+
+	    return false;
+	}
+	
+	function showSelectOption(){
+		
+		$("#show_dive").empty();
+		
+		for(var key in data){
+			$("#show_dive").append("<button type='button' id='button' name='button' onClick=\"deleteItem('"+ key +"')\">"+ data[key]["Text"] +"</button>");
+		}
+		
+		var jsonString = JSON.stringify(data);
+		//alert(jsonString);
+
+
+	}
+	
+	function deleteItem(key){
+		
+		data.splice(key, 1);	// Removes the index th element of data array.
+		
+		showSelectOption();
+	}
+</script>
+
+</head>
+
+<body>
+	
+	<select id="status_type" name="status_type">
+		<option value="">其他搜尋條件</option>
+		<option value="OrderStatus">訂單狀態</option>
+		<option value="PaymentStatus">付歀狀態</option>
+		<option value="PaymentMethod">付歀方式</option>
+		<option value="ShippingStatus">出貨狀態</option>
+	</select>
+	
+	<br><br><br>
+
+	<select id="status" name="status">
+		<option value="ShippingStatus">出貨狀態</option>
+	</select>
+
+	<br><br>
+	
+	<div id="show_dive">
+	</div>
+	
+</body>
+
+</html>
