@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>json 範例</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+	//初始化
+	window.fbAsyncInit = function() {
+	  FB.init({
+	    appId      : '申請的app id',
+	    cookie     : true,
+	    xfbml      : true,
+	    version    : 'v2.8'
+	  });
+	  //記錄用戶行為資料 可在後台查看用戶資訊
+	  FB.AppEvents.logPageView();   
+	};
+	//嵌入臉書sdk
+	(function(d, s, id){
+	   var js, fjs = d.getElementsByTagName(s)[0];
+	   if (d.getElementById(id)) {return;}
+	   js = d.createElement(s); js.id = id;
+	   js.src = "https://connect.facebook.net/en_US/sdk.js";
+	   fjs.parentNode.insertBefore(js, fjs);
+	 }(document, 'script', 'facebook-jssdk'));
+	
+	//簡寫法 (取代<body onload="...">)
+	$(function() {
+		//在網頁載入完成後，開始初始化工作
+
+		 //點擊登入按鈕
+	    $("#login-").click(function() {
+	      //檢查臉書登入狀態
+	      FB.getLoginStatus(function(response) {
+	    	  
+	        //如果已經有授權過應用程式
+	        if (response.authResponse) {
+	          //呼叫FB.api()取得使用者資料
+	          FB.api('/me',{fields: 'id,name,email'}, function (response) {
+	              //這邊就可以判斷取得資料跟網站使用者資料是否一致
+	              alert("已登入 = "+JSON.stringify(response));
+	              console.log('已登入 Successful login for: ' + response.name);
+	          });
+	          
+	        //沒授權過應用程式
+	        } else {
+	        	
+	          //呼叫FB.login()請求使用者授權
+	          FB.login(function (response) {
+	            if (response.authResponse) {
+	              FB.api('/me',{fields: 'id,name,email'}, function (response) {
+	                //這邊就可以判斷取得資料跟網站使用者資料是否一致
+	            	  alert("未登入 = "+JSON.stringify(response));
+		              console.log('已登入 Successful login for: ' + response.name);
+	              });
+	            }
+	          //FB.login()預設只會回傳基本的授權資料
+	          //如果想取得額外的授權資料需要另外設定在scope參數裡面
+	          //可以設定的授權資料可以參考官方文件          
+	          }, { scope: 'email,user_likes' });
+	        }
+	      });
+	    });
+		
+	});
+	
+
+</script>
+
+</head>
+
+<body>
+
+<button type="button" id="login-" name="login-" >FB 登入</button>	
+
+</body>
+
+</html>
