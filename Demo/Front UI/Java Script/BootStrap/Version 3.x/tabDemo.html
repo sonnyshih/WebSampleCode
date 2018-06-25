@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" />
+
+
+<!-- Bootstrap  -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme (可以不用載入)-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+	
+	$(function() {
+
+		$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+// 			alert($(this).attr("id"));
+			var tabID = $(this).attr("id");
+			alert(tabID);
+			if(tabID=="home_tab"){
+				$("#page1").show();
+				$("#page2").hide();
+			}
+			
+			if(tabID=="profile_tab"){
+				$("#page1").hide();
+				$("#page2").show();
+			}
+// 			  alert($(e.target).text()); // newly activated tab
+// 			  alert($(e.relatedTarget).text()); // previous active tab
+		})
+
+		$('#myTab a[href="#profile"]').tab('show')
+	});
+	
+	
+</script>
+
+</head>
+
+<body>
+
+	參考:<br> 
+	1. http://www.runoob.com/bootstrap/bootstrap-tab-plugin.html<br>
+	2. https://getbootstrap.com/docs/3.3/javascript/#tabs-events
+	<br>
+	
+<div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist" id="myTab">
+    <li role="presentation" class="active">
+    	<a href="#home" id="home_tab" aria-controls="home" role="tab" data-toggle="tab">
+    		Home
+    	</a>
+    </li>
+    
+    <li role="presentation">
+    	<a href="#profile" id="profile_tab" aria-controls="profile" role="tab" data-toggle="tab">
+    		Profile
+    	</a>
+    </li>
+    
+    <li role="presentation">
+    	<a href="#messages" id="messages_tab" aria-controls="messages" role="tab" data-toggle="tab">
+    		Messages
+    	</a>
+    </li>
+    
+    <li role="presentation">
+    	<a href="#settings" id="settings_tab" aria-controls="settings" role="tab" data-toggle="tab">
+    		Settings
+    	</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">home page</div>
+    <div role="tabpanel" class="tab-pane" id="profile">profile page</div>
+    <div role="tabpanel" class="tab-pane" id="messages">message page</div>
+    <div role="tabpanel" class="tab-pane" id="settings">settings page</div>
+  </div>
+
+</div>
+
+	<div class="col-sm-6" align="right" id="page1">
+		page1
+	</div>
+	
+	<div class="col-sm-6" align="right" id="page2">
+		page2
+	</div>
+	
+</body>
+
+</html>
