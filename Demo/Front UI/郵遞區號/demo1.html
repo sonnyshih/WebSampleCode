@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>json 範例</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="js/tw-city-selector.min.js"></script>
+<script>
+	//簡寫法 (取代<body onload="...">)
+	
+
+</script>
+
+</head>
+
+<body>
+
+
+	<div class="my-selector-c">
+		<div class="col-md-6 form-group">
+			<label class="sr-only">*請選擇縣市</label>
+			 <select id="county" name="county" class="county"></select>
+		</div>
+		<div class="col-md-6 form-group">
+			<label class="sr-only">*選擇地區</label>
+			<select id="district" name="district" class="district"></select>
+			 <input type="hidden" name="zipcode" class="zipcode" value="">
+		</div>
+	</div>
+
+<script type="text/javascript">
+  new TwCitySelector({
+    el: ".my-selector-c",
+    elCounty: ".county", // 在 el 裡查找 dom
+    elDistrict: ".district", // 在 el 裡查找 dom
+    elZipcode: ".zipcode" // 在 el 裡查找 dom
+  });
+  
+	//簡寫法 (取代<body onload="...">)
+	$(function() {
+		alert("asdfsdf");
+	});
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</body>
+
+</html>
