@@ -20,4 +20,7 @@
     Function中的apply, call, bind用法
 
 8. Object-Advanced.js
-    JavaScript 物件進階用法    
+    JavaScript 物件進階用法   
+
+9. Object-OOP.js
+    JavaScript沒有OOP(Object Oriented Programming)概念，但可以模擬類別(class)
