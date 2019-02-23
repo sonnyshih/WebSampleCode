@@ -24,3 +24,8 @@
 
 9. Object-OOP.js
     JavaScript沒有OOP(Object Oriented Programming)概念，但可以模擬類別(class)
+
+10. ES6-Basic.js
+    * 全域變數與區域變數
+    * 常數設定
+    * 解構設定值
