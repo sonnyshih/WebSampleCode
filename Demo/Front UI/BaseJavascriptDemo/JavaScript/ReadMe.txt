@@ -33,3 +33,9 @@
 11. ES-ArrowFunction.js
     * 箭頭函式的宣告
     * this的使用
+
+12. ES-SetAndMap.js
+    * Set 的使用
+    * Map 的使用
+
+13. ES-Proxy.js
