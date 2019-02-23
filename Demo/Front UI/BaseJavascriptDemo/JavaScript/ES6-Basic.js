@@ -37,7 +37,7 @@ let [i,...j] = students;    // 分析陣列中的第1個值，並將餘值放入
 console.log(i + " " + j);
 
 let [k, l, m, n, o] = students; 
-console.log(k + " " + l + " " + m + " " + n + " " + o);
+    console.log(k + " " + l + " " + m + " " + n + " " + o);
 
 let array = [1, 2, [5, 6, 7]];
 let [p, q, [r, s, t]] = array;  //解構設定值的巢狀結構
