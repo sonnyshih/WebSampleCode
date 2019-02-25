@@ -39,3 +39,7 @@
     * Map 的使用
 
 13. ES-Proxy.js
+    * 使用Proxy代理對物件的屬性讀寫進行攔截
+
+14. ES6-Promise.js
+    * Promise 物件執行非同步工作    
