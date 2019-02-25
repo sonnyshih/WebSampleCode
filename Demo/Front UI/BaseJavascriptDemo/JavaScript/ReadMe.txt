@@ -42,4 +42,17 @@
     * 使用Proxy代理對物件的屬性讀寫進行攔截
 
 14. ES6-Promise.js
-    * Promise 物件執行非同步工作    
+    * Promise 物件執行非同步工作   
+
+15. ES6-Generator.js
+    * Generator 產生器與yield敘述
+    * Generator 函數應用
+    * Generator 工作參數的傳遞
+
+16. ES-Class.js
+    * class 定義類別
+    * class 繼承
+
+17. ES6-ClassModule.js, ES6-ClassImport.js
+    注意: 要在React Native 中才能使用
+    * 模組引用             
