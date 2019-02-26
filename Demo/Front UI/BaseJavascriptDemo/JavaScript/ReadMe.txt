@@ -30,15 +30,15 @@
     * 常數設定
     * 解構設定值
 
-11. ES-ArrowFunction.js
+11. ES6-ArrowFunction.js
     * 箭頭函式的宣告
     * this的使用
 
-12. ES-SetAndMap.js
+12. ES6-SetAndMap.js
     * Set 的使用
     * Map 的使用
 
-13. ES-Proxy.js
+13. ES6-Proxy.js
     * 使用Proxy代理對物件的屬性讀寫進行攔截
 
 14. ES6-Promise.js
@@ -49,7 +49,7 @@
     * Generator 函數應用
     * Generator 工作參數的傳遞
 
-16. ES-Class.js
+16. ES6-Class.js
     * class 定義類別
     * class 繼承
 

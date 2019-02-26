@@ -7,7 +7,7 @@ console.log(res);
 
 // arrow function因為只有一個參數與一行程式，所以可以寫成
 let f1 = a => a*a;
-let res1 = f(3);
+let res1 = f1(3);
 console.log(res1);
 
 //支援函數參數的解構設定值
