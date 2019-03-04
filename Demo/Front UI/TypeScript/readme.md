@@ -14,3 +14,12 @@
 # 二、TypeScript 語法範例
   1. Variable.ts
       * 變數宣告
+
+  2. Function.tx
+     * 函數型別   
+     * 選擇性參數
+     * 預設參數
+     * 剩餘參數
+     * Lambda運算式和使用‘this’
+  
+  3. 
