@@ -30,4 +30,12 @@
      * 類別型別 (Class Type)
      * 擴充介面
      * 混合型別 (Hybird Type)
-  4. 
+   
+  4. Class.ts
+     * 基本型 (Basic Classes)
+     * 繼承 (Inheritance Classes)
+     * public, private, protected 修飾符 (public, private 和 protected modifiers)
+     * 靜態屬性 (Static Properties)
+     * 抽象類別 (Abstract Class)
+  
+  5.  
