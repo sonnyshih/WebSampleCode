@@ -15,11 +15,19 @@
   1. Variable.ts
       * 變數宣告
 
-  2. Function.tx
+  2. Function.ts
      * 函數型別   
      * 選擇性參數
      * 預設參數
      * 剩餘參數
      * Lambda運算式和使用‘this’
   
-  3. 
+  3. Interface.ts
+     * 基本型
+     * 選擇性屬性 (Optional Properties)
+     * 函數型別 (Function Types)
+     * 陣列型別 (Indexable Types)
+     * 類別型別 (Class Type)
+     * 擴充介面
+     * 混合型別 (Hybird Type)
+  4. 
