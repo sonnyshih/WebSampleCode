@@ -54,7 +54,7 @@
      * 建立啟動lite server 指令
        - 開啟 package.json
        - 在 scripts 中加入 "start": "lite-server"
-         ![alt text](001.jpg "加入啟動lite server指令")
+         ![alt text](images/001.jpg "加入啟動lite server指令")
        - 啟動 lite server
          > $ npm start 
      
@@ -63,6 +63,13 @@
      
      * complie專案中所有的ts檔案
          > $ tsc
+
+     *  **注意如果第一次下載MyFirstProject時，裡面沒有node_module 資料夾時，要先安裝相關套件**
+        <p>yarn 會參考package-lock.json 安裝相關套件</p>
+
+        > $ yarn install
+        <p>可以延長timeout時間: yarn install --network-timeout 1000000 </p>
+        
      *  
   
   6. 
