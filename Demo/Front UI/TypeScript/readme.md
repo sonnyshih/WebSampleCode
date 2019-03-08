@@ -38,4 +38,31 @@
      * 靜態屬性 (Static Properties)
      * 抽象類別 (Abstract Class)
   
-  5.  
+  5. MyFirstProject 建立第一個專案
+     * 建立MyFirstProject資料夾為第一個專案
+     
+     * 在MyFirstProject 資料夾中建立以下2個檔案
+       - index.html
+       - app.ts
+       
+     * npm 初始化專案 (會產生package.json設定檔)
+         > $ npm init
+     
+     * 安裝lite server
+         > $ npm install lite-server --save-dev
+     
+     * 建立啟動lite server 指令
+       - 開啟 package.json
+       - 在 scripts 中加入 "start": "lite-server"
+         ![alt text](001.jpg "加入啟動lite server指令")
+       - 啟動 lite server
+         > $ npm start 
+     
+     * TypeScript初始化專案 (會產生tsconfig.json設定檔)
+         > $ tsc --init
+     
+     * complie專案中所有的ts檔案
+         > $ tsc
+     *  
+  
+  6. 
