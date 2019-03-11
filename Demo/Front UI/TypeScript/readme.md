@@ -70,6 +70,23 @@
         > $ yarn install
         <p>可以延長timeout時間: yarn install --network-timeout 1000000 </p>
         
+     * tsconfig.json 說明
+        * [tsconfig.json設定檔說明](http://   www.typescriptlang.org/docs/handbook/tsconfig-json.html "tsconfig.json設定")
+        
+        * 執行tsc complier時可以下的參數
+          [tsc complier 的參數](http://www.typescriptlang.org/docs/handbook/compiler-options.html "tsc 參數")
+
+        * sourceMap
+         ![alt text](images/002.jpg "加入啟動lite server指令")
+          <p>設定為true時，在complier完成後，在Browser中可以顯示js檔案是對應哪一個ts檔案</p>
+          
+        * noImplicitAny
+          <p>會提示需要設定為any的變數</p>
+
+        * noUnusedParameters
+          <p>在complie時，會顯哪些變數是沒有被用到的
+
+        *     
      *  
   
   6. 
