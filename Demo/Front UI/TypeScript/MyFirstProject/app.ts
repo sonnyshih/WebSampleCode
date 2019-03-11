@@ -1,5 +1,8 @@
 console.log("Hello World");
 
+// const value
+const maxLevels = 100;
+
 //String
 let myName = "Max";
 
@@ -47,6 +50,17 @@ console.log(car);
 car = {brand: "BMW", series: 3};
 console.log(car);
 
+//Block scope (區域變數)
+console.log("### Block scope (區域變數) ###");
+let variable = "Test";
+function reset() {
+    let variable = null;
+    console.log(variable);
+}
+
+reset();
+console.log(variable);
+
 // functions
 // 回傳string
 function returnMyName(): string {
@@ -70,6 +84,36 @@ console.log(multiply(10, 2));
 let myMultiply: (val1: number, val2: number) => number; // 指定輸入變數與回傳值的型態
 myMultiply = multiply;
 console.log(myMultiply(5,3));
+
+// Arrow functions
+console.log(" ### Arrow Functions ###");
+const addNumbers = function (number1: number, number2: number): number {
+    return number1 + number2;
+}
+console.log(addNumbers(10,3));
+
+const multiplyNumbers = (number1: number, number2: number) => number1 * number2;
+console.log(multiplyNumbers(10,3));
+
+const greet = () =>{
+    console.log("Hello!");
+}
+greet();
+
+const greetFriend = (friend:string) => console.log(friend);
+greetFriend("Manu");
+
+//Default Parameters
+console.log("Default Parameters");
+const countdown = (start: number = 10): void=>{
+    console.log(start);
+    while(start>0){
+        start--;
+    }
+    console.log("Done!", start);
+}
+countdown();
+countdown(20);
 
 // Objects
 // 宣告一個物件，裡面的property都要設定資料型態
@@ -115,3 +159,31 @@ function neverReturns(): never {
 // 在tsconfig.json中 把 strictNullChecks打開 ("strictNullChecks": true, )，這樣就可以檢查變數是否能設為null
 let canBeNull: number | null = 12;
 canBeNull = null;
+
+// Rest & Spread
+console.log(" #### Rest & Spread ####");
+const number = [1, 10, 99,-3];
+console.log(Math.max(33, 99,10, -3));
+console.log(Math.max(...number));
+
+function makeArray (name:string, ...args:number[]) {
+    return args;
+}
+console.log(makeArray("Max", 1, 2, 3, 6));
+
+//Desturcturing
+console.log(" #### Desturcturing #### ");
+const myHobbies = ["Cooking", "Sports"];
+const [hobby1, hobby2] = myHobbies;
+console.log(hobby1, hobby2);
+
+const userData1 = {userName: "Max", age:27};
+const {userName:myName1, age:myAge} = userData1;
+console.log(myName1, myAge);
+
+//Template Literals
+const userName = "Max";
+const greeting = `This is a heading!
+I'm ${userName}.
+This is cool!`;
+console.log(greeting);
