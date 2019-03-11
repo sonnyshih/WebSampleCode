@@ -91,6 +91,7 @@ function neverReturns() {
     throw new Error("An error!");
 }
 // Nullable Types (變數型態是可以設定為null)
-// 在tsconfig.json中 把 strictNullChecks打開，這樣就可以檢查變數是否能設為null
+// 在tsconfig.json中 把 strictNullChecks打開 ("strictNullChecks": true, )，這樣就可以檢查變數是否能設為null
 var canBeNull = 12;
 canBeNull = null;
+//# sourceMappingURL=app.js.map
