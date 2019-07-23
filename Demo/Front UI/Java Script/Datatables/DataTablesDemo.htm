@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<!-- jQuery  -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<!-- Datatables css  -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+
+<!-- Datatables js lib  -->
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+
+<script>
+	// 完整寫法 (取代<body onload="...">)
+	$(document).ready(function(){
+		//在網頁載入完成後，開始初始化工作
+		//alert("網頁載入完成後，開始初始化工作");
+		
+		var data = [
+		    {
+		        "name":       "Tiger Nixon",
+		        "position":   "System Architect",
+		        "salary":     "$3,120",
+		        "start_date": "2011/04/25",
+		        "office":     "Edinburgh",
+		        "extn":       "5421"
+		    },
+		    {
+		        "name":       "Garrett Winters",
+		        "position":   "Director",
+		        "salary":     "$5,300",
+		        "start_date": "2011/07/25",
+		        "office":     "Edinburgh",
+		        "extn":       "8422"
+		    },
+		    {
+		        "name":       "Garrett Winters",
+		        "position":   "Director",
+		        "salary":     "$5,300",
+		        "start_date": "2011/07/25",
+		        "office":     "Edinburgh",
+		        "extn":       "8422"
+		    },
+		    {
+		        "name":       "Garrett Winters",
+		        "position":   "Director",
+		        "salary":     "$5,300",
+		        "start_date": "2011/07/25",
+		        "office":     "Edinburgh",
+		        "extn":       "8422"
+		    },
+		    {
+		        "name":       "Garrett Winters",
+		        "position":   "Director",
+		        "salary":     "$5,300",
+		        "start_date": "2011/07/25",
+		        "office":     "Edinburgh",
+		        "extn":       "8422"
+		    },
+		    {
+		        "name":       "Garrett Winters",
+		        "position":   "Director",
+		        "salary":     "$5,300",
+		        "start_date": "2011/07/25",
+		        "office":     "Edinburgh",
+		        "extn":       "8422"
+		    },
+		    {
+		        "name":       "Garrett Winters",
+		        "position":   "Director",
+		        "salary":     "$5,300",
+		        "start_date": "2011/07/25",
+		        "office":     "Edinburgh",
+		        "extn":       "8422"
+		    },
+		    {
+		        "name":       "Garrett Winters",
+		        "position":   "Director",
+		        "salary":     "$5,300",
+		        "start_date": "2011/07/25",
+		        "office":     "Edinburgh",
+		        "extn":       "8422"
+		    },
+		    {
+		        "name":       "Garrett Winters",
+		        "position":   "Director",
+		        "salary":     "$5,300",
+		        "start_date": "2011/07/25",
+		        "office":     "Edinburgh",
+		        "extn":       "8422"
+		    },
+		    {
+		        "name":       "Garrett Winters",
+		        "position":   "Director",
+		        "salary":     "$5,300",
+		        "start_date": "2011/07/25",
+		        "office":     "Edinburgh",
+		        "extn":       "8422"
+		    },
+		    {
+		        "name":       "Garrett Winters",
+		        "position":   "Director",
+		        "salary":     "$5,300",
+		        "start_date": "2011/07/25",
+		        "office":     "Edinburgh",
+		        "extn":       "8422"
+		    },
+		    {
+		        "name":       "Garrett Winters",
+		        "position":   "Director",
+		        "salary":     "$5,300",
+		        "start_date": "2011/07/25",
+		        "office":     "Edinburgh",
+		        "extn":       "8422"
+		    },
+		    {
+		        "name":       "Garrett Winters",
+		        "position":   "Director",
+		        "salary":     "$5,300",
+		        "start_date": "2011/07/25",
+		        "office":     "Edinburgh",
+		        "extn":       "8422"
+		    }
+		];
+		
+		$('#table_id').DataTable({
+			searching: false, //關閉filter功能
+			//paging: false,	//顯示分頁功能
+			//scrollY: 400,	//高度
+			//pageLength: 5,	//每頁筆數
+    		//lengthMenu: [25, 50, 100],//下拉選單每頁顯示幾筆
+			data: data,
+			columns: [
+		        { data: 'name' },
+		        { data: 'position' },
+		        { data: 'salary' },
+		        { data: 'office' }
+		    ]
+		});
+	});
+	
+	//簡寫法
+//	$(function(){
+//		在網頁載入完成後，開始初始化工作
+//	});
+</script>
+
+</head>
+<body>
+	<table id="table_id" class="display">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Office</th>
+        </tr>
+    </thead>    
+</table>
+
+
+</body>
+
+</html>
