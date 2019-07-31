@@ -41,23 +41,17 @@
 
 </head>
 <body>
-	<br>
-	參考: https://github.com/kartik-v/bootstrap-fileinput/issues/219
-	<br>
 <div class="container kv-main">
    
     
-    <form enctype="multipart/form-data" method="post" action="upload_file.php">
+    <form enctype="multipart/form-data" method="post" action="upload_file_add_field.php">
        
 
         <div class="form-group">
             
         	<input name='attachFile[]' id="attachFile" type="file" class="file-loading" multiple>
             
-		</div>
-		
-		<div id="field">
-		</div>
+        </div>
         
         <br>
         <button type="submit" name="uploadForm" class="btn btn-primary">Submit</button>
@@ -86,32 +80,31 @@
 	    $("#attachFile").fileinput({
 	        theme: 'fa',			// 使用 Font Awesome Theme
 	        language: 'zh-TW',		// 設定語系
+	        uploadUrl: 'upload_file_add_field.php', // you must set a valid URL here else you will get an error
+	        enctype: 'multipart/form-data',
+	        allowedFileExtensions: ['jpg', 'png', 'gif','txt'],	//可以上傳的檔案類型
+	        uploadExtraData: function (previewId, index) {
+	            var info = {"tags": index};	// tags: 為欄位名稱, somestuff:為傳送的值
+	            return info;
+	        },
 	        //overwriteInitial: false,
 	        //maxFileSize: 1000,
 	        //maxFilesNum: 3,
 	        maxFileCount: 2,	// 最多選擇多少檔案
+	        //msgFilesTooMany: "Number of files selected for upload ({n}) exceeds maximum allowed limit of {m}. Please retry your upload!",	//超過檔案數量時顯示的訊息
 	        showUpload: true,
 	        //allowedFileTypes: ['image', 'video', 'flash'],
 	 		layoutTemplates:{
 	            //actionDelete:'', //設定刪除按鈕的值為空字串，則去掉圖片上面的縮略刪除按鈕
 	            actionUpload:'', //設定上傳按鈕的值為空字串，則去掉圖片上面的縮略上傳按鈕
 	            actionZoom:'',	 //設定zoom按鈕的值為空字串，則去掉圖片上面的縮略Zoom按鈕
-	            	footer: '<div class="file-thumbnail-footer">\n' +
-	                		'   <div class="file-caption-name">Alt</div>\n' +
-	                		'   <input type="text" class="form-control" name="alt_tw" id="alt_tw" value=""/>\n' +
-	                		'   <input type="text" class="form-control" name="alt_cn" id="alt_cn" value=""/>\n' +
-	                		'   <input type="text" class="form-control" name="alt_en" id="alt_en" value=""/>\n' +
-	                		'</div>'
+	            	footer: '<div>\n' +
+            		'   <div>Alt</div>\n' +
+            		'   繁中: <input type="text" name="alt_tw[]" id="alt_tw" value=""/><br>\n' +
+            		'   簡中: <input type="text" name="alt_cn[]" id="alt_cn" value=""/><br>\n' +
+            		'   英文: <input type="text" name="alt_en[]" id="alt_en" value=""/><br>\n' +
+            		'</div>'
 	        },        
-	        // uploadUrl: 'upload_file.php', // you must set a valid URL here else you will get an error
-	        // enctype: 'multipart/form-data',
-	        allowedFileExtensions: ['jpg', 'png', 'gif','txt'],	//可以上傳的檔案類型
-	        uploadExtraData: function (previewId, index) {
-	            //var info = {"tags": "somestuff"};	// tags: 為欄位名稱, somestuff:為傳送的值
-	            var info = {"tags": index};
-	            alert(info);
-	            return info;
-	        },
 	        slugCallback: function (filename) {
 	            return filename.replace('(', '_').replace(']', '_');
 	        }
@@ -124,8 +117,6 @@
 	        
 	    }).on('fileloaded', function(event, file, previewId, index, reader) {
 	        console.log("fileloaded");
-
-			$("#field").append("<input type='text' name='alt[]' id='alt' value=''><br>");
 	        
 	    }).on('filereset', function(event) {
 	        console.log("filereset");
