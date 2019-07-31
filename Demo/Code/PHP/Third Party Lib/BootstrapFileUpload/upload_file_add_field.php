@@ -34,9 +34,10 @@ foreach ($_FILES["attachFile"]["error"] as $key => $error) {
 if (isset($_POST['uploadForm'])) {
     
     echo "<pre>_FILES = " . print_r($_FILES['attachFile'], TRUE). "</pre>";
-    echo "<pre>_Alt_tw = " . print_r($_POST["alt_tw"], TRUE) . "</pre>";
-    echo "<pre>_Alt_cn = " . print_r($_POST["alt_cn"], TRUE) . "</pre>";
-    echo "<pre>_Alt_en = " . print_r($_POST["alt_en"], TRUE) . "</pre>";
+//     echo "<pre>_Alt_tw = " . print_r($_POST["alt_tw"], TRUE) . "</pre>";
+//     echo "<pre>_Alt_cn = " . print_r($_POST["alt_cn"], TRUE) . "</pre>";
+//     echo "<pre>_Alt_en = " . print_r($_POST["alt_en"], TRUE) . "</pre>";
+    echo "aaa=".json_encode($_POST);
     // 使用ajax 上傳
 } else {
     
@@ -56,7 +57,6 @@ if (isset($_POST['uploadForm'])) {
     
 //     echo json_encode($jsonArray);
     echo json_encode($_POST);
-    
 }
 
 

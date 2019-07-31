@@ -77,20 +77,23 @@
 	});
 	function initUploadfile() {
 		
+		var footerTemplate = '<div class="file-thumbnail-footer" style ="height:94px">\n' +
+	    '  <input class="kv-input kv-new form-control input-sm form-control-sm text-center {TAG_CSS_NEW}" value="{caption}" placeholder="Enter caption...">\n' +
+	    '  <input class="kv-input kv-init form-control input-sm form-control-sm text-center {TAG_CSS_INIT}" value="" placeholder="Enter caption...">\n' +
+	    '  <input id="test" name="test" value="" placeholder="Enter caption...">\n' +
+	    '   <div class="small" style="margin:15px 0 2px 0">{size}</div> {progress}\n{indicator}\n{actions}\n' +
+	    '</div>';
+		
 	    $("#attachFile").fileinput({
 	        theme: 'fa',			// 使用 Font Awesome Theme
 	        language: 'zh-TW',		// 設定語系
 	        uploadUrl: 'upload_file_add_field.php', // you must set a valid URL here else you will get an error
 	        enctype: 'multipart/form-data',
 	        allowedFileExtensions: ['jpg', 'png', 'gif','txt'],	//可以上傳的檔案類型
-	        uploadExtraData: function (previewId, index) {
-	            var info = {"tags": index};	// tags: 為欄位名稱, somestuff:為傳送的值
-	            return info;
-	        },
 	        //overwriteInitial: false,
 	        //maxFileSize: 1000,
 	        //maxFilesNum: 3,
-	        maxFileCount: 2,	// 最多選擇多少檔案
+	        //maxFileCount: 2,	// 最多選擇多少檔案
 	        //msgFilesTooMany: "Number of files selected for upload ({n}) exceeds maximum allowed limit of {m}. Please retry your upload!",	//超過檔案數量時顯示的訊息
 	        showUpload: true,
 	        //allowedFileTypes: ['image', 'video', 'flash'],
@@ -98,16 +101,34 @@
 	            //actionDelete:'', //設定刪除按鈕的值為空字串，則去掉圖片上面的縮略刪除按鈕
 	            actionUpload:'', //設定上傳按鈕的值為空字串，則去掉圖片上面的縮略上傳按鈕
 	            actionZoom:'',	 //設定zoom按鈕的值為空字串，則去掉圖片上面的縮略Zoom按鈕
-	            	footer: '<div>\n' +
-            		'   <div>Alt</div>\n' +
-            		'   繁中: <input type="text" name="alt_tw[]" id="alt_tw" value=""/><br>\n' +
-            		'   簡中: <input type="text" name="alt_cn[]" id="alt_cn" value=""/><br>\n' +
-            		'   英文: <input type="text" name="alt_en[]" id="alt_en" value=""/><br>\n' +
-            		'</div>'
-	        },        
-	        slugCallback: function (filename) {
-	            return filename.replace('(', '_').replace(']', '_');
-	        }
+	            	footer: footerTemplate
+	        },
+	        uploadExtraData: function (previewId, index) {
+	        	var out = {};
+                //$el = $("#test[".index."]");
+                //out['new_' + index] = $("#test["+index+"]").val();
+                
+	        	var out = {}, key, i = 0;
+	            $('.kv-input:visible').each(function() {
+	                $el = $(this);
+	                key = $el.hasClass('kv-new') ? 'new_' + i : 'init_' + i;
+	                out[key] = $el.val();
+	                i++;
+	            });
+	            
+	            return out;
+	        	
+//	            var info = {"tags": index};	// tags: 為欄位名稱, somestuff:為傳送的值
+//	            return info;
+	        },
+//	        previewThumbTags: {
+//	            '{TAG_VALUE}': '',        // no value
+//	            '{TAG_CSS_NEW}': '',      // new thumbnail input
+//	            '{TAG_CSS_INIT}': 'kv-hidden'  // hide the initial input
+//	        },
+//	        slugCallback: function (filename) {
+//	            return filename.replace('(', '_').replace(']', '_');
+//	        }
 	        
 	    }).on('fileclear', function(event) {
 	        console.log("fileclear");
@@ -140,7 +161,7 @@
 	    	
 	        console.log('jsonString = '+jsonString);
 	        console.log('jsonData = '+jsonData.fileNumber);
-	        
+        
 	    }).on('filesuccessremove', function(event, id) {//刪除已經上傳完成的檔案
 	    	alert("刪除已經上傳完成的檔案");
 	    
