@@ -94,8 +94,9 @@
 	});
 	
 	function getTestFieldString(){
-		var arraySize = $('[id="test"]:visible').length;
-		alert("Array Size:" + arraySize);
+		var testArraySize = $('[id="test"]:visible').length;
+		var altArraySize = $('[id="alt"]:visible').length;
+		alert("Test Array Size:" + testArraySize + "\nAlt Array Size:" + altArraySize);
 		
 		var info = {};
 		i = 0;
@@ -104,7 +105,12 @@
 			info["test_" + i] = $(this).val();
 			i++;
 		});
-		
+
+		$('[id="alt"]:visible').each(function(){
+			info["alt_" + i] = $(this).val();
+			i++;
+		});
+
 		jsonString = JSON.stringify(info); // Oject -> String
 		
 		$("#alt_data").val(jsonString);
@@ -117,7 +123,8 @@
 	function initUploadfile() {
 		
 		var footerTemplate = '<div class="file-thumbnail-footer" style ="height:94px">\n' +
-	    '  <input id="test" name="test" value="" placeholder="Enter caption...">\n' +
+	    '  test: <input id="test" name="test" value="" placeholder="Enter caption..."><br>\n' +
+	    '  alt: <input id="alt" name="alt" value="" placeholder="Enter caption...">\n' +
 	    '</div>';
 		
 	    $("#attachFile").fileinput({
@@ -147,6 +154,7 @@
 				// 一組是hidden，一組是visible，輸入資料時，只有visible這組會有值，
 				// 所以只取visible 這組才有值
 				info['test_' + index] = $($('[id="test"]:visible')[index]).val();
+				info['alt_' + index] = $($('[id="alt"]:visible')[index]).val();
 				return info;
 	        	
 //	            var info = {"tags": index};	// tags: 為欄位名稱, somestuff:為傳送的值
