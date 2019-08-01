@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+	// 完整寫法 (取代<body onload="...">)
+	$(document).ready(function(){
+		//在網頁載入完成後，開始初始化工作
+		console.log($($('[id="aaa"]')[0]).val());
+		console.log($($('[id="aaa"]')[1]).val());
+		console.log($($('[id="aaa"]')[2]).val());
+		
+	});
+	
+	//簡寫法
+//	$(function(){
+//		在網頁載入完成後，開始初始化工作
+//	});
+</script>
+
+</head>
+<body>
+	<h1>相同ID</h1>
+
+	<input type="text" id="aaa" name="aaa" value='aaa'><br>
+    <input type="text" id="aaa" name="aaa" value='bbb'><br>
+    <input type="text" id="aaa" name="aaa" value='ccc'><br>
+	
+
+</body>
+
+</html>
