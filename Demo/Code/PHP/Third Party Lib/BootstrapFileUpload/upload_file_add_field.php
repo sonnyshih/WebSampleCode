@@ -31,14 +31,19 @@ foreach ($_FILES["attachFile"]["error"] as $key => $error) {
 
 
 // 使用form 上傳
-if (isset($_POST['uploadForm'])) {
+if (isset($_POST['uploadFormButton'])) {
     
     echo "<pre>_FILES = " . print_r($_FILES['attachFile'], TRUE). "</pre>";
-//     echo "<pre>_Alt_tw = " . print_r($_POST["alt_tw"], TRUE) . "</pre>";
-//     echo "<pre>_Alt_cn = " . print_r($_POST["alt_cn"], TRUE) . "</pre>";
-//     echo "<pre>_Alt_en = " . print_r($_POST["alt_en"], TRUE) . "</pre>";
-    echo "aaa=".json_encode($_POST);
-    // 使用ajax 上傳
+
+    //     echo "aaa=".json_encode($_POST);
+    
+    $altString = $_POST["alt_data"];
+    $altData = json_decode($altString, true);
+    print_r($altData);
+//     echo "alt_test_1=".$altData["test_0"];
+    
+    
+// 使用ajax 上傳    
 } else {
     
 //     echo "tags=".$_POST["tags"];

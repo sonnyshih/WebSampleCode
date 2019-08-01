@@ -41,10 +41,13 @@
 
 </head>
 <body>
+
+參考: http://plugins.krajee.com/file-input-ajax-demo/7
+<br><br>
 <div class="container kv-main">
    
     
-    <form enctype="multipart/form-data" method="post" action="upload_file_add_field.php">
+    <form id="myform" enctype="multipart/form-data" method="post" action="upload_file_add_field.php">
        
 
         <div class="form-group">
@@ -53,8 +56,10 @@
             
         </div>
         
+        <input type="text" name="alt_data" id="alt_data" >
+        
         <br>
-        <button type="submit" name="uploadForm" class="btn btn-primary">Submit</button>
+        <button type="submit" name="uploadFormButton" class="btn btn-primary">Submit</button>
         <button type="reset" class="btn btn-default">Reset</button>
  
     </form>
@@ -62,6 +67,8 @@
 	<br><br>
     <button type="button" name="clickUpload" id="clickUpload" class="btn btn-primary" >Click Upload</button>
 	
+	<br><br>
+    <button type="button" name="getTestField" id="getTestField" class="btn btn-primary" >Click Get Test Field Value</button>
 
 
 </div>
@@ -71,17 +78,46 @@
 	$(function() {
 		initUploadfile();
 		
+		$('#myform').submit(function() {
+			getTestFieldString();
+		    return true; // return false to cancel form action
+		});
+		
+		$("#getTestField").on("click", function(){
+			getTestFieldString();
+		});
+		
+		
 		$("#clickUpload").on("click", function(){
 			$("#attachFile").fileinput("upload");
 		});
 	});
+	
+	function getTestFieldString(){
+		var arraySize = $('[id="test"]:visible').length;
+		alert("Array Size:" + arraySize);
+		
+		var info = {};
+		i = 0;
+		
+		$('[id="test"]:visible').each(function(){
+			info["test_" + i] = $(this).val();
+			i++;
+		});
+		
+		jsonString = JSON.stringify(info); // Oject -> String
+		
+		$("#alt_data").val(jsonString);
+		
+		alert(jsonString);
+
+	}
+	
+	
 	function initUploadfile() {
 		
 		var footerTemplate = '<div class="file-thumbnail-footer" style ="height:94px">\n' +
-	    '  <input class="kv-input kv-new form-control input-sm form-control-sm text-center {TAG_CSS_NEW}" value="{caption}" placeholder="Enter caption...">\n' +
-	    '  <input class="kv-input kv-init form-control input-sm form-control-sm text-center {TAG_CSS_INIT}" value="" placeholder="Enter caption...">\n' +
 	    '  <input id="test" name="test" value="" placeholder="Enter caption...">\n' +
-	    '   <div class="small" style="margin:15px 0 2px 0">{size}</div> {progress}\n{indicator}\n{actions}\n' +
 	    '</div>';
 		
 	    $("#attachFile").fileinput({
@@ -104,31 +140,18 @@
 	            	footer: footerTemplate
 	        },
 	        uploadExtraData: function (previewId, index) {
-	        	var out = {};
-                //$el = $("#test[".index."]");
-                //out['new_' + index] = $("#test["+index+"]").val();
-                
-	        	var out = {}, key, i = 0;
-	            $('.kv-input:visible').each(function() {
-	                $el = $(this);
-	                key = $el.hasClass('kv-new') ? 'new_' + i : 'init_' + i;
-	                out[key] = $el.val();
-	                i++;
-	            });
-	            
-	            return out;
+				
+				var info = {};
+				
+				// 因為bootstrap fileupload在顯示圖片或是欄位時，都會新增2組，
+				// 一組是hidden，一組是visible，輸入資料時，只有visible這組會有值，
+				// 所以只取visible 這組才有值
+				info['test_' + index] = $($('[id="test"]:visible')[index]).val();
+				return info;
 	        	
 //	            var info = {"tags": index};	// tags: 為欄位名稱, somestuff:為傳送的值
 //	            return info;
-	        },
-//	        previewThumbTags: {
-//	            '{TAG_VALUE}': '',        // no value
-//	            '{TAG_CSS_NEW}': '',      // new thumbnail input
-//	            '{TAG_CSS_INIT}': 'kv-hidden'  // hide the initial input
-//	        },
-//	        slugCallback: function (filename) {
-//	            return filename.replace('(', '_').replace(']', '_');
-//	        }
+	        }
 	        
 	    }).on('fileclear', function(event) {
 	        console.log("fileclear");
