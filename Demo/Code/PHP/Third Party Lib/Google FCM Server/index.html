@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+	//簡寫法
+//	$(function(){
+//		在網頁載入完成後，開始初始化工作
+//	});
+</script>
+
+</head>
+<body>
+<form action="fcm.php" method="post">
+手機的Token: 
+<textarea id="token" name="token" rows="10" cols="80"></textarea><br><br>
+
+Title: <input type="text" id="title" name="title"><br><br>
+
+Message: 
+<textarea id="message" name="message" rows="10" cols="80"></textarea><br><br>
+
+<button type="submit" id="send" name="send">send </button>
+</form>
+
+
+</body>
+
+</html>
