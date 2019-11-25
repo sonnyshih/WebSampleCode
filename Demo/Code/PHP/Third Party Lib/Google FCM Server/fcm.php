@@ -1,5 +1,8 @@
 <?php
-define('API_SERVER_ACCESS_KEY', 'AAAAig_IzKY:APA91bE22xP4ZitUv_JbIHtCig0l6EDreefO1y_lw7cC9cetTBv3VuVfeu-TcjcbHs_PuhITqpso8QO4Z3A71RkIjFg1ij1py1ThKyxQq2Ehcxa8AcE2psse-k5itsOHwapqXp1I3ZHN');
+// define('API_SERVER_ACCESS_KEY', 'AAAAig_IzKY:APA91bE22xP4ZitUv_JbIHtCig0l6EDreefO1y_lw7cC9cetTBv3VuVfeu-TcjcbHs_PuhITqpso8QO4Z3A71RkIjFg1ij1py1ThKyxQq2Ehcxa8AcE2psse-k5itsOHwapqXp1I3ZHN');
+
+// 客戶的API Key
+define('API_SERVER_ACCESS_KEY', 'AAAAz95FcLo:APA91bE-T0yFlJHRZfZJ9J9V7GB8BncTQ_awcYLzM0PHBqjs9kVsYYgRArzt9ieJ7rpk6Q_DPenEDueiEM39o_ZpHhZraYV3TX2t7XlvIoP8HNL3yXd3_jnc6-uY1eA4zPwp4zoMVpsB');
 
 $token = $_POST['token']; /* FCM 接收端的token */
 $title = $_POST['title']; /* 要接收的標題 */
