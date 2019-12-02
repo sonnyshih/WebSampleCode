@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle tw zip code</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-twzipcode@1.7.14/jquery.twzipcode.min.js"></script>
+
+<LINK rel="stylesheet" type="text/css" href="style.css">
+
+<script>
+	$(function(){
+		initBase();
+		
+		initAdvance();
+	});
+	
+	function initBase(){
+		$("#twzipcode").twzipcode();	// 基本歀
+	}
+	
+	function initAdvance(){
+		$("#container").twzipcode({
+			zipcodeIntoDistrict: false, // true: 郵遞區號自動顯示在區別選單中
+		    'css': [
+		        'addr-city', 		// 自訂 縣市 class 名稱
+		        'addr-area',	    // 自訂 鄉鎮市區 class 名稱
+		        'addr-zip'			// 自訂 郵遞區號 class 名稱
+		    ],
+
+			countyName: "city", 	// 自訂城市 select 標籤的 name 值
+			districtName: "area", 	// 自訂區別 select 標籤的 name 值
+			zipcodeName: "postcode"	// 自訂區別 select 標籤的 name 值
+		});
+	}
+</script>
+
+
+</head>
+<body>
+參考: https://github.com/essoduke/jQuery-TWzipcode
+<br>
+	<h1>基本歀</h1>
+	<div id="twzipcode"></div>
+	
+	<br><br><br><br>
+
+	<h1>進階歀</h1>
+	<div id="container"></div>
+
+</body>
+
+</html>

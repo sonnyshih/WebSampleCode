@@ -1,0 +1,15 @@
+.addr-city {
+	width: 90px;
+}
+.addr-area {
+	width: 90px;
+}
+.addr-city {
+	background: rgb(65, 105, 225); color: rgb(255, 255, 255);
+}
+.addr-area {
+	background: rgb(0, 128, 0); color: rgb(255, 255, 255);
+}
+.addr-zip {
+	background: rgb(204, 0, 0); border: 1px solid rgb(102, 102, 102); color: rgb(255, 255, 255);
+}
