@@ -6,10 +6,72 @@
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="js/tw-city-selector.min.js"></script>
-<script>
-	//簡寫法 (取代<body onload="...">)
-	
+<script type="text/javascript">
+	onlyArea =['臺北市', '基隆市', '新北市', '宜蘭縣', '桃園市', '新竹市', '新竹縣', 
+	    '苗栗縣', '臺中市', '彰化縣', '南投縣', '嘉義市', '嘉義縣', '雲林縣', 
+	    '臺南市', '高雄市', '屏東縣', '臺東縣', '花蓮縣'];
 
+  
+	//簡寫法 (取代<body onload="...">)
+	$(function() {
+		
+		beforeTwCitySelector();
+		
+		
+		$("#assignAddress").click(function(){
+			afterTwCitySelector();
+			
+		});
+		
+		$("#check_same").click(function() {
+			if($(this).prop("checked")) {
+				afterTwCitySelector();
+				
+			} else {
+				beforeTwCitySelector();				
+			}
+		});
+	});
+ 
+function beforeTwCitySelector(){
+// 如果county, district有設定css時,當需要做重新定義時，需做以下的步驟才不會出錯	
+//	$("#county").removeClass('nice-select niceselect_option');
+//	$("#district").removeClass('nice-select niceselect_option');
+//	$("#county").addClass('county');
+//	$("#district").addClass('district');
+
+	   new TwCitySelector({
+		    el: ".my-selector-c",
+		    elCounty: ".county", // 在 el 裡查找 dom
+		    elDistrict: ".district", // 在 el 裡查找 dom
+		    elZipcode: ".zipcode", // 在 el 裡查找 dom
+// 		   	countyClassName: 'nice-select niceselect_option', 
+// 		    districtClassName: 'nice-select niceselect_option', 
+ 		    only: onlyArea,
+
+		  });
+}	
+	
+ function afterTwCitySelector(){
+// 如果county, district有設定css時,當需要做重新定義時，需做以下的步驟才不會出錯	
+//		$("#county").removeClass('nice-select niceselect_option');
+//		$("#district").removeClass('nice-select niceselect_option');
+//		$("#county").addClass('county');
+//		$("#district").addClass('district');
+		
+ 	new TwCitySelector({
+	    el: ".my-selector-c",
+	    elCounty: ".county", // 在 el 裡查找 dom
+	    elDistrict: ".district", // 在 el 裡查找 dom
+	    elZipcode: ".zipcode", // 在 el 裡查找 dom
+//	   	countyClassName: 'nice-select niceselect_option', 
+//	    districtClassName: 'nice-select niceselect_option', 
+	    only: onlyArea,
+    	selectedCounty: "臺北市",
+    	selectedDistrict: "萬華區"
+	  });
+	  
+ }
 </script>
 
 </head>
@@ -29,22 +91,10 @@
 		</div>
 	</div>
 
-<script type="text/javascript">
-  new TwCitySelector({
-    el: ".my-selector-c",
-    elCounty: ".county", // 在 el 裡查找 dom
-    elDistrict: ".district", // 在 el 裡查找 dom
-    elZipcode: ".zipcode" // 在 el 裡查找 dom
-  });
-  
-	//簡寫法 (取代<body onload="...">)
-	$(function() {
-		alert("asdfsdf");
-	});
-</script>
+	<h3>收件人 <input type='checkbox' id='check_same'> <label>同訂購人</label></h3>
+	<button type="button" id="assignAddress" name="assignAddress">指定地址</button>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </body>
 
 </html>
