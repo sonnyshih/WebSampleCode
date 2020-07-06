@@ -103,6 +103,40 @@
 	        });
 	}
 
+	// 使用ajax retrun 值
+	function ajaxPostAsync(){
+		ajaxObj = $.ajax({
+		            type:"POST",
+		            url: "post_json.php",
+		            async: false,   // async ajax
+		            dataType: "json",
+		            data: {   name: $("#staffName").val(),
+		                	number: $("#staffNumber").val(),
+		                       sex: $("#staffSex").val(),
+		                     hello:'{"child":[{ "id":"1", "name":"bob"},{ "id":"2", "name":"jonas"}]}'
+		            },
+		            success: function(data) {	// 回傳的data是 object
+		                if (data.name) {
+		                	alert('員工：' + data.name + '，儲存成功！');
+		                } else {
+		                	alert(data.msg);
+		                }
+		            
+	             	if (data.child) {
+	             		alert(JSON.stringify(data.child));
+	             	}
+	
+		            },
+		            error: function(jqXHR) {
+		                alert("發生錯誤: " + jqXHR.status);
+		            }
+		        });
+		 
+		 var jsonString = ajaxObj.responseText;    // return json String.
+	        jsonObject = JSON.parse(jsonString);
+		 
+		alert(jsonObject.name);
+	}
 	
 	// 使用ajax post Text
 	function ajaxPostText(){
