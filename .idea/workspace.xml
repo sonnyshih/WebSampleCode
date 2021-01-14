@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery選擇器Demo.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Code/PHP/Demo/日期區間/date-string-convert-date.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +27,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo/Front UI/jQueryDemo" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -41,11 +43,40 @@
       <option name="presentableId" value="Default" />
       <updated>1597025345203</updated>
       <workItem from="1597025346403" duration="128000" />
-      <workItem from="1597025502560" duration="700000" />
+      <workItem from="1597025502560" duration="1512000" />
+      <workItem from="1597112242368" duration="637000" />
+      <workItem from="1597846043569" duration="1034000" />
+      <workItem from="1597889946488" duration="1869000" />
+      <workItem from="1598000787975" duration="1752000" />
+      <workItem from="1598345200084" duration="138000" />
+      <workItem from="1598594209030" duration="677000" />
+      <workItem from="1599322000944" duration="740000" />
+      <workItem from="1599447725833" duration="285000" />
+      <workItem from="1599448143492" duration="183000" />
+      <workItem from="1601089731043" duration="1116000" />
+      <workItem from="1608790956993" duration="497000" />
+      <workItem from="1609135513586" duration="604000" />
+      <workItem from="1609146828063" duration="942000" />
+      <workItem from="1610607052020" duration="318000" />
+      <workItem from="1610608167493" duration="12000" />
+      <workItem from="1610608591300" duration="1387000" />
     </task>
+    <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
+      <created>1597026477931</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597026477931</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
+    <MESSAGE value="jQuery選擇器Demo.htm" />
+    <option name="LAST_COMMIT_MESSAGE" value="jQuery選擇器Demo.htm" />
   </component>
 </project>
