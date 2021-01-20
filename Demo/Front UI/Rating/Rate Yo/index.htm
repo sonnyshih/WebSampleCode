@@ -1,0 +1,36 @@
+<!--參考: https://rateyo.fundoocode.ninja/ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Rate Yo! 星評 Demo</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+
+</head>
+<body>
+	<div id="rateYo"></div>
+
+	<script type="text/javascript">
+		$(function(){
+			$("#rateYo").rateYo({
+				//rating: 3.3,				//星星數
+				starWidth: "20px",			// 設定大小 (預設18px)
+				normalFill: "#A0A0A0",		// 未選填滿的顏色 (預設: #808080)
+				ratedFill: "#E74C3C",		// 已選填滿的顏色 (預設: #F39C12)
+				halfStar: true,				// 評價單位: 半顆星
+				//fullStar: true,			// 評價單位: 全顆星
+				onChange: function (rating, rateYoInstance) {
+					console.log(rating);
+					// $(this).next().text(rating);
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>

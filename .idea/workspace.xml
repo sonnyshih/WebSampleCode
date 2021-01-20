@@ -2,48 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/css/star-rating.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/css/star-rating.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/img/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/LANG.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/bn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/kk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/pt-BR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/ua.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/zh-tw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/zh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/star-rating.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/js/star-rating.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/sample.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-fa/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-fa/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-fa/theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-fa/theme.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-fas/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-fas/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-fas/theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-fas/theme.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-svg/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-svg/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-svg/theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-svg/theme.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-uni/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-uni/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-uni/theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-uni/theme.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Rate Yo/index.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/css/star-rating.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/css/star-rating.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/css/star-rating.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/css/star-rating.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/img/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/img/loading.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/LANG.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/locales/LANG.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/locales/ar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/bn.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/locales/bn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/de.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/locales/de.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/es.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/locales/es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/fa.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/locales/fa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/locales/fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/it.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/locales/it.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/kk.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/locales/kk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/ko.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/locales/ko.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/pl.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/locales/pl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/pt-BR.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/locales/pt-BR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/ro.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/locales/ro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/locales/ru.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/locales/tr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/ua.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/locales/ua.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/zh-tw.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/locales/zh-tw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales/zh.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/locales/zh.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/star-rating.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/star-rating.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/js/star-rating.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/js/star-rating.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/sample.html" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/sample.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-fa/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/themes/krajee-fa/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-fa/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/themes/krajee-fa/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-fa/theme.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/themes/krajee-fa/theme.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-fa/theme.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/themes/krajee-fa/theme.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-fas/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/themes/krajee-fas/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-fas/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/themes/krajee-fas/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-fas/theme.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/themes/krajee-fas/theme.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-fas/theme.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/themes/krajee-fas/theme.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-svg/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/themes/krajee-svg/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-svg/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/themes/krajee-svg/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-svg/theme.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/themes/krajee-svg/theme.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-svg/theme.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/themes/krajee-svg/theme.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-uni/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/themes/krajee-uni/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-uni/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/themes/krajee-uni/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-uni/theme.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/themes/krajee-uni/theme.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Rating/themes/krajee-uni/theme.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating/themes/krajee-uni/theme.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,17 +66,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo/Front UI/Rating/Rating" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo/Front UI/Rating/Rating" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/Rating/js" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/Rating" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/Rating/img" />
-      <recent name="$PROJECT_DIR$/Demo/Front UI/Rating/css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -106,7 +110,9 @@
       <workItem from="1610608591300" duration="1981000" />
       <workItem from="1610956608034" duration="5309000" />
       <workItem from="1611020525458" duration="16000" />
-      <workItem from="1611020569775" duration="4186000" />
+      <workItem from="1611020569775" duration="4421000" />
+      <workItem from="1611105763261" duration="416000" />
+      <workItem from="1611106206280" duration="2516000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -122,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610610221743</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1. Add the rating demo.">
+      <created>1611035062320</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1611035062320</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +145,7 @@
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <MESSAGE value="jQuery選擇器Demo.htm" />
     <MESSAGE value="1. Add the string convert to date demo." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Add the string convert to date demo." />
+    <MESSAGE value="1. Add the rating demo." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Add the rating demo." />
   </component>
 </project>
