@@ -31,4 +31,13 @@
     $date = $monShortString." ". $day .", ". $year;
     echo $date;
 
+
+    $weekday = getChineseWeekday($dateString);
+    echo $weekday;
+
+function getChineseWeekday($datetime){
+    $weekday = date('w', strtotime($datetime));
+    return ['日', '一', '二', '三', '四', '五', '六'][$weekday];
+//    return '星期' . ['日', '一', '二', '三', '四', '五', '六'][$weekday];
+}
 ?>
