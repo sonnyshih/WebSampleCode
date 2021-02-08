@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Demo/Code/PHP/Demo/日期區間/date-assign-date.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/Code/PHP/Demo/日期區間/date-string-convert-date.php" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Code/PHP/Demo/日期區間/date-string-convert-date.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +24,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo/Front UI/Rating/Rating" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
@@ -75,7 +76,14 @@
       <workItem from="1611121956095" duration="541000" />
       <workItem from="1611281192231" duration="2240000" />
       <workItem from="1611887575243" duration="198000" />
-      <workItem from="1611888003989" duration="72000" />
+      <workItem from="1611888003989" duration="719000" />
+      <workItem from="1611911416362" duration="634000" />
+      <workItem from="1611991853719" duration="530000" />
+      <workItem from="1612089329284" duration="9000" />
+      <workItem from="1612102769648" duration="819000" />
+      <workItem from="1612668430720" duration="1050000" />
+      <workItem from="1612687384933" duration="1006000" />
+      <workItem from="1612746940609" duration="1722000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -105,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611108835566</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1. Add the get chinese weekday.">
+      <created>1611888114195</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1611888114195</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +132,7 @@
     <MESSAGE value="1. Add the string convert to date demo." />
     <MESSAGE value="1. Add the rating demo." />
     <MESSAGE value="1. Add the Rate Yo! rating demo." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Add the Rate Yo! rating demo." />
+    <MESSAGE value="1. Add the get chinese weekday." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Add the get chinese weekday." />
   </component>
 </project>
