@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+	<title>JQuery-validation demo | Bootstrap</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+
+	<!-- jQuery Core -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	
+	<!-- jQuery UI -->
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" />
+	
+	<!-- jQuery Validate -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-validation-1.17.0/localization/messages_zh_TW.min.js"></script>
+	
+</head>
+<body>
+
+	<div class="container">
+		<form id="register_form" method="post" action="register.php">
+			
+    		<div class="row">
+    			<div class="col-md-8 center no-padding">
+    				<div class="col-md-12 m-b-20">
+    					<h3>CheckBox demo</h3>
+
+    				</div>
+    
+    				<div class="col-md-12 no-padding">
+						<div class="form-group">
+							<label for="gui_layout">* 場域</label>
+							<div class="row" id="gui_layout">
+								&nbsp;&nbsp;
+								<div class="icheck-material-blue">
+									<input type="checkbox" id="is_gui_a5d222ec-a2d4-4483-849b-c97d9bac413b" name="is_gui[]" value="JS-F001">
+									<label for="is_gui_a5d222ec-a2d4-4483-849b-c97d9bac413b">JS-F001-加伸1</label>
+								</div>
+								&nbsp;&nbsp;
+								<div class="icheck-material-blue">
+									<input type="checkbox" id="is_gui_eb1a5ddf-ceaf-426c-9ba2-b6d40999ed5a" name="is_gui[]" value="JS-F002">
+									<label for="is_gui_eb1a5ddf-ceaf-426c-9ba2-b6d40999ed5a">JS-F002-加伸 2</label>
+								</div>
+							</div>
+							<label id="field_error" class="error" for="is_gui[]"></label>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="username1">Username</label>
+							<div class="col-sm-5">
+								<input type="text" class="form-control" id="username" name="username" placeholder="Username" />
+							</div>
+						</div>
+
+					</div>
+
+    				<div class="col-md-12 form-group m-t-20">
+    					<button type="submit" id="register_button" name="register_button" class="btn btn-default">繼續</button>
+    				</div>
+    			</div>
+    		</div>
+		</form>
+	</div>
+
+
+	<script type="text/javascript">
+
+	$(function() {
+
+		initValidateCheck();
+	});
+
+
+
+	function initValidateCheck(){
+
+		
+		$( "#register_form" ).validate( {
+			rules: {
+				"is_gui[]": {
+					required: true,
+					minlength: 1
+				},
+				"username": {
+					required: true
+				}
+			},
+			errorPlacement: function (error, element) {
+				var type = $(element).attr("type");
+				if (type === "checkbox") {
+					// custom placement
+					$("#field_error").text($(error).text());
+				} else {
+					error.insertAfter(element);
+				}
+			}
+			,
+			submitHandler: function(form){
+	       		form.submit();
+			}
+		} );
+	}
+	</script>
+</body>
+</html>
