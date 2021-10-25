@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+
+	//簡寫法
+	$(function(){
+		initField()
+	});
+
+	function initField() {
+		var fieldArray = {"JS-F001": ["JS-H001"], "JS-F002": ["JS-H002"]}
+
+		Object.entries(fieldArray).forEach(([key, value]) => {
+			$("#field_id").append($("<option></option>")
+					.attr("value", key)
+					.text(key));
+		});
+
+		$("#field_id").change(function () {
+
+			$("#house_no").empty();
+			$("#house_no").append($("<option></option>").attr("value", "").text("選擇 House No"));
+			fieldArray[$(this).val()].forEach(function (item, index, array) {	// 物件, 索引, 全部陣列
+				//console.log(item, index); // 物件, 索引
+				$("#house_no").append($("<option></option>")
+						.attr("value", item)
+						.text(item));
+			});
+
+		});
+
+		$("#house_no").change(function() {
+			alert($(this).val());
+		});
+	}
+</script>
+
+</head>
+<body>
+
+	<div class="row">
+		<div class="col-lg-2">
+			<div class="form-group">
+				<label for="field_id" class="col-sm-1 control-label">&nbsp;</label>
+				<select class="form-control" id="field_id" name="field_id">
+					<option value=""></option>
+				</select>
+			</div>
+		</div>
+
+		<div class="col-lg-2">
+			<label for="house_no" class="col-sm-1 control-label">&nbsp;</label>
+			<div class="input-group">
+				<select class="form-control" id="house_no" name="house_no">
+					<option value=""></option>
+				</select>
+			</div>
+		</div>
+	</div><!-- /.row -->
+
+</body>
+
+</html>

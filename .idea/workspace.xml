@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo/checkbox_demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/selectAndForeachDemo.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,17 +26,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo/Front UI/jQueryDemo" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/Rating/Rating" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/Rating/js" />
-      <recent name="$PROJECT_DIR$/Demo/Front UI/Rating" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating" />
@@ -86,7 +86,8 @@
       <workItem from="1612746940609" duration="1722000" />
       <workItem from="1620887323996" duration="347000" />
       <workItem from="1621328145917" duration="86000" />
-      <workItem from="1634624633482" duration="1131000" />
+      <workItem from="1634624633482" duration="1980000" />
+      <workItem from="1635131898024" duration="2184000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -123,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611888114195</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1. Add the checkbox_demo.html">
+      <created>1634627553646</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1634627553646</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +144,7 @@
     <MESSAGE value="1. Add the rating demo." />
     <MESSAGE value="1. Add the Rate Yo! rating demo." />
     <MESSAGE value="1. Add the get chinese weekday." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Add the get chinese weekday." />
+    <MESSAGE value="1. Add the checkbox_demo.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Add the checkbox_demo.html" />
   </component>
 </project>
