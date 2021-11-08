@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/selectAndForeachDemo.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/checkbox-子項目全選/checkbox-子項目全選.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +39,7 @@
       <recent name="$PROJECT_DIR$/Demo/Front UI/Rating/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/checkbox-子項目全選" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating" />
     </key>
   </component>
@@ -87,7 +88,9 @@
       <workItem from="1620887323996" duration="347000" />
       <workItem from="1621328145917" duration="86000" />
       <workItem from="1634624633482" duration="1980000" />
-      <workItem from="1635131898024" duration="2184000" />
+      <workItem from="1635131898024" duration="3097000" />
+      <workItem from="1636092026679" duration="58000" />
+      <workItem from="1636335550009" duration="2341000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -131,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634627553646</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="1. Add the selectAndForeachDemo.htm">
+      <created>1635134550076</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1635134550076</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +155,7 @@
     <MESSAGE value="1. Add the Rate Yo! rating demo." />
     <MESSAGE value="1. Add the get chinese weekday." />
     <MESSAGE value="1. Add the checkbox_demo.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Add the checkbox_demo.html" />
+    <MESSAGE value="1. Add the selectAndForeachDemo.htm" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Add the selectAndForeachDemo.htm" />
   </component>
 </project>

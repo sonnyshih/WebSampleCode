@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<!-- jquery-ui http://jqueryui.com/ -->
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+	<!-- Bootstrap 4 -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
+	<!-- icheck material -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/icheck-material@1.0.1/icheck-material.min.css">
+
+	<!--##### jQuery Treetable Start #####  -->
+	<link href="css/jQueryTreetable/jquery.treetable.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="css/jQueryTreetable/jquery.treetable.theme.custom.css" media="all" rel="stylesheet" type="text/css" />
+	<script src="js/jQueryTreetable/jquery.treetable.js"></script>
+	<!--##### jQuery Treetable End #####  -->
+
+<script type="text/javascript">
+
+	$(function(){
+		initCategoryList();
+	});
+
+	function initCategoryList(){
+		$("#category_table").treetable({
+			stringCollapse: "收起",
+			stringExpand: "展開",
+			expandable: true
+		});
+
+		$("#category_table").treetable("expandAll");
+
+	}
+
+	function selectSubMenu(id){
+		var checked = $("#menuId" + id).prop("checked");
+
+		$("input[name='menuId[]']").each(function(){
+			if ($(this).attr('data-parent-id') == id) {
+				$(this).prop("checked", checked);
+			}
+		});
+	}
+
+</script>
+
+</head>
+<body>
+
+<table id='category_table' class='table table-bordered table-hover'>
+	<tbody>
+	<tr data-tt-id="SPCA" data-tt-parent-id="">
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCA" name="menuId[]" value="SPCA" onclick="selectSubMenu('SPCA')">
+					基本資料
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCA010" data-tt-parent-id="SPCA">
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCA010" name="menuId[]" data-parent-id="SPCA" value="SPCA010">
+					<label for="menuIdSPCA010">經資門科目設定</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCA040" data-tt-parent-id="SPCA" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCA040" name="menuId[]" data-parent-id="SPCA" value="SPCA040">
+					<label for="menuIdSPCA040">供應商基本資料查詢</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCA020" data-tt-parent-id="SPCA" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCA020" name="menuId[]" data-parent-id="SPCA" value="SPCA020">
+					<label for="menuIdSPCA020">預算科目設定</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCA050" data-tt-parent-id="SPCA" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCA050" name="menuId[]" data-parent-id="SPCA" value="SPCA050">
+					<label for="menuIdSPCA050">供應商成交紀錄查詢</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCA030" data-tt-parent-id="SPCA" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCA030" name="menuId[]" data-parent-id="SPCA" value="SPCA030">
+					<label for="menuIdSPCA030">分支計畫維護</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+
+	<tr data-tt-id="SPCA1" data-tt-parent-id="SPCA" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCA1" name="menuId[]" data-parent-id="SPCA" value="SPCA1">
+					<label for="menuIdSPCA1">供應商管理</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCA060" data-tt-parent-id="SPCA" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCA060" name="menuId[]" data-parent-id="SPCA" value="SPCA060">
+					<label for="menuIdSPCA060">三級用途別</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCB" data-tt-parent-id="" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCB" name="menuId[]" value="SPCB" onclick="selectSubMenu(&quot;SPCB&quot;)">
+					請購管理
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCB010" data-tt-parent-id="SPCB" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCB010" name="menuId[]" data-parent-id="SPCB" value="SPCB010">
+					<label for="menuIdSPCB010">請購作業</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCB040" data-tt-parent-id="SPCB" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCB040" name="menuId[]" data-parent-id="SPCB" value="SPCB040">
+					<label for="menuIdSPCB040">個人請購紀錄查詢</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCB020" data-tt-parent-id="SPCB" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCB020" name="menuId[]" data-parent-id="SPCB" value="SPCB020">
+					<label for="menuIdSPCB020">採購作業</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCB030" data-tt-parent-id="SPCB" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCB030" name="menuId[]" data-parent-id="SPCB" value="SPCB030">
+					<label for="menuIdSPCB030">請購補登作業</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCB050" data-tt-parent-id="SPCB" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCB050" name="menuId[]" data-parent-id="SPCB" value="SPCB050">
+					<label for="menuIdSPCB050">單位請購紀錄查詢</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+
+	<tr data-tt-id="SPCC" data-tt-parent-id="" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCC" name="menuId[]" value="SPCC" onclick="selectSubMenu('SPCC')">
+					合約管理
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCC010" data-tt-parent-id="SPCC" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCC010" name="menuId[]" data-parent-id="SPCC" value="SPCC010">
+					<label for="menuIdSPCC010">合約資料維護</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCC020" data-tt-parent-id="SPCC" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCC020" name="menuId[]" data-parent-id="SPCC" value="SPCC020">
+					<label for="menuIdSPCC020">合約付款核銷作業</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+	
+	<tr data-tt-id="SPCD" data-tt-parent-id="" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCD" name="menuId[]" value="SPCD" onclick="selectSubMenu('SPCD')">
+					核銷管理
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCD010" data-tt-parent-id="SPCD" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCD010" name="menuId[]" data-parent-id="SPCD" value="SPCD010">
+					<label for="menuIdSPCD010">請購轉核銷</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCD020" data-tt-parent-id="SPCD" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCD020" name="menuId[]" data-parent-id="SPCD" value="SPCD020">
+					<label for="menuIdSPCD020">核銷作業</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCD030" data-tt-parent-id="SPCD" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCD030" name="menuId[]" data-parent-id="SPCD" value="SPCD030">
+					<label for="menuIdSPCD030">查詢核銷紀錄</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+
+	<tr data-tt-id="SPCE" data-tt-parent-id="" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCE" name="menuId[]" value="SPCE" onclick="selectSubMenu('SPCE')">
+					付款管理
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCE020" data-tt-parent-id="SPCE" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCE020" name="menuId[]" data-parent-id="SPCE" value="SPCE020">
+					<label for="menuIdSPCE020">付款作業</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCE030" data-tt-parent-id="SPCE" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCE030" name="menuId[]" data-parent-id="SPCE" value="SPCE030">
+					<label for="menuIdSPCE030">郵局匯款表</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+	<tr data-tt-id="SPCE040" data-tt-parent-id="SPCE" >
+		<td>
+			<label>
+				<div class="icheck-material-blue">
+					<input type="checkbox" id="menuIdSPCE040" name="menuId[]" data-parent-id="SPCE" value="SPCE040">
+					<label for="menuIdSPCE040">查詢付款紀錄</label>
+				</div>
+			</label>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+</body>
+
+</html>
