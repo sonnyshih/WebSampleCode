@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/checkbox-子項目全選/checkbox-子項目全選.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo/date_format_demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/另開視窗回傳值/child.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/另開視窗回傳值/parent.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,19 +28,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo/Front UI/jQueryDemo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo" />
+      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/另開視窗回傳值" />
+      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/Rating/Rating" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales" />
-      <recent name="$PROJECT_DIR$/Demo/Front UI/Rating/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/另開視窗回傳值" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/checkbox-子項目全選" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/Rating/Bootstrap Star Rating" />
     </key>
@@ -90,7 +93,15 @@
       <workItem from="1634624633482" duration="1980000" />
       <workItem from="1635131898024" duration="3097000" />
       <workItem from="1636092026679" duration="58000" />
-      <workItem from="1636335550009" duration="2341000" />
+      <workItem from="1636335550009" duration="2973000" />
+      <workItem from="1636341524783" duration="698000" />
+      <workItem from="1637131221891" duration="2615000" />
+      <workItem from="1637199881381" duration="503000" />
+      <workItem from="1637218098552" duration="1026000" />
+      <workItem from="1637242691961" duration="788000" />
+      <workItem from="1637567736785" duration="361000" />
+      <workItem from="1637811006988" duration="977000" />
+      <workItem from="1638843297093" duration="2971000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -141,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635134550076</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="1. add select sub checkbox item Demo.">
+      <created>1636338026945</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1636338026945</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +174,7 @@
     <MESSAGE value="1. Add the get chinese weekday." />
     <MESSAGE value="1. Add the checkbox_demo.html" />
     <MESSAGE value="1. Add the selectAndForeachDemo.htm" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Add the selectAndForeachDemo.htm" />
+    <MESSAGE value="1. add select sub checkbox item Demo." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. add select sub checkbox item Demo." />
   </component>
 </project>

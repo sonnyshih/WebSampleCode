@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+
+	//簡寫法
+	$(function(){
+
+		$("#button1").click(function() { // $("#test1"): 使用ID選擇器
+			let parent = window.opener;
+			parent.$("#city").val($("#selectCity").val())
+			window.close();
+		});
+
+	});
+</script>
+
+</head>
+<body>
+
+	<select id="selectCity" name="selectCity">
+		<option value="">其他搜尋條件</option>
+		<option value="Taipei">台北</option>
+		<option value="Taichung">台中</option>
+		<option value="Kaohsiung">高雄</option>
+	</select>
+
+	<button id="button1">選取</button>
+
+</body>
+
+</html>
