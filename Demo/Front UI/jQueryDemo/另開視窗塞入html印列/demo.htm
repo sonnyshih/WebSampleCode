@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+
+	//簡寫法
+	$(function(){
+		initPrintButton();
+	});
+
+	function initPrintButton(){
+		$("#printButton").click(function () {
+
+			// $("#collapseOne").addClass('show');
+
+			let htmlContent = '';
+			htmlContent += $("#accordion").html() + "<br>";
+			htmlContent += $("#myTable").html();
+
+			let win = window.open("", "", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=960,height=800");
+			win.document.write('<html>');
+			win.document.write('	<head>');
+			win.document.write('		<title>列印</title>');
+			win.document.write('		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"><\/script>');
+			win.document.write('		<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"><\/script>');
+			win.document.write('		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">');
+			win.document.write('	</head>');
+			win.document.write('	<body>');
+			win.document.write('	<div class="container-fuild">');
+			win.document.write('		<div class="row no-gutters">');
+			win.document.write('			<div class="i-grid">');
+			win.document.write(htmlContent);
+			win.document.write('			</div>');
+			win.document.write('		</div>');
+			win.document.write('	</div>');
+			win.document.write('	</body>');
+			win.document.write('</html>');
+
+			win.document.close();
+			win.focus();
+			win.print();	// 列印
+			// win.close();
+
+		});
+	}
+
+</script>
+
+</head>
+<body>
+	<button class="btn btn-primary"  id="printButton" name="printButton">列印</button>
+
+	<div id="accordion">
+	hello word
+	</div>
+
+	<table id="myTable">
+		<tr>
+			<td>姓名</td>
+			<td>年紀</td>
+		</tr>
+		<tr>
+			<td>Hello</td>
+			<td>10</td>
+		</tr>
+	</table>
+
+</body>
+
+</html>

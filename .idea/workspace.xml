@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo/date_format_demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/另開視窗回傳值/child.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/另開視窗回傳值/parent.htm" afterDir="false" />
+    <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="1. add select sub checkbox item Demo.">
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/另開視窗塞入html印列/demo.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/網頁列印前與列印後執行程式/beforePrintAfterPrint.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +17,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1ft74aqsQQ83sL0wLnyalokula2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -28,17 +29,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/網頁列印前與列印後執行程式" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/網頁列印前與列印後執行程式" />
+      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/另開視窗塞入html印列" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/另開視窗回傳值" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo" />
-      <recent name="$PROJECT_DIR$/Demo/Front UI/Rating/Rating" />
-      <recent name="$PROJECT_DIR$/Demo/Front UI/Rating/js/locales" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/另開視窗回傳值" />
@@ -102,6 +103,10 @@
       <workItem from="1637567736785" duration="361000" />
       <workItem from="1637811006988" duration="977000" />
       <workItem from="1638843297093" duration="2971000" />
+      <workItem from="1648017122367" duration="406000" />
+      <workItem from="1648019241021" duration="1226000" />
+      <workItem from="1648024095871" duration="210000" />
+      <workItem from="1648024309478" duration="1502000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -164,6 +169,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />

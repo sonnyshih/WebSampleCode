@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+
+	//簡寫法
+	$(function(){
+		initWindowEventListener();
+		initPrintButton();
+	});
+
+	function initPrintButton(){
+		$("#printButton").click(function () {
+			window.print();
+
+		});
+	}
+
+	// chrome與Edge可以用，其他會有問題
+	function initWindowEventListener(){
+
+		window.addEventListener("beforeprint", function(event) {
+
+			console.log("before print");
+			// $("#floatingBoxParentContainer").attr("widgetid", "");
+			// $("#floatingBoxParentContainer").removeAttr('widgetid');
+			// $("#floatingBoxParentContainer").removeAttr('style');
+			// $("#floatingBoxParentContainer").removeClass();
+			// $("#wrap").removeAttr('style');
+
+		});
+
+		window.addEventListener("afterprint", function(event) {
+
+			console.log("after print");
+
+			// $("#floatingBoxParentContainer").attr("widgetid", "floatingBoxParentContainer");
+			// $("#floatingBoxParentContainer").attr("style", "overflow: hidden auto; left: 0px; top: 80px; position: absolute; width: 1413px; height: 864px;");
+			// $("#floatingBoxParentContainer").attr("class", "dijitContentPane dijitBorderContainerNoGutter-child dijitBorderContainerNoGutter-dijitContentPane dijitBorderContainerNoGutterPane dijitAlignCenter");
+			// $("#wrap").attr("style", "width: 100%; height: 100%; padding: 0px;");
+
+		});
+
+	}
+
+</script>
+
+</head>
+<body>
+	<button class="btn btn-primary"  id="printButton" name="printButton">列印</button>
+
+
+
+</body>
+
+</html>
