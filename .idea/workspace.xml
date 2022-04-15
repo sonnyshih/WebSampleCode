@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="1. add demo: load the another html file.">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/css/signin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/css/style2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/example/example-menu-js-scroll.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/example/example-menu-js.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/example/example.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/js/cusomer.js" afterDir="false" />
+    <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/Front UI/BootStrap/Version 3.x/modal Dialog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/Front UI/BootStrap/Version 3.x/tabDemo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/css/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/css/style2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/js/cusomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/js/cusomer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,17 +38,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/example" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/example" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/載入另一個html檔案" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/DojoToolKit" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/網頁列印前與列印後執行程式" />
-      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/另開視窗塞入html印列" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/另開視窗回傳值" />
@@ -130,7 +124,7 @@
       <workItem from="1649649498765" duration="34000" />
       <workItem from="1649656710723" duration="1265000" />
       <workItem from="1649658432561" duration="1428000" />
-      <workItem from="1650010907273" duration="183000" />
+      <workItem from="1650010907273" duration="2423000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -202,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649660788168</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="1. add demo bootstrap framework.">
+      <created>1650011321861</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1650011321861</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +233,7 @@
     <MESSAGE value="1. add demo: open window and add html and print&#10;2. add demo: before print and after print." />
     <MESSAGE value="1. add demo: load the another html file." />
     <MESSAGE value="1. add demo- load the another html file." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. add demo- load the another html file." />
+    <MESSAGE value="1. add demo bootstrap framework." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. add demo bootstrap framework." />
   </component>
 </project>

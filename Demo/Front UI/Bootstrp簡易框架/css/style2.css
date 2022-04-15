@@ -92,7 +92,7 @@ a:focus {
     display: block;
 }
 
-#sidebar ul li a.active {
+#sidebar ul li ul li a.active {
     color: #000;
     background: #fff;
 }
