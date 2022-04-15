@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="../">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系所 / 職缺審核</title>
+
+    <!-- Font Awesome Icons http://fontawesome.io/ -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Custom js -->
+    <script src="js/cusomer.js"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+       });
+    </script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Bootstrap Sidebar</h3>
+            <strong>BS</strong>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+                <ul class="collapse list-unstyled show" id="homeSubmenu">
+                    <li>
+                        <a href="#" class="active" >Home 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-briefcase"></i>
+                    About
+                </a>
+            </li>
+            <li>
+              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                  <i class="fas fa-copy"></i>
+                  Pages
+              </a>
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                  <li>
+                      <a href="#">Page 1</a>
+                  </li>
+                  <li>
+                      <a href="#">Page 2</a>
+                  </li>
+                  <li>
+                      <a href="#">Page 3</a>
+                  </li>
+              </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-image"></i>
+                    Portfolio
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-question"></i>
+                    FAQ
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-paper-plane"></i>
+                    Contact
+                </a>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+            </li>
+            <li>
+                <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span>Toggle Sidebar</span>
+                </button>
+                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-align-justify"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Page</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav><!--./nav -->
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">履歷查詢</li>
+            </ol>
+        </nav>
+
+        <form id="search_form" class="form-horizontal" role="form" action=""  method="post">
+            <div class="row">
+                <div class="col-lg-4">
+                  <div class="input-group">
+                      <input type="text" class="form-control" id="keywords" name="keywords" placeholder="搜尋姓名">
+                      <span class="input-group-append">
+                          <button type="submit" class="btn btn-info btn-flat">
+                              <i class="fas fa-search"></i>
+                          </button>
+                      </span>
+                </div>
+
+              </div><!-- /.col-lg-3 -->
+  
+            </div><!-- /.row -->
+        </form>
+        <br>
+
+        <div class="card card-info">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h3 class="card-title">共有 10 筆</h3>   
+            <button type="button" class="btn btn-primary">新增</button>               
+        </div>	
+        <div class="card-body">
+
+            <div class="box">
+                <div class="box-body table-responsive no-padding">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>                                
+                            <th width="10%" >班級</th>
+                            <th >學生姓名</th>
+                            <th width="15%" >查閱</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>經三甲</td>
+                            <td>魏福布</td>
+                            <td>
+                                <button type='button' class='btn btn-info'>編輯</button>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td>經三乙</td>
+                            <td>羅技詳</td>
+                            <td>
+                                <button type='button' class='btn btn-info'>編輯</button>
+                            </td>
+                            </tr> 
+                        </tbody>
+                    </table>
+                </div>
+            </div><!--./box-->
+
+        </div><!-- /.card-body -->
+
+        
+        
+        </div>
+
+
+    </div><!--./ Page Content  -->
+
+  </div><!--./wrapper -->
+
+
+</body>
+</html>

@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="1. add select sub checkbox item Demo.">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/另開視窗塞入html印列/demo.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/網頁列印前與列印後執行程式/beforePrintAfterPrint.htm" afterDir="false" />
+    <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="1. add demo: load the another html file.">
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/css/signin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/css/style2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/example/example-menu-js-scroll.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/example/example-menu-js.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/example/example.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/js/cusomer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/BootStrap/Version 3.x/modal Dialog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/BootStrap/Version 3.x/tabDemo.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +20,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,20 +40,21 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/網頁列印前與列印後執行程式" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架" />
+      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/載入另一個html檔案" />
+      <recent name="$PROJECT_DIR$/Demo/Front UI/DojoToolKit" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/網頁列印前與列印後執行程式" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/另開視窗塞入html印列" />
-      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo" />
-      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/另開視窗回傳值" />
-      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/另開視窗回傳值" />
@@ -106,7 +121,16 @@
       <workItem from="1648017122367" duration="406000" />
       <workItem from="1648019241021" duration="1226000" />
       <workItem from="1648024095871" duration="210000" />
-      <workItem from="1648024309478" duration="1502000" />
+      <workItem from="1648024309478" duration="1724000" />
+      <workItem from="1648450854190" duration="2256000" />
+      <workItem from="1648608139659" duration="699000" />
+      <workItem from="1649228874914" duration="104000" />
+      <workItem from="1649237025494" duration="640000" />
+      <workItem from="1649314569340" duration="606000" />
+      <workItem from="1649649498765" duration="34000" />
+      <workItem from="1649656710723" duration="1265000" />
+      <workItem from="1649658432561" duration="1428000" />
+      <workItem from="1650010907273" duration="183000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -164,7 +188,21 @@
       <option name="project" value="LOCAL" />
       <updated>1636338026945</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="1. add demo: open window and add html and print&#10;2. add demo: before print and after print.">
+      <created>1648026002919</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1648026002919</updated>
+    </task>
+    <task id="LOCAL-00010" summary="1. add demo- load the another html file.">
+      <created>1649660788168</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1649660788168</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +229,9 @@
     <MESSAGE value="1. Add the checkbox_demo.html" />
     <MESSAGE value="1. Add the selectAndForeachDemo.htm" />
     <MESSAGE value="1. add select sub checkbox item Demo." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. add select sub checkbox item Demo." />
+    <MESSAGE value="1. add demo: open window and add html and print&#10;2. add demo: before print and after print." />
+    <MESSAGE value="1. add demo: load the another html file." />
+    <MESSAGE value="1. add demo- load the another html file." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. add demo- load the another html file." />
   </component>
 </project>
