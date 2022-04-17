@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo/css/customer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/css/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/css/style2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/js/cusomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/js/cusomer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo/checkbox_demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo/checkbox_demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo/date_format_demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo/date_format_demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo/email_submit.html" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo/email_submit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo/signup_bootstrap.html" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo/signup_bootstrap.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,6 +221,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
