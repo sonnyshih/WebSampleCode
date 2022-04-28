@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/css/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/css/style2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/js/cusomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Bootstrp簡易框架/js/cusomer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery選擇器Demo.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery選擇器Demo.htm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +122,9 @@
       <workItem from="1649649498765" duration="34000" />
       <workItem from="1649656710723" duration="1265000" />
       <workItem from="1649658432561" duration="1428000" />
-      <workItem from="1650010907273" duration="2423000" />
+      <workItem from="1650010907273" duration="2459000" />
+      <workItem from="1650252260264" duration="270000" />
+      <workItem from="1651115815573" duration="2146000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -203,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650011321861</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="1. update bootstrap framework.">
+      <created>1650020657662</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1650020657662</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +241,7 @@
     <MESSAGE value="1. add demo: load the another html file." />
     <MESSAGE value="1. add demo- load the another html file." />
     <MESSAGE value="1. add demo bootstrap framework." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. add demo bootstrap framework." />
+    <MESSAGE value="1. update bootstrap framework." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. update bootstrap framework." />
   </component>
 </project>
