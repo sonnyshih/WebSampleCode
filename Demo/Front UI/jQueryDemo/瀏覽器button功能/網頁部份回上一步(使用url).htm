@@ -1,0 +1,70 @@
+<!DOCTYPE html><html>
+
+<head>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+
+		$(function() {
+			init();
+
+			$("#one").click(function(event){
+				let url ="page1.html";
+				$("#content").load(url);
+				event.preventDefault();
+				history.pushState( url, "", "" );
+			});
+
+			$("#two").click(function(event){
+				let url ="page2.html";
+				$("#content").load(url);
+				event.preventDefault();
+				history.pushState( url, "", "" );
+			});
+
+		});
+
+
+		function init(){
+
+			$(window).on( "popstate", function(event){
+				let state = event.originalEvent.state;
+				// alert("popstate" + "## event="+ JSON.stringify(event.originalEvent.state));
+
+				$("#content").empty();
+
+				if (state == null) {
+					history.back();
+				} else {
+					$("#content").load(state);
+				}
+
+			});
+
+		}
+	</script>
+
+</head>
+
+<body>
+
+<ul>
+
+	<li><a href="#" id="one" name="one">one</a></li>
+
+	<li><a href="#" id="two" name="two">two</a></li>
+
+	<li><a href="/three">three</a></li>
+
+	<li><a href="/four">four</a></li>
+
+</ul>
+
+<button>refresh</button>
+
+<div id="content"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html><html>
+
+<head>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+
+		$(function() {
+			init();
+
+			$("#one").click(function(event){
+				let html = "<div>Hello one</div>";
+				$("#content").empty();
+				$("#content").append(html);
+
+				event.preventDefault();
+				history.pushState( html, "", "" );
+				// let item = {
+				// 	"id": 1,
+				// 	"text": "hello one"
+				// }
+				// history.pushState( item, "", "" );
+			});
+
+			$("#two").click(function(event){
+				let html = "<div>Hello two</div>";
+				$("#content").empty();
+				$("#content").append(html);
+
+				event.preventDefault();
+				history.pushState( html, "", "" );
+				// let item = {
+				// 	"id": 2,
+				// 	"text": "hello two"
+				// }
+				// history.pushState( item, "", "" );
+			});
+		});
+
+
+		function init(){
+
+			$(window).on( "popstate", function(event){
+				let state = event.originalEvent.state;
+				alert("popstate" + "## event="+ JSON.stringify(event.originalEvent.state));
+
+				$("#content").empty();
+
+				if (state == null) {
+					history.back();
+				} else {
+					$("#content").append(state);
+				}
+
+			});
+
+		}
+	</script>
+
+</head>
+
+<body>
+
+<ul>
+
+	<li><a href="#" id="one" name="one">one</a></li>
+
+	<li><a href="#" id="two" name="two">two</a></li>
+
+	<li><a href="/three">three</a></li>
+
+	<li><a href="/four">four</a></li>
+
+</ul>
+
+<button>refresh</button>
+
+<div id="content"></div>
+
+</body>
+
+</html>
