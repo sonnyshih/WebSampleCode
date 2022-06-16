@@ -16,17 +16,29 @@
 </head>
 <body class="text-center">
 <br>
-<button type="button" class="btn btn-primary" id="openButton" name="openButton">Open</button>
+<button type="button" class="btn btn-primary" id="openButton1" name="openButton1">Open1</button>
+
+<button type="button" class="btn btn-primary" id="openButton2" name="openButton2">Open2</button>
 
 </body>
 <script>
 	$(function(){
-		$("#openButton").click(function () {
-			var dialog = loadingDialog();
-			console.log(dialog);
-			dialog.showPleaseWait();
-		});
+		initOpenButton1()
+		initOpenButton2();
 	});
+
+	function initOpenButton1(){
+		$("#openButton1").click(function () {
+			var dialog = loadingDialog();
+			dialog.showPleaseWait();
+
+			// 有時候ajax response 太快時， model 的hide 會無法使用
+			setTimeout(function () {
+				dialog.hidePleaseWait();
+			}, 2000);
+
+		});
+	}
 
 	function loadingDialog(message){
 		if (message == "" || typeof(message) == "undefined" || message == null) {
@@ -57,6 +69,65 @@
 				},
 				hidePleaseWait: function () {
 					pleaseWaitDiv.modal('hide');
+				},
+
+			};
+		})();
+
+		return dialog;
+	}
+
+
+	function initOpenButton2(){
+		$("#openButton2").click(function () {
+
+			// $("<p>Hello</p>").appendTo("body");
+			var dialog2 = loadingDialog2();
+			dialog2.showPleaseWait();
+			//
+			// 有時候ajax response 太快時， model 的hide 會無法使用
+			setTimeout(function () {
+				dialog2.hidePleaseWait();
+			}, 2000);
+
+		});
+	}
+
+	function loadingDialog2(message){
+		if (message == "" || typeof(message) == "undefined" || message == null) {
+			message = '資料處理中...';
+		}
+		let waitDialog = '<div class="modal fade" id="pleaseWaitDialog" data-bs-backdrop="static" data-bs-keyboard="false">'+
+				'	<div class="modal-dialog modal-sm modal-dialog-centered">'+
+				'		<div class="modal-content">'+
+				'			<div class="modal-header">'+
+				'				<h1>'+message+'</h1>'+
+				'			</div>'+
+				'			<div class="modal-body">'+
+				'				<div class="progress">'+
+				'				  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>'+
+				'				</div>'+
+				'            </div>'+
+				'			</div>'+
+				'		</div>'+
+				'	</div>'+
+				'</div>';
+
+
+		$(waitDialog).appendTo("body");
+		// $("#pleaseWaitDialog").modal('show');
+
+		var dialog;
+		dialog = dialog || (function () {
+			// var pleaseWaitDiv = $("#pleaseWaitDialog");
+			var pleaseWaitDiv = new bootstrap.Modal($("#pleaseWaitDialog"));
+
+			return {
+				showPleaseWait: function() {
+					pleaseWaitDiv.show();
+				},
+				hidePleaseWait: function () {
+					pleaseWaitDiv.hide();
 				},
 
 			};
