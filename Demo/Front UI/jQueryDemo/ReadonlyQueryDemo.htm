@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+	$(function(){
+		$("#name").attr("readonly", true);
+
+		initRadio();
+		initSendButton();
+	});
+
+	function initRadio(){
+		console.log("sex="+$("input[name='sex[]']:checked").val());
+		$("input[name='sex[]']:not(:checked)").attr('disabled', true);
+	}
+
+	function initSendButton(){
+		$("#sendButton").click(function (){
+			selectDemo();
+		});
+	}
+
+	function selectDemo(){
+		$("#city").attr("disabled", false);
+
+		alert("city=" + $("#city").val());
+
+		$("#city").attr("disabled", true);
+	}
+
+</script>
+
+</head>
+<body>
+<input type="text" name="name" id="name" value="Hello" readonly>
+<br><br>
+
+<select id="city" name="city" disabled>
+	<option value="">請選擇</option>
+	<option value="a">a</option>
+	<option value="b" selected>b</option>
+	<option value="c">c</option>
+</select>
+<br><br>
+
+<input type="radio" name="sex[]" id="sex1" value="male" checked> 男生
+<input type="radio" name="sex[]" id="sex2" value="female"> 女生
+<br><br>
+
+<button type="button" id="sendButton" name="sendButton">送出</button>
+
+</body>
+
+
+
+</html>

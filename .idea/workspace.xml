@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/select自動選.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/ReadonlyQueryDemo.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +134,8 @@
       <workItem from="1655947912067" duration="1600000" />
       <workItem from="1655950081903" duration="1374000" />
       <workItem from="1656915861320" duration="25717000" />
-      <workItem from="1657101351148" duration="962000" />
+      <workItem from="1657101351148" duration="4626000" />
+      <workItem from="1657767562049" duration="2376000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -311,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657010837912</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="1. Add the auto select and trigger change.">
+      <created>1657103275176</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1657103275176</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,6 +362,7 @@
     <MESSAGE value="1. Add the Div fadein fadeout." />
     <MESSAGE value="1. Add the Div fadein fadeout demo." />
     <MESSAGE value="1. Add the date picker demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Add the date picker demo" />
+    <MESSAGE value="1. Add the auto select and trigger change." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Add the auto select and trigger change." />
   </component>
 </project>
