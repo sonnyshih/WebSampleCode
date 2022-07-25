@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+    <!-- 參考 https://www.ucamc.com/articles/332-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8jquery-ajax-submit-%E5%82%B3%E9%80%81form%E8%A1%A8%E5%96%AEserialize-%E6%96%B9%E6%B3%95 -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+
+	$(function(){
+
+	});
+
+    $('#upload').click(function(e){
+        e.preventDefault();
+        var form = $('#uploadForm')[0];
+        var formData = new FormData(form);
+
+        $.ajax({
+            url:'/upload',
+            type : "POST",
+            data : formData,
+            contentType: false,
+            cache: false,
+            processData: false,
+            success : function(data)
+            {
+                console.log(data);
+            },error: function(data)
+            {
+                console.log('無法送出');
+            }
+        })
+    });
+</script>
+</head>
+<body>
+<form id="uploadForm" enctype="multipart/form-data">
+    <input name='user' placeholder='user'><br>
+    <input name='password' type='password' placeholder='password'><br>
+    <input id="file" type="file" name="file"/>
+    <button id="upload" type="button">upload</button>
+</form>
+</body>
+
+</html>

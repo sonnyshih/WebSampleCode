@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/ReadonlyQueryDemo.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jquery post 資料與檔案/jQuery只有資料.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jquery post 資料與檔案/jQuery資料+檔案上傳.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,24 +37,24 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo/Front UI/jQueryDemo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jquery post 資料與檔案" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jquery post 資料與檔案" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/日期選擇器" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/Modal分類" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/BootstrapDemo/bootstrap5.1.3" />
-      <recent name="$PROJECT_DIR$/Demo/Front UI/BootstrapDemo/bootstrap5.0.0" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/檔案上傳" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/日期選擇器" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/BootstrapDemo/bootstrap5.1" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/瀏覽器button功能" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/另開視窗回傳值" />
-      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/checkbox-子項目全選" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -136,6 +137,10 @@
       <workItem from="1656915861320" duration="25717000" />
       <workItem from="1657101351148" duration="4626000" />
       <workItem from="1657767562049" duration="2376000" />
+      <workItem from="1657855838157" duration="253000" />
+      <workItem from="1658719973931" duration="238000" />
+      <workItem from="1658720245780" duration="5000" />
+      <workItem from="1658720266460" duration="266000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -319,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657103275176</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="1. Add Readonly Demo.">
+      <created>1657856059427</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1657856059428</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +350,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
-    <MESSAGE value="jQuery選擇器Demo.htm" />
     <MESSAGE value="1. Add the string convert to date demo." />
     <MESSAGE value="1. Add the rating demo." />
     <MESSAGE value="1. Add the Rate Yo! rating demo." />
@@ -363,6 +374,7 @@
     <MESSAGE value="1. Add the Div fadein fadeout demo." />
     <MESSAGE value="1. Add the date picker demo" />
     <MESSAGE value="1. Add the auto select and trigger change." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Add the auto select and trigger change." />
+    <MESSAGE value="1. Add Readonly Demo." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Add Readonly Demo." />
   </component>
 </project>
