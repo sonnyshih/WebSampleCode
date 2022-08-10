@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script type="text/javascript">
+
+	//簡寫法
+	$(function(){
+
+		$("select[name='test']" ).each(function( index ) {
+			console.log( index + ": " + $( this ).val() );
+		});
+	});
+</script>
+
+</head>
+<body>
+選擇1 :
+<select id="test1" name="test">
+	<option value="hello word 1" selected>hello word 1</option>
+</select>
+<br>
+選擇2 :
+<select id="test2" name="test">
+	<option value="hello word 2" selected>hello word 2</option>
+</select>
+<br>
+
+</body>
+
+</html>

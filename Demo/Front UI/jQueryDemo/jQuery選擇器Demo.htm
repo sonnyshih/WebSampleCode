@@ -18,14 +18,24 @@
 </head>
 <body>
 	<input id="text1" name="text1" type="text" value="hello world!!">
+	<br>
+	選擇1 :
+	<select id="test1" name="test">
+		<option value="hello" selected>hello</option>
+	</select>
+	<br>
 
 	<button id="button1" name="button1">取得內容</button>
+	<br>
+
+
 	<script>
 		$("#button1").click(function() { //
 			alert("Get Data(#)=" + $("#text1").val()); // 使用#選擇器(只能是唯一ID)
 			alert("Get Data(id)=" + $('[id="text1"]').val()); // 使用ID選擇器
 			alert("Get Data(name)=" + $('input[name="text1"]').val()); // 使用name選擇器
 			alert("Get button (name)=" + $('button[name="button1"]').text()); // 使用name選擇器 (如果是button， 記得input 要改成button)
+			alert($("select[name='test']").val());			// select 使用name選擇器
 		});
 	</script>
 	<br>
