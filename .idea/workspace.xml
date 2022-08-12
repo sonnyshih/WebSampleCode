@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/列出每個Select.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/自動scroll到指定物件.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery選擇器Demo.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery選擇器Demo.htm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +141,8 @@
       <workItem from="1658720245780" duration="5000" />
       <workItem from="1658720266460" duration="287000" />
       <workItem from="1660098204675" duration="688000" />
+      <workItem from="1660115845740" duration="645000" />
+      <workItem from="1660273707950" duration="262000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
