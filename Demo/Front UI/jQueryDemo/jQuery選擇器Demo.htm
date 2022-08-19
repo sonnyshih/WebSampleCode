@@ -25,6 +25,10 @@
 	</select>
 	<br>
 
+	<input type="radio" id="isAccommodation1" name="isAccommodation" value="我是第一個checkbox 1">選項 1<br>
+	<input type="radio" id="isAccommodation2" name="isAccommodation" value="我是第二個checkbox 2" checked>選項 2
+
+	<br>
 	<button id="button1" name="button1">取得內容</button>
 	<br>
 
@@ -36,6 +40,8 @@
 			alert("Get Data(name)=" + $('input[name="text1"]').val()); // 使用name選擇器
 			alert("Get button (name)=" + $('button[name="button1"]').text()); // 使用name選擇器 (如果是button， 記得input 要改成button)
 			alert($("select[name='test']").val());			// select 使用name選擇器
+
+			alert($("input[name='isAccommodation']:checked").val());
 		});
 	</script>
 	<br>

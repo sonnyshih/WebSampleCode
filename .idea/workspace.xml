@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/自動scroll到指定物件.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery選擇器Demo.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery選擇器Demo.htm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +142,10 @@
       <workItem from="1658720266460" duration="287000" />
       <workItem from="1660098204675" duration="688000" />
       <workItem from="1660115845740" duration="645000" />
-      <workItem from="1660273707950" duration="262000" />
+      <workItem from="1660273707950" duration="413000" />
+      <workItem from="1660814562525" duration="1397000" />
+      <workItem from="1660889076074" duration="88000" />
+      <workItem from="1660889166436" duration="237000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -340,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658720542182</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="1. Auto scroll to element.">
+      <created>1660273993918</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1660273993918</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +369,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
-    <MESSAGE value="1. Add the string convert to date demo." />
     <MESSAGE value="1. Add the rating demo." />
     <MESSAGE value="1. Add the Rate Yo! rating demo." />
     <MESSAGE value="1. Add the get chinese weekday." />
@@ -384,6 +393,7 @@
     <MESSAGE value="1. Add the date picker demo" />
     <MESSAGE value="1. Add the auto select and trigger change." />
     <MESSAGE value="1. Add Readonly Demo." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Add Readonly Demo." />
+    <MESSAGE value="1. Auto scroll to element." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Auto scroll to element." />
   </component>
 </project>
