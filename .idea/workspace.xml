@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/array使用.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery選擇器Demo.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery選擇器Demo.htm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,17 +36,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo/Front UI/jQueryDemo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo/Front UI/Javascript 範例" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo/Front UI/Javascript 範例" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jquery post 資料與檔案" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/日期選擇器" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/Modal分類" />
-      <recent name="$PROJECT_DIR$/Demo/Front UI/BootstrapDemo/bootstrap5.1.3" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/檔案上傳" />
@@ -145,7 +145,11 @@
       <workItem from="1660273707950" duration="413000" />
       <workItem from="1660814562525" duration="1397000" />
       <workItem from="1660889076074" duration="88000" />
-      <workItem from="1660889166436" duration="237000" />
+      <workItem from="1660889166436" duration="983000" />
+      <workItem from="1661136047712" duration="5000" />
+      <workItem from="1661153560422" duration="1412000" />
+      <workItem from="1661248125726" duration="1542000" />
+      <workItem from="1665109471659" duration="1719000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -350,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660273993918</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="1. Modify the jQuery選擇器Demo.htm">
+      <created>1660889497803</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1660889497803</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +380,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
-    <MESSAGE value="1. Add the rating demo." />
     <MESSAGE value="1. Add the Rate Yo! rating demo." />
     <MESSAGE value="1. Add the get chinese weekday." />
     <MESSAGE value="1. Add the checkbox_demo.html" />
@@ -394,6 +404,7 @@
     <MESSAGE value="1. Add the auto select and trigger change." />
     <MESSAGE value="1. Add Readonly Demo." />
     <MESSAGE value="1. Auto scroll to element." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Auto scroll to element." />
+    <MESSAGE value="1. Modify the jQuery選擇器Demo.htm" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Modify the jQuery選擇器Demo.htm" />
   </component>
 </project>

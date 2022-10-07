@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script type="text/javascript">
+	// 參考: https://www.casper.tw/development/2020/10/04/js-array-methods/
+
+	var stringArray = ['aa', 'bb', 'cc', 'dd'];
+
+	//簡寫法
+	$(function(){
+
+		$("#add").click(function () {
+			let keyword = $("#keyword").val();
+			let isExist=stringArray.includes(keyword);
+
+			if (!isExist){
+				stringArray.push(keyword);
+			}
+			console.log(stringArray);
+		});
+
+		$("#delete").click(function () {
+			let keyword = $("#keyword").val();
+
+			for( var i=0; i<stringArray.length; i++){
+				if ( stringArray[i] === keyword) {
+					stringArray.splice(i, 1);
+				}
+			}
+
+			console.log(stringArray);
+			// stringArray.forEach(function (value){
+			// 	console.log(value);
+			// });
+
+		});
+
+	});
+
+
+</script>
+
+</head>
+<body>
+<input type="text" id="keyword" name="keyword">
+<button type="button" id="add" name="add">新增</button>
+<button type="button" id="delete" name="delete">刪除</button>
+</body>
+
+</html>
