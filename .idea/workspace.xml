@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/判斷是否為email.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/判斷是否為空值.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/判斷為手機號碼.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/判斷為正整數.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/判斷為正整數.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/判斷為正整數.htm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +151,7 @@
       <workItem from="1661248125726" duration="1542000" />
       <workItem from="1665109471659" duration="3480000" />
       <workItem from="1665459765294" duration="6000" />
-      <workItem from="1666161448978" duration="3964000" />
+      <workItem from="1666161448978" duration="5037000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -373,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665111536787</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="1. Add the Javascript checking some string.">
+      <created>1666246577984</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1666246577984</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,7 +396,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
-    <MESSAGE value="1. Add the get chinese weekday." />
     <MESSAGE value="1. Add the checkbox_demo.html" />
     <MESSAGE value="1. Add the selectAndForeachDemo.htm" />
     <MESSAGE value="1. add select sub checkbox item Demo." />
@@ -417,6 +420,7 @@
     <MESSAGE value="1. Auto scroll to element." />
     <MESSAGE value="1. Modify the jQuery選擇器Demo.htm" />
     <MESSAGE value="1. Add the Javascript array使用.htm" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Add the Javascript array使用.htm" />
+    <MESSAGE value="1. Add the Javascript checking some string." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Add the Javascript checking some string." />
   </component>
 </project>

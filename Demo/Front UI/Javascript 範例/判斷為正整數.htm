@@ -7,7 +7,7 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 <script type="text/javascript">
-
+	// 參考: https://stackoverflow.com/questions/10834796/validate-that-a-string-is-a-positive-integer
 
 	//簡寫法
 	$(function(){
@@ -31,11 +31,9 @@
 
 	});
 
-	function isPositiveInt(value) {
-		// if (!$.isNumeric(value)){
-		// 	return false;
-		// }
-		return value == "0" || ((value | 0) > 0 && value % 1 == 0);
+	function isPositiveInt(str) {
+		var value = Math.floor(Number(str));
+		return value !== Infinity && String(value) === str && value >= 0;
 	}
 
 
