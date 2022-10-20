@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script type="text/javascript">
+
+
+	//簡寫法
+	$(function(){
+
+		$("#checkButton").click(function() {
+
+			let number = $("#number").val();
+			let isInteger = isPositiveInt(number);
+			if (isInteger!=true){
+				alert("請輸入正整數");
+			}
+		});
+
+		$("#number").focusout(function() {
+			let number = $("#number").val();
+			let isInteger = isPositiveInt(number);
+			if (isInteger!=true){
+				alert("請輸入正整數");
+			}
+		});
+
+	});
+
+	function isPositiveInt(value) {
+		// if (!$.isNumeric(value)){
+		// 	return false;
+		// }
+		return value == "0" || ((value | 0) > 0 && value % 1 == 0);
+	}
+
+
+</script>
+
+</head>
+<body>
+
+<input type="text" id="number" name="number">
+<button type="button" id="checkButton" name="checkButton">判斷</button>
+
+</body>
+
+</html>
