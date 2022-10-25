@@ -27,9 +27,9 @@
 	function isValidateEmail(email)
 	{
 		//Regular expression Testing
-		let emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+		let emailRule = /^\w+([\.-]?\w+)+([\.+]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-		if(email.search(emailRule)!= -1){
+		if(emailRule.test(email)){
 			// alert("Valid email address!");
 			return true;
 		}else{
