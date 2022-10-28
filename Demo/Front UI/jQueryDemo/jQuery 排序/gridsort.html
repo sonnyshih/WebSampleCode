@@ -22,13 +22,15 @@
         },
 
     	update: function(event, ui) { 
-    		alert($("#sortable>li").length);
-            //console.log('update: '+ui.item.index())	//移動完成位置
-            for (var i=1; i<13; i++) {
-            	console.log($("#sortable li:nth-child("+i+")").data("id"));
-            	alert($("#sortable li:nth-child("+i+")").data("id"));
-            }
-            
+    		// alert($("#sortable>li").length);
+            // //console.log('update: '+ui.item.index())	//移動完成位置
+            // for (var i=1; i<13; i++) {
+            // 	console.log($("#sortable li:nth-child("+i+")").data("id"));
+            // 	alert($("#sortable li:nth-child("+i+")").data("id"));
+            // }
+
+          var json = $('#sortable').sortable('toArray', { attribute: "data-id" } );
+            console.log(json);
         }
     });
 
