@@ -322,10 +322,10 @@ $(function() {
         var target = $(e.target),
             action = target.data('action');
         if(action === 'expand-all') {
-            $('.dd').nestable('expandAll');
+            $('.dd').nestable('expandAll'); // 全部展開
         }
         if(action === 'collapse-all') {
-            $('.dd').nestable('collapseAll');
+            $('.dd').nestable('collapseAll');   //全部合起來
         }
         if(action === 'add-item') {
             var newItem = {

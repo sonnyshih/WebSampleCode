@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery 排序/gridsort.html" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery 排序/gridsort.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Nestable2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Nestable2/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +152,8 @@
       <workItem from="1665109471659" duration="3480000" />
       <workItem from="1665459765294" duration="6000" />
       <workItem from="1666161448978" duration="8360000" />
-      <workItem from="1666929720698" duration="836000" />
+      <workItem from="1666929720698" duration="859000" />
+      <workItem from="1667899636445" duration="1445000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -392,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666677546574</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="1. Modify the Javascript sort demo.">
+      <created>1666936998515</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1666936998515</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,7 +419,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
-    <MESSAGE value="1. add select sub checkbox item Demo." />
     <MESSAGE value="1. add demo: open window and add html and print&#10;2. add demo: before print and after print." />
     <MESSAGE value="1. add demo: load the another html file." />
     <MESSAGE value="1. add demo- load the another html file." />
@@ -436,6 +443,7 @@
     <MESSAGE value="1. Add the Javascript checking some string." />
     <MESSAGE value="1. Modify the Javascript checking positive integer." />
     <MESSAGE value="1. Modify the Javascript checking email." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Modify the Javascript checking email." />
+    <MESSAGE value="1. Modify the Javascript sort demo." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Modify the Javascript sort demo." />
   </component>
 </project>
