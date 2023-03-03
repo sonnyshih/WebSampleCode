@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+
+
+	$(function(){
+
+		const optionsList = $("#animalList option");
+		for(let i = 0; i < optionsList.length; i++) {
+			const chooseOption = optionsList.eq(i);
+			// const dataVal = $option.data('value');
+			const dataVal = chooseOption.attr("data-value");
+			const showWord = chooseOption.text();
+			const val = chooseOption.val();
+
+			console.log("data-Val=" + dataVal);
+			console.log("show Word=" + showWord);
+			console.log("val=" + val);
+		}
+
+		$('#input0').on('input',function (e)
+		{
+
+			// var value = $(this);
+
+			const optionsList = $("#animalList option");
+			for(let i = 0; i < optionsList.length; i++) {
+				const chooseOption = optionsList.eq(i);
+				// const dataVal = chooseOption.data('value');
+				const dataVal = chooseOption.attr("data-value");	// 用法和 chooseOption.data('value') 意思相同
+				const showWord = chooseOption.text();
+				const val = chooseOption.val();
+
+				console.log("data-Val=" + dataVal);
+				console.log("show Word=" + showWord);
+				console.log("val=" + val);
+				if (showWord == $(this).val()) {
+					$("#inputID").val(dataVal);
+					alert("data-val=" + dataVal + " show word=" + showWord);
+				}
+			}
+
+		});
+	});
+
+
+</script>
+
+</head>
+<body>
+<span>選擇你最喜歡的動物：</span>
+<input type="text" id="inputID">
+<input type="text" id="input0" list="animalList">
+<datalist id="animalList">
+	<option data-value="1">馬來貘</option>
+	<option data-value="2">山貘</option>
+	<option data-value="3">中美貘</option>
+	<option data-value="4">南美貘</option>
+	<option data-value="5">卡波馬尼貘</option>
+</datalist>
+</body>
+
+</html>
