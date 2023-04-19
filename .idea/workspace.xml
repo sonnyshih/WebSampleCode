@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/datalist模擬select.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQueryTree/jQuery treetable/DragandDropQueryTree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQueryTree/jQuery treetable/css/jquery.treetable.theme.default.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQueryTree/jQuery treetable/css/jquery.treetable.theme.default.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +41,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/hongjie/PhpstormProjects/WebSampleCode/Demo/Front UI/jQueryDemo&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hongjie/PhpstormProjects/WebSampleCode/Demo/Front UI/jQueryDemo/jQueryTree/jQuery treetable&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -51,11 +52,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQueryTree/jQuery treetable" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/Javascript 範例" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jquery post 資料與檔案" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/日期選擇器" />
-      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/Modal分類" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/檔案上傳" />
@@ -166,7 +167,12 @@
       <workItem from="1675477914285" duration="149000" />
       <workItem from="1675478066234" duration="3944000" />
       <workItem from="1676707101022" duration="2069000" />
-      <workItem from="1677750611361" duration="3202000" />
+      <workItem from="1677750611361" duration="5606000" />
+      <workItem from="1678325132990" duration="1558000" />
+      <workItem from="1680060910215" duration="6382000" />
+      <workItem from="1680752613412" duration="597000" />
+      <workItem from="1681111057876" duration="598000" />
+      <workItem from="1681447120087" duration="596000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -420,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675489952622</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="1. Develop the datalist模擬select.htm demo">
+      <created>1677807886671</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1677807886671</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +452,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
-    <MESSAGE value="1. add demo: load the another html file." />
     <MESSAGE value="1. add demo- load the another html file." />
     <MESSAGE value="1. add demo bootstrap framework." />
     <MESSAGE value="1. update bootstrap framework." />
@@ -464,6 +476,7 @@
     <MESSAGE value="1. Modify the Javascript checking email." />
     <MESSAGE value="1. Modify the Javascript sort demo." />
     <MESSAGE value="1. Develop the timer範例.htm demo." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Develop the timer範例.htm demo." />
+    <MESSAGE value="1. Develop the datalist模擬select.htm demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Develop the datalist模擬select.htm demo" />
   </component>
 </project>
