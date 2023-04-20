@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+	//簡寫法
+	$(function(){
+	});
+
+	$(document).mousedown(function(e) {
+        xPos = parseInt(e.pageX, 10);
+        yPos = parseInt(e.pageY, 10);
+        console.log("在畫面mouse move X: " + xPos + " Y: " + yPos);
+	});
+
+    $(document).mouseup(function(e) {
+        xPos = parseInt(e.pageX, 10);
+        yPos = parseInt(e.pageY, 10);
+        console.log("在畫面mouse up X: " + xPos + " Y: " + yPos);
+    });
+
+    $(document).mousemove(function (e) {
+        xPos = parseInt(e.pageX, 10);
+        yPos = parseInt(e.pageY, 10);
+        console.log("在畫面mouse move X: " + xPos + " Y: " + yPos);
+    });
+
+    $(document).keydown(function (e) {
+        console.log("在畫面keydown 按下 " + e.key);
+    });
+
+
+    $(document).keyup(function (e){
+        onKeyup(e);
+    });
+
+    function onKeyup(e){
+        console.log("在畫面keyup " + e.key);
+    }
+</script>
+
+</head>
+<body>
+
+
+
+</body>
+
+</html>

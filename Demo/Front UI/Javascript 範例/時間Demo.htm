@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script type="text/javascript">
+	// 參考: https://pjchender.dev/javascript/js-date-time/
+	//簡寫法
+	$(function(){
+		let timestamp = Date.now();
+		console.log("timestamp: " + timestamp);
+
+		let date = new Date(timestamp);
+		console.log(date);
+		dataValues = [
+			date.getFullYear(),		// 年
+			date.getMonth() + 1,	// 月
+			date.getDate(),			// 日
+			date.getHours(),		// 時
+			date.getMinutes(),		// 分
+			date.getSeconds(),		// 秒
+		];
+		console.log(dataValues);
+
+		// setTimeout("alert('時間到')", 3000);
+		counter();
+	});
+
+	var num = 10
+	function counter(){
+		$("#timer").val(num);
+		num--;
+		if (num>=0){
+			setTimeout("counter()", 1000);
+		}
+	}
+
+
+</script>
+
+</head>
+<body>
+	<input type="text" id="timer" name="timer" value=""/>
+</body>
+</html>
