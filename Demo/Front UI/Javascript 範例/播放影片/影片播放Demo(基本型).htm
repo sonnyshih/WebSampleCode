@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+	<link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
+	<script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script type="text/javascript">
+	// refer to: https://videojs.com/getting-started/
+	// example : https://videojs.com/advanced?video=disneys-oceans
+
+	var videoPlayer;
+	//簡寫法
+	$(function(){
+		initVideo();
+	});
+
+	var playlist = [ {type: 'video/mp4', src: 'https://www.w3schools.com/tags/mov_bbb.mp4'},
+					 {type: 'video/mp4', src: "https://vjs.zencdn.net/v/oceans.mp4"}
+				   ]
+
+	function initVideo(){
+		var options = { autoplay: true, muted: true,	// if want to autoplay video, must set the "autoplay" and "muted" to true.
+					    width: 600, height: 300,
+						controls: true,					// show control
+						// poster: "https://vjs.zencdn.net/v/oceans.png"	// preview photo
+					  };
+
+		videoPlayer = videojs("my-video", options);
+		// videoPlayer.src({type: 'video/mp4', src: 'https://www.w3schools.com/tags/mov_bbb.mp4'});
+		videoPlayer.src(playlist[0]);
+
+		videoPlayer.ready(function() {
+			console.log('Your player is ready!');
+			// videoPlayer.play();
+			// console.log("current time=" + videoPlayer.currentTime() );
+			// console.log("影片長度: " + videoPlayer.duration());
+			// console.log(videoPlayer.rem());
+		});
+
+		videoPlayer.on('ended', function() {
+			console.log("video is end");
+		});
+
+		/*
+		var options = {};
+
+		var player = videojs('my-video', options, function onPlayerReady() {
+			console.log('Your player is ready!');
+
+			// In this context, `this` is the player that was created by Video.js.
+			// this.play();
+
+			// How about an event listener?
+			this.on('ended', function() {
+				console.log('Awww...over so soon?!');
+			});
+		});
+
+		 */
+	}
+
+	function get(){
+		console.log("current time=" + videoPlayer.currentTime() );
+		console.log("影片長度: " + videoPlayer.duration());
+		console.log(videoPlayer.remainingTime());
+
+	}
+
+	function setCurrentTime(time){
+		videoPlayer.currentTime(time);	// 指定開始時間
+	}
+
+	function play()
+	{
+		videoPlayer.play(); // 播放
+	}
+
+	function pause()
+	{
+		videoPlayer.pause(); // 暫停
+	}
+
+	function mute()
+	{
+		videoPlayer.muted( true ); // 靜音
+	}
+
+	function changeSource(){
+		videoPlayer.src(playlist[1]);
+	}
+
+	function getCurrentSrc(){
+		console.log("current video path: " + videoPlayer.currentSrc());
+	}
+</script>
+
+</head>
+<body>
+
+<video id="my-video" class="video-js"></video>
+
+<br />
+<button onclick="play()">Play</button>
+<button onclick="pause()">Pause</button>
+<button onclick="mute()">Mute</button>
+
+<button onclick="get()">get</button>
+<button onclick="setCurrentTime(2)">set time</button>
+<button onclick="changeSource()">換片</button>
+<button onclick="getCurrentSrc()">目前播放影片</button>
+
+</body>
+</html>

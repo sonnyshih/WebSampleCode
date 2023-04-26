@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/時間Demo.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/滑鼠鍵盤動作Demo.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/播放影片/影片播放Demo(基本型).htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/WebSampleCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WebSampleCode.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,25 +31,26 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.0" />
   <component name="ProjectId" id="1ft74aqsQQ83sL0wLnyalokula2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/hongjie/PhpstormProjects/WebSampleCode/Demo/Front UI/Javascript 範例",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hongjie/PhpstormProjects/WebSampleCode/Demo/Front UI/Javascript 範例&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Demo/Front UI/Javascript 範例" />
@@ -59,11 +60,11 @@
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/日期選擇器" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/播放影片" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/檔案上傳" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/日期選擇器" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/BootstrapDemo/bootstrap5.1" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/瀏覽器button功能" />
-      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/另開視窗回傳值" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -173,7 +174,14 @@
       <workItem from="1680752613412" duration="597000" />
       <workItem from="1681111057876" duration="598000" />
       <workItem from="1681447120087" duration="596000" />
-      <workItem from="1681868028813" duration="6240000" />
+      <workItem from="1681868028813" duration="6882000" />
+      <workItem from="1682038550736" duration="598000" />
+      <workItem from="1682326333190" duration="3906000" />
+      <workItem from="1682383312072" duration="1298000" />
+      <workItem from="1682385339681" duration="5492000" />
+      <workItem from="1682406364110" duration="255000" />
+      <workItem from="1682406640494" duration="2319000" />
+      <workItem from="1682470865466" duration="2167000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -441,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681868206053</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="1. Develop the 時間Demo.htm&#10;2. Develop the 滑鼠鍵盤動作Demo.htm">
+      <created>1681958929120</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1681958929120</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +475,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
-    <MESSAGE value="1. add demo bootstrap framework." />
     <MESSAGE value="1. update bootstrap framework." />
     <MESSAGE value="1. Modify the demo." />
     <MESSAGE value="1. disable back button of browser demo" />
@@ -485,6 +499,7 @@
     <MESSAGE value="1. Develop the timer範例.htm demo." />
     <MESSAGE value="1. Develop the datalist模擬select.htm demo" />
     <MESSAGE value="1. Develop the DragandDropQueryTree.html DEMO" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Develop the DragandDropQueryTree.html DEMO" />
+    <MESSAGE value="1. Develop the 時間Demo.htm&#10;2. Develop the 滑鼠鍵盤動作Demo.htm" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Develop the 時間Demo.htm&#10;2. Develop the 滑鼠鍵盤動作Demo.htm" />
   </component>
 </project>
