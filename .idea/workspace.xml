@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/播放影片/影片播放Demo(基本型).htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/WebSampleCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WebSampleCode.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/播放影片/影片播放Demo(基本型).htm" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/播放影片/影片播放Demo(基本型).htm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +180,11 @@
       <workItem from="1682385339681" duration="5492000" />
       <workItem from="1682406364110" duration="255000" />
       <workItem from="1682406640494" duration="2319000" />
-      <workItem from="1682470865466" duration="2167000" />
+      <workItem from="1682470865466" duration="6849000" />
+      <workItem from="1682494522079" duration="28000" />
+      <workItem from="1682494793849" duration="65000" />
+      <workItem from="1682497916535" duration="635000" />
+      <workItem from="1682558552918" duration="14652000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -456,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681958929120</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="1. Develop the 影片播放.htm">
+      <created>1682477462717</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1682477462717</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +485,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
-    <MESSAGE value="1. update bootstrap framework." />
     <MESSAGE value="1. Modify the demo." />
     <MESSAGE value="1. disable back button of browser demo" />
     <MESSAGE value="1. replease part html Demo." />
@@ -500,6 +509,7 @@
     <MESSAGE value="1. Develop the datalist模擬select.htm demo" />
     <MESSAGE value="1. Develop the DragandDropQueryTree.html DEMO" />
     <MESSAGE value="1. Develop the 時間Demo.htm&#10;2. Develop the 滑鼠鍵盤動作Demo.htm" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Develop the 時間Demo.htm&#10;2. Develop the 滑鼠鍵盤動作Demo.htm" />
+    <MESSAGE value="1. Develop the 影片播放.htm" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Develop the 影片播放.htm" />
   </component>
 </project>

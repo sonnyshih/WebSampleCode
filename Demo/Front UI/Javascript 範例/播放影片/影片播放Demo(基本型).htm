@@ -3,64 +3,61 @@
 <head>
 <meta charset="utf-8" />
 <title>Handle Value Demo</title>
-	<link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
-	<script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
-
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<script type="text/javascript">
+	<!-- videojs base -->
+	<link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet">
+	<script src="https://unpkg.com/video.js@7/dist/video.min.js"></script>
+
+
+	<!-- switch quality (Just only can use in video js v7.x) -->
+	<link href="https://cdn.jsdelivr.net/npm/videojs-hls-quality-selector@1.1.4/dist/videojs-hls-quality-selector.min.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-quality-levels/2.0.9/videojs-contrib-quality-levels.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/videojs-hls-quality-selector@1.1.4/dist/videojs-hls-quality-selector.min.js"></script>
+
+	<script type="text/javascript">
 	// refer to: https://videojs.com/getting-started/
 	// example : https://videojs.com/advanced?video=disneys-oceans
+	// 動態影片程式處理: https://www.qiniu.com/qfans/qnso-31591166#comments
+	// switch video quality: https://www.npmjs.com/package/videojs-hls-quality-selector
 
 	var videoPlayer;
+	var index = 0;
 	//簡寫法
 	$(function(){
 		initVideo();
 	});
 
 	var playlist = [ {type: 'video/mp4', src: 'https://www.w3schools.com/tags/mov_bbb.mp4'},
-					 {type: 'video/mp4', src: "https://vjs.zencdn.net/v/oceans.mp4"}
+					 {type: 'video/mp4', src: "https://vjs.zencdn.net/v/oceans.mp4"},
+  					 {type: "application/x-mpegURL", src: "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"},
+					 {type: "application/x-mpegURL", src: "http://localhost:8080/showImageVideoServlet?type=2&filePath=/video/30/test.m3u8"}
 				   ]
 
 	function initVideo(){
 		var options = { autoplay: true, muted: true,	// if want to autoplay video, must set the "autoplay" and "muted" to true.
-					    width: 600, height: 300,
-						controls: true,					// show control
-						// poster: "https://vjs.zencdn.net/v/oceans.png"	// preview photo
-					  };
+			fluid: true,    					// 自動設定大小
+			playbackRates: [0.5, 1, 1.5, 2],	// 切換不同速度
+			controls: true,						// show control
+			// poster: "https://vjs.zencdn.net/v/oceans.png"	// preview photo
+		};
 
-		videoPlayer = videojs("my-video", options);
+		videoPlayer = videojs('my-video', options);
+
+
 		// videoPlayer.src({type: 'video/mp4', src: 'https://www.w3schools.com/tags/mov_bbb.mp4'});
-		videoPlayer.src(playlist[0]);
+		videoPlayer.src(playlist[2]);
+		videoPlayer.hlsQualitySelector();    // 載入選擇解析度功能 (一開始要載入有分解析度的影片才會顯示切換解析度的功能)
 
 		videoPlayer.ready(function() {
 			console.log('Your player is ready!');
-			// videoPlayer.play();
-			// console.log("current time=" + videoPlayer.currentTime() );
-			// console.log("影片長度: " + videoPlayer.duration());
-			// console.log(videoPlayer.rem());
 		});
 
 		videoPlayer.on('ended', function() {
 			console.log("video is end");
+			nextVideo();
 		});
 
-		/*
-		var options = {};
-
-		var player = videojs('my-video', options, function onPlayerReady() {
-			console.log('Your player is ready!');
-
-			// In this context, `this` is the player that was created by Video.js.
-			// this.play();
-
-			// How about an event listener?
-			this.on('ended', function() {
-				console.log('Awww...over so soon?!');
-			});
-		});
-
-		 */
 	}
 
 	function get(){
@@ -89,8 +86,29 @@
 		videoPlayer.muted( true ); // 靜音
 	}
 
+	function preVideo(){
+		index--
+		if (index<0){
+			index=0;
+		}
+		videoPlayer.src(playlist[index]);
+	}
+
+	function nextVideo(){
+		index++
+		if (index==playlist.length){
+			index=0;
+		}
+		videoPlayer.src(playlist[index]);
+	}
+
 	function changeSource(){
-		videoPlayer.src(playlist[1]);
+		index++
+		if (index==playlist.length){
+			index=0;
+		}
+		videoPlayer.src(playlist[index]);
+
 	}
 
 	function getCurrentSrc(){
@@ -101,7 +119,12 @@
 </head>
 <body>
 
-<video id="my-video" class="video-js"></video>
+<video id="my-video" class="video-js">
+	<p class="vjs-no-js">
+		To view this video please enable JavaScript, and consider upgrading to a web browser that
+		<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+	</p>
+</video>
 
 <br />
 <button onclick="play()">Play</button>
@@ -110,7 +133,9 @@
 
 <button onclick="get()">get</button>
 <button onclick="setCurrentTime(2)">set time</button>
-<button onclick="changeSource()">換片</button>
+<!--<button onclick="changeSource()">換片</button>-->
+<button onclick="preVideo()">上一片</button>
+<button onclick="nextVideo()">下一片</button>
 <button onclick="getCurrentSrc()">目前播放影片</button>
 
 </body>
