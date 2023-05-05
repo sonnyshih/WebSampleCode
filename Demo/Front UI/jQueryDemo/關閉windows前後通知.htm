@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script type="text/javascript">
+
+    $(window).on('beforeunload', function (e) {
+    	console.log("asdfasdf");
+        e.preventDefault();
+            $.ajax({
+                url: '/path/to/your/script.php',
+                type: 'POST',
+                data: {message: 'Window is closing'},
+                async: false,
+                success: function(data) {
+                    // 當 AJAX 請求成功時，關閉視窗
+                    window.close();
+                },
+                error: function(xhr, status, error) {
+                    // 處理錯誤
+                    console.log('AJAX request failed: ' + error);
+                }
+            });
+        return "";
+    });
+
+
+	//簡寫法
+	// $(function(){
+	// 	initClose();
+	// });
+
+	function initClose(){
+
+
+        //
+		// $(window).on('beforeunload', function (e) {
+		// 	e.returnValue = '你還沒有完成你的文章，就這樣離開了嗎？1111'
+		// 	return '你還沒有完成你的文章，就這樣離開了嗎？';
+		// });
+
+        // window.onbeforeunload=function(){
+        //     return "Are you sure to leave this page?";
+        // }
+        //
+        // window.addEventListener('beforeunload', (event) => {
+        //     event.returnValue = 'Are you sure you want to leave?';
+        // });
+	}
+</script>
+
+</head>
+<body>
+
+
+</body>
+
+</html>
