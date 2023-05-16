@@ -34,6 +34,14 @@
 
 		var dataList = [];
 		function initSortable(){
+
+			$( "#accordionCourse" ).sortable({
+				stop: function(event, ui) {
+					let arrayData = $('#accordionCourse').sortable('toArray', { attribute: "data-id" } );
+					console.log(arrayData);
+				}
+			});
+
 			$('div[name="list[]"]').sortable({
 				connectWith: $('div[name="list[]"]'),
 				items: ".sort",	// 不可使用name selector, 只能使用class
@@ -80,19 +88,20 @@
 </head>
 <body>
 
-<div class="item" id="list_a" name="list[]">
-	<p>title1</p>
-	<div class="sort" id="item_a" data-id="data_a">sort 1</div>
+<div id="accordionCourse">
+	<div class="item" id="list_a" name="list[]" data-id="list_a">
+		<p>title1</p>
+		<div class="sort" id="item_a" data-id="data_a">sort 1</div>
+	</div>
+	<div class="item" id="list_b" name="list[]" data-id="list_b">
+		<p>title2</p>
+		<div class="sort" id="item_b" data-id="data_b">sort 2</div>
+	</div>
+	<div class="item" id="list_c" name="list[]" data-id="list_c">
+		<p>title3</p>
+		<div class="sort" id="item_c" data-id="data_c">sort 3</div>
+	</div>
 </div>
-<div class="item" id="list_b" name="list[]">
-	<p>title2</p>
-	<div class="sort" id="item_b" data-id="data_b">sort 2</div>
-</div>
-<div class="item" id="list_c" name="list[]">
-	<p>title3</p>
-	<div class="sort" id="item_c" data-id="data_c">sort 3</div>
-</div>
-
 
 
 </body>

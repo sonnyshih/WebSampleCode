@@ -190,7 +190,7 @@
       <workItem from="1682990302893" duration="2000" />
       <workItem from="1683011170904" duration="7750000" />
       <workItem from="1683158986743" duration="1213000" />
-      <workItem from="1684202302735" duration="11253000" />
+      <workItem from="1684202302735" duration="12818000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -493,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684221590655</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="1. Modify Sort Demo.">
+      <created>1684223688897</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1684223688897</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,7 +519,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
-    <MESSAGE value="1. Add the bootstrap 5.1.3 demo" />
     <MESSAGE value="1. Add the bootstrap 5.1.3 button loading demo" />
     <MESSAGE value="1. Add the js sample." />
     <MESSAGE value="1. Add the CategoryTreeDemo.htm" />
@@ -537,6 +543,7 @@
     <MESSAGE value="1. Modify the 影片播放.htm" />
     <MESSAGE value="1. Develop 關閉windows前後通知.htm" />
     <MESSAGE value="1. Develop Sort Demo." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Develop Sort Demo." />
+    <MESSAGE value="1. Modify Sort Demo." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Modify Sort Demo." />
   </component>
 </project>
