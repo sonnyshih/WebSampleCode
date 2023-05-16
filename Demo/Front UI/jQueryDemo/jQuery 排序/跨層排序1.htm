@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Handle Value Demo</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<style>
+		.item {
+			height: auto;
+			min-height: 40px;
+			background: #ccc;
+			margin-bottom: 5px;
+			width: 150px;
+		}
+
+		.sort {
+			background: #333;
+			color: #fff;
+			z-index: 1;
+		}
+	</style>
+
+	<script>
+		$(function(){
+			initSortable();
+		});
+
+		// var dropped;
+		// var titleDrop;
+		// var titleChange;
+
+		var dataList = [];
+		function initSortable(){
+			$('div[name="list[]"]').sortable({
+				connectWith: $('div[name="list[]"]'),
+				items: ".sort",
+				update: function (vent, ui){
+					var changedList = this.id;
+					var order = $(this).sortable('toArray');
+					let arrayData = $(this).sortable('toArray', { attribute: "data-id" } );
+
+					let data = {
+						id: changedList,
+						items: order,
+						arrayData: arrayData
+					};
+
+					dataList.push(data);
+
+					console.log("data = " + JSON.stringify(data) );
+				},
+				start: function (event, ui){
+					dataList = [];
+				},
+				stop: function( event, ui ) {
+					console.log(dataList);
+					// if(titleDrop != titleChange)
+					// 	dropped.append(ui.item);
+				},
+				change: function(event, ui){
+
+				}
+			});
+
+			// $( ".item" ).droppable({
+			// 	accept: ".sort",
+			// 	drop: function( event, ui ) {
+			// 		dropped = $(this);
+			// 		titleDrop = $(this).find('p').text();
+			// 	}
+			// });
+
+		}
+
+	</script>
+
+</head>
+<body>
+
+<div class="item" id="list_a" name="list[]">
+	<p>title1</p>
+	<div class="sort" id="item_a" data-id="data_a">sort 1</div>
+</div>
+<div class="item" id="list_b" name="list[]">
+	<p>title2</p>
+	<div class="sort" id="item_b" data-id="data_b">sort 2</div>
+</div>
+<div class="item" id="list_c" name="list[]">
+	<p>title3</p>
+	<div class="sort" id="item_c" data-id="data_c">sort 3</div>
+</div>
+
+
+
+</body>
+
+</html>

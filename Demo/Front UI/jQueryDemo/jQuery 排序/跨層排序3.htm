@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Handle Value Demo</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+	<script>
+		$(function(){
+			initSortable();
+		});
+
+		function initSortable(){
+			$('ul[name="imageList[]"]').sortable({
+				// connectWith: '.sortable-list',
+				connectWith: $('ul[name="imageList[]"]'),
+				update: function(event, ui) {
+					var changedList = this.id;
+					var order = $(this).sortable('toArray');
+					var positions = order.join(';');
+
+					console.log({
+						id: changedList,
+						positions: positions
+					});
+				}
+			});
+
+		}
+	</script>
+
+</head>
+<body>
+<!-- 參考: https://codepen.io/Sinetheta/pen/DGQWMm?editors=1111 -->
+<ul id="image-list1" name="imageList[]" class="sortable-list">
+	<li id="a">A</li>
+	<li id="b">B</li>
+	<li id="c">C</li>
+</ul>
+
+<ul id="image-list2" name="imageList[]" class="sortable-list">
+	<li id="1">1</li>
+	<li id="2">2</li>
+	<li id="3">3</li>
+</ul>
+
+</body>
+
+</html>

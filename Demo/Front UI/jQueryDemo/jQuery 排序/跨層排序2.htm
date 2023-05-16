@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<style>
+		.item {
+			height: auto;
+			min-height: 40px;
+			background: #ccc;
+			margin-bottom: 5px;
+			width: 150px;
+		}
+
+		.sort {
+			background: #333;
+			color: #fff;
+			z-index: 1;
+		}
+	</style>
+
+<script>
+	// 參考: http://jsfiddle.net/wPtjM/1/
+	$(function(){
+		initSortable();
+	});
+
+	function initSortable(){
+		var dropped;
+		var titleDrop;
+		var titleChange;
+		$(function() {
+			$("#accordionCourse").sortable({
+				connectWith: '.sortable',
+				items: ".sort",
+				update: function (vent, ui){
+					var changedList = this.id;
+					var order = $(this).sortable('toArray');
+					var positions = order.join(';');
+
+					console.log({
+						id: changedList,
+						positions: positions
+					});
+				},
+				change: function(event, ui){
+					titleChange = ui.placeholder.parent().find('p').text();
+				},
+				stop: function( event, ui ) {
+					let arrayData = $('#accordionCourse').sortable('toArray', { attribute: "data-id" } );
+					console.log(arrayData);
+
+					if(titleDrop != titleChange)
+						dropped.append(ui.item);
+				}
+
+			});
+
+			$( ".item" ).droppable({
+				accept: ".sort",
+				drop: function( event, ui ) {
+					dropped = $(this);
+					titleDrop = $(this).find('p').text();
+				}
+			});
+		});
+	}
+</script>
+
+</head>
+<body>
+
+<div class="sortable" id="accordionCourse">
+	<div class="item" id="item_a" data-id="cate_a">
+		<p>title1</p>
+		<div class="sort" data-parent-id="item_a" data-id="sort_a">sort 1</div>
+	</div>
+	<div class="item" id="item_b" data-id="cate_b">
+		<p>title2</p>
+		<div class="sort" data-parent-id="item_b" data-id="sort_b">sort 2</div>
+	</div>
+	<div class="item" id="item_c"  data-id="cate_c">
+		<p>title3</p>
+		<div class="sort" data-parent-id="item_c" data-id="sort_c">sort 3</div>
+	</div>
+</div>
+
+</body>
+
+</html>
