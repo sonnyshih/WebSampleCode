@@ -36,8 +36,8 @@
 		function initSortable(){
 			$('div[name="list[]"]').sortable({
 				connectWith: $('div[name="list[]"]'),
-				items: ".sort",
-				update: function (vent, ui){
+				items: ".sort",	// 不可使用name selector, 只能使用class
+				update: function (event, ui){
 					var changedList = this.id;
 					var order = $(this).sortable('toArray');
 					let arrayData = $(this).sortable('toArray', { attribute: "data-id" } );

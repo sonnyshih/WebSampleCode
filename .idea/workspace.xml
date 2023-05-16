@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery 排序/跨層排序1.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery 排序/跨層排序2.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery 排序/跨層排序3.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery 排序/跨層排序1.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery 排序/跨層排序1.htm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +190,7 @@
       <workItem from="1682990302893" duration="2000" />
       <workItem from="1683011170904" duration="7750000" />
       <workItem from="1683158986743" duration="1213000" />
-      <workItem from="1684202302735" duration="9285000" />
+      <workItem from="1684202302735" duration="11253000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -488,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683259384348</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="1. Develop Sort Demo.">
+      <created>1684221590655</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1684221590655</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,7 +512,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
-    <MESSAGE value="1. replease part html Demo." />
     <MESSAGE value="1. Add the bootstrap 5.1.3 demo" />
     <MESSAGE value="1. Add the bootstrap 5.1.3 button loading demo" />
     <MESSAGE value="1. Add the js sample." />
@@ -532,6 +536,7 @@
     <MESSAGE value="1. Develop the 影片播放.htm" />
     <MESSAGE value="1. Modify the 影片播放.htm" />
     <MESSAGE value="1. Develop 關閉windows前後通知.htm" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Develop 關閉windows前後通知.htm" />
+    <MESSAGE value="1. Develop Sort Demo." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Develop Sort Demo." />
   </component>
 </project>
