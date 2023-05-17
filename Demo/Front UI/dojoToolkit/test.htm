@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tutorial: Hello Dojo!</title>
+	<!-- Font Awesome Icons http://fontawesome.io/ -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<!-- load Dojo -->
+	<!-- refer to: https://dojotoolkit.org/ -->
+	<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.8/dojo/dojo.js"></script>
+
+	<link rel="stylesheet" href="dijit/themes/claro/claro.css">
+<!--	<link rel="stylesheet" href="css/themes/claro/document.css">-->
+
+
+
+
+
+</head>
+<body class="claro">
+<button id="button1">按鈕1</button>
+<button id="button2">按鈕2</button>
+
+<script>
+
+	require(["dijit/Menu", "dijit/MenuItem", "dojo/on"], function(Menu, MenuItem, on) {
+		var menu = new Menu({
+			targetNodeIds: ["button1", "button2"]
+		});
+
+		var menuItem = new MenuItem({
+			label: "菜單項目",
+			onClick: function(evt) {
+				var target = evt.target; // 獲取觸發事件的元素
+				var buttonId = target.id; // 獲取元素的 ID
+				console.log("右鍵點擊了按鈕：" + buttonId);
+			}
+		});
+		menu.addChild(menuItem);
+
+		menu.startup();
+
+		// 監聽右鍵點擊事件
+		on(document, "contextmenu", function(evt) {
+			var targetId = evt.target.id; // 獲取事件目標元素的 ID
+			if (targetId === "button1" || targetId === "button2") {
+				// 如果是指定元素的右鍵點擊事件
+				evt.preventDefault(); // 阻止默認右鍵菜單
+				menu.bindDomNode(evt.target); // 綁定菜單到目標元素上
+				menu._openMyself(evt.target); // 手動打開菜單
+			}
+			console.log("adfasdfasdf");
+			console.log(evt.target)
+		});
+	});
+
+</script>
+</body>
+</html>

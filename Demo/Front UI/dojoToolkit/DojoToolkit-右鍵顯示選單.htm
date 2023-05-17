@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tutorial: Hello Dojo!</title>
+	<!-- Font Awesome Icons http://fontawesome.io/ -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<!-- load Dojo -->
+	<!-- refer to: https://dojotoolkit.org/ -->
+	<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.8/dojo/dojo.js"></script>
+
+	<link rel="stylesheet" href="dijit/themes/claro/claro.css">
+<!--	<link rel="stylesheet" href="css/themes/claro/document.css">-->
+
+	<link rel="stylesheet" href="css/icon.css">
+
+
+	<script type="text/javascript">
+		$(function(){
+			initDojoToolkit();
+		});
+
+		function initDojoToolkit(){
+			// refer to: https://dojotoolkit.org/reference-guide/1.8/dijit/Menu.html
+			require(["dojo/ready",
+					 "dijit/Menu",
+					 "dijit/MenuItem",
+					 "dijit/CheckedMenuItem",
+					 "dijit/MenuSeparator",
+					 "dijit/PopupMenuItem",
+					 "dojo/on"],
+					function(ready, Menu, MenuItem, CheckedMenuItem, MenuSeparator, PopupMenuItem, on){
+						ready(function(){
+							var pMenu;
+							pMenu = new Menu({
+								targetNodeIds: ["progmenu1", "progmenu2"]	// 按鈕的ID
+							});
+
+							/** icon 圖示不能用 fontawesome，只能自己建css檔 (如 css/icon.css檔) */
+							// 主選單項目
+							var item1 = new MenuItem({
+								label: "Simple menu item",
+								iconClass: "accessIcon",
+								onClick: function(event){
+									var target = event.target; // 獲取觸發事件的元素
+									var objectID = target.id; // 獲取元素的 ID
+
+									// console.log(target);
+
+									console.log("點擊了按鈕：" + objectID);
+									alert('i was clicked');
+								}
+							});
+
+							pMenu.addChild(item1);
+
+							// 主選單項目
+							var item2 = new MenuItem({
+								iconClass: "viewIcon",
+								label: "Disabled menu item",
+								disabled: true
+							});
+							pMenu.addChild(item2);
+
+							// 主選單項目
+							var item3 = new MenuItem({
+								iconClass: "zipUploadIcon",
+								label: "Menu Item With an icon",
+								onClick: function(event){
+									alert('i was clicked')
+								}
+							});
+							pMenu.addChild(item3);
+
+							// 主選單項目
+							var item4 = new CheckedMenuItem({
+								label: "checkable menu item"
+							})
+							pMenu.addChild(item4);
+
+							// 分隔線
+							pMenu.addChild(new MenuSeparator());
+
+							/** ##### 有子項目的主選單項目 (Start) ##### */
+							// 子項目
+							var pSubMenu = new Menu();
+
+							var submenu1 = new MenuItem({
+								label: "Submenu item"
+							});
+							pSubMenu.addChild(submenu1);
+
+							var submenu2 = new MenuItem({
+								label: "Submenu item"
+							});
+							pSubMenu.addChild(submenu2);
+
+							// 將子項目加入到主項目
+							let popupMenuItem = new PopupMenuItem({
+								label: "Submenu",
+								popup: pSubMenu
+							});
+
+							pMenu.addChild(popupMenuItem);
+							/** ##### 有子項目的主選單項目 (End) ##### */
+
+							pMenu.startup();
+
+							// 監聽右鍵點擊事件
+							on(document, "contextmenu", function(evt) {
+								var targetId = evt.target.id; // 獲取事件目標元素的 ID
+								console.log("targetId="+targetId);
+								// if (targetId === "button1" || targetId === "button2") {
+								// 	// 如果是指定元素的右鍵點擊事件
+								// 	evt.preventDefault(); // 阻止默認右鍵菜單
+								// 	menu.bindDomNode(evt.target); // 綁定菜單到目標元素上
+								// 	menu._openMyself(evt.target); // 手動打開菜單
+								// }
+							});
+						}
+					);
+			});
+
+		}//end function
+	</script>
+
+</head>
+<body class="claro">
+<span id="progmenu1">Right click me to get a menu (第1組)</span>
+<br>
+<span id="progmenu2">Right click me to get a menu (第2組)</span>
+
+<i class="fas fa-wrench"></i>
+</body>
+</html>

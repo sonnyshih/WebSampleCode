@@ -1,0 +1,316 @@
+.claro .dijitIcon.dijitMenuItemIcon.accessIcon{
+    background-image: url('menuIcon/access.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.alertIcon{
+    background-image: url('menuIcon/alert.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.auditIcon{
+    background-image: url('menuIcon/audit.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.addIcon{
+    background-image: url('menuIcon/fileNew.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.calendarIcon{
+    background-image: url('menuIcon/calendar.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.closeIcon{
+    background-image: url('menuIcon/close.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.deleteIcon{
+    background-image: url('menuIcon/delete.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.backIcon{
+    background-image: url('menuIcon/back.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.broomIcon{
+    background-image: url('menuIcon/broom.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.editIcon{
+    background-image: url('menuIcon/edit.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.exportIcon{
+    background-image: url('menuIcon/export.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.gemIcon{
+    background-image: url('menuIcon/gem.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.importIcon{
+    background-image: url('menuIcon/import.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.logIcon{
+    background-image: url('menuIcon/log.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.modifyIcon{
+    background-image: url('menuIcon/modify.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.fileNewIcon{
+    background-image: url('menuIcon/fileNew.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.folderNewIcon{
+    background-image: url('menuIcon/folderNew.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.downloadIcon{
+    background-image: url('menuIcon/download.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.copyIcon{
+    background-image: url('menuIcon/copy.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.convertIcon{
+    background-image: url('menuIcon/convert.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    background-size: 24px 24px;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.historyIcon{
+    background-image: url('menuIcon/history.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.infoIcon{
+    background-image: url('menuIcon/info.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.lockIcon{
+    background-image: url('menuIcon/lock.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.mailIcon{
+    background-image: url('menuIcon/mail.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.chatIcon{
+    background-image: url('menuIcon/chat.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.optionIcon{
+    background-image: url('menuIcon/options.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.printerIcon{
+    background-image: url('menuIcon/printer.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.prohibitIcon{
+    background-image: url('menuIcon/prohibit.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.publishIcon{
+    background-image: url('menuIcon/publish.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.refreshIcon{
+    background-image: url('menuIcon/refresh.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.removeDateIcon{
+    background-image: url('menuIcon/removeDate.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.renameIcon{
+    background-image: url('menuIcon/rename.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.reportIcon{
+    background-image: url('menuIcon/report.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.scanIcon{
+    background-image: url('menuIcon/shield.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.searchIcon{
+    background-image: url('menuIcon/search.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.stickyIcon{
+    background-image: url('menuIcon/star.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.syncIcon{
+    background-image: url('menuIcon/sync.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.systemIcon{
+    background-image: url('menuIcon/direk.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.tagsIcon{
+    background-image: url('menuIcon/tags.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.unlockIcon{
+    background-image: url('menuIcon/unlock.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.uploadIcon{
+    background-image: url('menuIcon/upload.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.versionIcon{
+    background-image: url('menuIcon/history.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.viewIcon{
+    background-image: url('menuIcon/view.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.zipDownloadIcon{
+    background-image: url('menuIcon/zipDownload.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}
+.claro .dijitIcon.dijitMenuItemIcon.zipUploadIcon{
+    background-image: url('menuIcon/zipUpload.png');
+    background-repeat: no-repeat;
+    background-position: 68% 50%;
+    width: 41px;
+    height: 32px;
+}

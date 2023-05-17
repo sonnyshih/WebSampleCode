@@ -5,8 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/DojoToolkit-右鍵顯示選單(html).htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/DojoToolkit-右鍵顯示選單.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/icon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/access.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/alert.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/audit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/broom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/calendar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/chat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/convert.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/copy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/direk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/export.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/fileNew.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/folderMove.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/folderNew.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/gem.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/history.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/import.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/info.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/lock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/log.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/mail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/modify.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/options.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/printer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/prohibit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/publish.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/refresh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/removeDate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/rename.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/report.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/save.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/shield.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/sync.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/tags.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/unlock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/upload.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/upload2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/view.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/zipDownload.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css/menuIcon/zipUpload.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/dijit/themes/claro/claro.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/test.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery 排序/跨層排序1.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery 排序/跨層排序1.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/BaseDojoToolkitDemo.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/BaseDojoToolkitDemo.htm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +92,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/hongjie/PhpstormProjects/WebSampleCode/Demo/Front UI/jQueryDemo/jQuery 排序",
+    "last_opened_file_path": "/Users/hongjie/PhpstormProjects/WebSampleCode/Demo/Front UI/dojoToolkit",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -52,18 +103,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo/Front UI/dojoToolkit" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery 排序" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/Javascript 範例" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQueryTree/jQuery treetable" />
-      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jquery post 資料與檔案" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css" />
+      <recent name="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/dijit/themes/claro" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/播放影片" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/檔案上傳" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/日期選擇器" />
-      <recent name="$PROJECT_DIR$/Demo/Front UI/BootstrapDemo/bootstrap5.1" />
-      <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/瀏覽器button功能" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -190,7 +241,7 @@
       <workItem from="1682990302893" duration="2000" />
       <workItem from="1683011170904" duration="7750000" />
       <workItem from="1683158986743" duration="1213000" />
-      <workItem from="1684202302735" duration="12818000" />
+      <workItem from="1684202302735" duration="29409000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -500,7 +551,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684223688897</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="1. Modify Sort Demo.">
+      <created>1684225432904</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1684225432904</updated>
+    </task>
+    <task id="LOCAL-00046" summary="1. Add the dojo toolkit base demo.">
+      <created>1684293587960</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1684293587960</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,7 +584,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
-    <MESSAGE value="1. Add the bootstrap 5.1.3 button loading demo" />
     <MESSAGE value="1. Add the js sample." />
     <MESSAGE value="1. Add the CategoryTreeDemo.htm" />
     <MESSAGE value="1. Modify the CategoryTreeDemo.htm" />
@@ -544,6 +608,7 @@
     <MESSAGE value="1. Develop 關閉windows前後通知.htm" />
     <MESSAGE value="1. Develop Sort Demo." />
     <MESSAGE value="1. Modify Sort Demo." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Modify Sort Demo." />
+    <MESSAGE value="1. Add the dojo toolkit base demo." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Add the dojo toolkit base demo." />
   </component>
 </project>

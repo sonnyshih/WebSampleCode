@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<!-- Font Awesome Icons http://fontawesome.io/ -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+
+	<script>dojoConfig = {async: true, parseOnLoad: true}</script>
+	<!-- load Dojo -->
+	<!-- refer to: https://dojotoolkit.org/ -->
+	<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.8/dojo/dojo.js"></script>
+
+	<link rel="stylesheet" href="dijit/themes/claro/claro.css">
+
+	<link rel="stylesheet" href="css/icon.css">
+
+	<script>
+		require(["dojo/domReady!", "dojo/parser", "dijit/Menu", "dijit/MenuItem", "dijit/MenuSeparator", "dijit/PopupMenuItem", "dijit/ColorPalette"]);
+	</script>
+</head>
+<body class="claro">
+
+<!-- icon 圖示不能用 fontawesome，只能自己建css檔 (如 css/icon.css檔) -->
+<!--<div data-dojo-type="dijit/Menu" id="windowContextMenu" data-dojo-props="contextMenuForWindow:true" style="display: none;">--> <!-- 在頁面上另一地方都可左鍵出現menu -->
+<div data-dojo-type="dijit/Menu" id="windowContextMenu" data-dojo-props="targetNodeIds:['progmenu']" style="display: none;"> <!-- 指定 id=progmenu 左鍵出現menu -->
+
+	<div data-dojo-type="dijit/MenuItem" data-dojo-props="label: '項目', iconClass: 'accessIcon'"></div>
+	<div data-dojo-type="dijit.MenuItem" data-dojo-props="iconClass:'deleteIcon', onClick:function(){alert('hello world')}, label:'刪除'"></div>
+
+	<div data-dojo-type="dijit/MenuItem" data-dojo-props="iconClass:'fas fa-wrench',
+        onClick:function(){alert('not actually cutting anything, just a test!')}">Cut</div>
+
+	<div data-dojo-type="dijit/MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCopy',
+        onClick:function(){alert('not actually copying anything, just a test!')}">Copy</div>
+
+	<div data-dojo-type="dijit/MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconPaste',
+        onClick:function(){alert('not actually pasting anything, just a test!')}">Paste</div>
+
+	<div data-dojo-type="dijit/MenuSeparator"></div>
+
+	<div data-dojo-type="dijit/PopupMenuItem">
+		<span>Enabled Submenu</span>
+		<div data-dojo-type="dijit/Menu" id="submenu1">
+			<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function(){alert('Submenu 1!')}">Submenu Item One</div>
+			<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function(){alert('Submenu 2!')}">Submenu Item Two</div>
+		</div>
+	</div>
+	<div data-dojo-type="dijit/PopupMenuItem">
+		<span>Popup of something other than a menu</span>
+		<div data-dojo-type="dijit/ColorPalette"></div>
+	</div>
+</div>
+
+<span id="progmenu">Right click anywhere on this page to see a menu</span>
+
+<br>
+<i class="fas fa-wrench"></i>
+<i class="fas fa-home"></i>
+
+</body>
+</html>
