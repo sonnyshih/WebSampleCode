@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>JS Bin</title>
+
+<script type="text/javascript" language="javascript">
+	function checkFile(send, extArray) {
+		console.log("id = " + send.id);
+		console.log("name = " + send.name);
+
+		let id = send.id;
+		var fileObj = document.getElementById(id);
+		let fileArray = fileObj.files;
+
+		for (var i = 0; i < fileArray.length; i++) {
+			let filename = fileArray[i].name;
+			var fileExt = filename.substring(filename.lastIndexOf('.')+1);
+			if (extArray.indexOf(fileExt) < 0) {
+				alert("檔案類型錯誤，可接受的副檔名有：" + extArray.toString());
+				return false;
+			}
+		}
+
+		return true;
+
+	}
+</script>
+
+</head>
+<body>
+<h3>##### On Change 做法 ######</h3>
+	<form method="post" enctype="multipart/form-data">
+		<input type="file" id="my_file" name="my_file" onchange="checkFile(this, ['mp4', 'jpg']);" multiple />
+		<input type="button" value="Upload">
+	</form>
+
+</body>
+</html>
