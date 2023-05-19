@@ -13,7 +13,7 @@
 
 		var isRight = true;
 		for (var i = 0; i < fileArray.length; i++) {
-			let filename = fileArray[i].name;
+			let filename = fileArray[i].name.toLowerCase();
 			var fileExt = filename.substring(filename.lastIndexOf('.')+1);
 			if (extArray.indexOf(fileExt) < 0) {
 				isRight = false;
@@ -43,6 +43,7 @@
 
 </head>
 <body>
+<h3>##### 送出前檢查 做法 ######</h3>
 	<form method="post" enctype="multipart/form-data">
 		<input type="file" id="my_file" name="my_file" multiple/>
 		&nbsp;

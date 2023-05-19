@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/檔案上傳格式判斷 Demo/上傳檔案格式限制2 (欄判斷).htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/index.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/index.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/檔案上傳 Demo/上傳檔案格式限制.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/檔案上傳格式判斷 Demo/上傳檔案格式限制1 (onchange).htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/檔案上傳格式判斷 Demo/上傳檔案格式限制1 (onchange).htm" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/檔案上傳格式判斷 Demo/上傳檔案格式限制1 (onchange).htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/檔案上傳格式判斷 Demo/上傳檔案格式限制2 (欄判斷).htm" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/檔案上傳格式判斷 Demo/上傳檔案格式限制2 (欄判斷).htm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +191,7 @@
       <workItem from="1682990302893" duration="2000" />
       <workItem from="1683011170904" duration="7750000" />
       <workItem from="1683158986743" duration="1213000" />
-      <workItem from="1684202302735" duration="36899000" />
+      <workItem from="1684202302735" duration="37455000" />
     </task>
     <task id="LOCAL-00001" summary="jQuery選擇器Demo.htm">
       <created>1597026477931</created>
@@ -523,7 +522,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684313768842</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="1. Develop the checking file extension.">
+      <created>1684462136524</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1684462136524</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,7 +548,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
-    <MESSAGE value="1. Add the CategoryTreeDemo.htm" />
     <MESSAGE value="1. Modify the CategoryTreeDemo.htm" />
     <MESSAGE value="1. Add the Div fadein fadeout." />
     <MESSAGE value="1. Add the Div fadein fadeout demo." />
@@ -567,6 +572,7 @@
     <MESSAGE value="1. Modify Sort Demo." />
     <MESSAGE value="1. Add the dojo toolkit base demo." />
     <MESSAGE value="1. Add the dojo toolkit menu demo." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Add the dojo toolkit menu demo." />
+    <MESSAGE value="1. Develop the checking file extension." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Develop the checking file extension." />
   </component>
 </project>
