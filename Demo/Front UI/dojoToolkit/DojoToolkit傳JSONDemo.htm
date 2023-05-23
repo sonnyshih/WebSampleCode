@@ -44,10 +44,13 @@
 				"arrayData": arrayData
 			},
 			handleAs : "json",
-			load : function(response, ioArgs) {
+			handle: function(response, args) {
 				if (response.success){
 					alert(response.returnMsg);
+					// $('#batchUploadVideoFile').fileinput('reset');
 				}
+
+				return response;
 			}
 		});
 	}
