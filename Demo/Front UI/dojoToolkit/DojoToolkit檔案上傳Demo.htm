@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tutorial: Hello Dojo!</title>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<!-- load Dojo -->
+	<!-- refer to:
+		1. https://dojotoolkit.org/documentation/tutorials/1.10/hello_dojo/index.html
+		2. https://dojotoolkit.org/
+	-->
+	<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.8/dojo/dojo.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			initDojoToolkit();
+		});
+
+		function initDojoToolkit(){
+			// 注意: 如果沒有使用jquery的載入方式，那就要把dojo toolkit 的宣告寫在最下面
+			require([
+				'dojo/dom',
+				'dojo/dom-construct'
+			], function (dom, domConstruct) {
+				// var greetingNode = dom.byId('greeting');
+				// domConstruct.place('<em> Dojo!</em>', greetingNode);
+			});
+		}
+	</script>
+
+</head>
+<body>
+<!--<h1 id="greeting">Hello</h1>-->
+
+<form id="batchUploadVideoForm" name="batchUploadVideoForm" method="post" enctype="multipart/form-data">
+	<div class="card frame class-lightBlue" id="batchUploadVideoDiv" style="display: none;">
+		<div class="form-label-t mb-2"><strong class="class-blue2">批次新增影片</strong> <span class="class-red">* (請上傳MP4檔案)</span> </div>
+		<div class="row g-0 align-items-center mb-3">
+			<div class="col-sm-9 ps-2">
+				<input class="form-control" type="file" id="batchUploadVideoFile" name="batchUploadVideoFile" multiple>
+				<div id="file-errors2"></div>
+			</div>
+		</div>
+		<button type="button" class="btn btn-searchblue" onclick="uploadBatchTrainingVideoSave();">批次上傳影片</button>
+	</div>
+</form>
+
+<script type="text/javascript">
+	function uploadBatchTrainingVideoSave(){
+		const fileInput = document.getElementById('batchUploadVideoFile');
+
+		if (fileInput.files.length==0){
+			alert("請選擇上傳MP4檔案");
+			return;
+		}
+
+		dojo.io.iframe.send({
+			url: 'trainingVideoPartBatchSave.do',
+			form: 'batchUploadVideoForm',		// form id
+			method: "post",
+			handleAs: "json",
+			content: {
+				chapterId: $("#chapterId").val()
+			},
+			handle: function(response, args) {
+				if (response.success){
+					alert(response.returnMsg);
+					// $('#batchUploadVideoFile').fileinput('reset');
+				}
+
+				return response;
+			}
+		});
+
+	}
+
+	/**
+	 ##### 回傳資料是要用<textarea></textarea> 包 #####
+	 Map dataMap = new HashMap();
+	 dataMap.put("success", success);
+	 dataMap.put("returnMsg", returnMsg);
+	 String pojoAsString = PojoMapper.toJson(dataMap);
+	 logger.debug("pojoAsString:"+pojoAsString);
+	 String pojoAsString2 = "<html><body>";
+	 pojoAsString2 += "<textarea>"+ pojoAsString +"</textarea>";
+	 pojoAsString2 += "</body></html>";
+	 response.getWriter().println(pojoAsString2);
+	 return null;
+
+
+
+
+
+
+	 */
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+	$(function(){
+		initRadio();
+		$("#send").click(function(){
+			$("input[name='fruit']").trigger("change");
+		});
+        // $('input[name="fruit"]').trigger("change");
+	});
+
+	function initRadio(){
+        // $('input[type=radio][name=fruit]').change(function () {
+		$("input[name='fruit']").change(function () {
+
+            let isChecked = $(this).is(":checked");
+
+            if (isChecked) {
+                console.log("value=" + $(this).val());
+            }
+
+		});
+	}
+</script>
+
+</head>
+<body>
+<input type="radio" id="fruit1" name="fruit" value="Apple1" checked> Apple <br>
+<input type="radio" id="fruit2" name="fruit" value="Orange1"> Orange <br>
+<input type="radio" id="fruit3" name="fruit" value="Peach1"> Peach <br>
+
+<button type="button" id="send" name="send">送出</button>
+
+</body>
+
+</html>

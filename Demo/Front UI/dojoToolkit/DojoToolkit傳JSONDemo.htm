@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tutorial: Hello Dojo!</title>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<!-- load Dojo -->
+	<!-- refer to:
+		1. https://dojotoolkit.org/documentation/tutorials/1.10/hello_dojo/index.html
+		2. https://dojotoolkit.org/
+	-->
+	<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.8/dojo/dojo.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			initDojoToolkit();
+		});
+
+		function initDojoToolkit(){
+			// 注意: 如果沒有使用jquery的載入方式，那就要把dojo toolkit 的宣告寫在最下面
+			require([
+				'dojo/dom',
+				'dojo/dom-construct'
+			], function (dom, domConstruct) {
+				// var greetingNode = dom.byId('greeting');
+				// domConstruct.place('<em> Dojo!</em>', greetingNode);
+			});
+		}
+	</script>
+
+</head>
+<body>
+<!--<h1 id="greeting">Hello</h1>-->
+
+
+<script type="text/javascript">
+	function send(){
+		dojo.xhrPost({
+			url : "trainingVideoChapterSaveSort.do",
+			method: "post",
+			content : {
+				"arrayData": arrayData
+			},
+			handleAs : "json",
+			load : function(response, ioArgs) {
+				if (response.success){
+					alert(response.returnMsg);
+				}
+			}
+		});
+	}
+</script>
+</body>
+</html>
