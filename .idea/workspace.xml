@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/DojoToolkit傳JSONDemo.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/DojoToolkit傳JSONDemo.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/DojoToolkit檔案上傳Demo.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/DojoToolkit檔案上傳Demo.htm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,14 +189,7 @@
       <workItem from="1682990302893" duration="2000" />
       <workItem from="1683011170904" duration="7750000" />
       <workItem from="1683158986743" duration="1213000" />
-      <workItem from="1684202302735" duration="44359000" />
-    </task>
-    <task id="LOCAL-00002" summary="1. Add the string convert to date demo.">
-      <created>1610610221743</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1610610221743</updated>
+      <workItem from="1684202302735" duration="44447000" />
     </task>
     <task id="LOCAL-00003" summary="1. Add the rating demo.">
       <created>1611035062320</created>
@@ -535,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684820674049</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="1. Develop the auto trigger demo.&#10;2. Modify the DojoToolkit傳JSONDemo.htm">
+      <created>1684820800929</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1684820800929</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +553,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
-    <MESSAGE value="1. Add the Div fadein fadeout demo." />
     <MESSAGE value="1. Add the date picker demo" />
     <MESSAGE value="1. Add the auto select and trigger change." />
     <MESSAGE value="1. Add Readonly Demo." />
@@ -579,6 +577,7 @@
     <MESSAGE value="1. Develop the checking file extension." />
     <MESSAGE value="1. Modify the checking file extension." />
     <MESSAGE value="1. Develop the auto trigger demo.&#10;2. Develop the DojoToolkit傳JSONDemo.htm&#10;3. Develop the DojoToolkit檔案上傳Demo.htm" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Develop the auto trigger demo.&#10;2. Develop the DojoToolkit傳JSONDemo.htm&#10;3. Develop the DojoToolkit檔案上傳Demo.htm" />
+    <MESSAGE value="1. Develop the auto trigger demo.&#10;2. Modify the DojoToolkit傳JSONDemo.htm" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Develop the auto trigger demo.&#10;2. Modify the DojoToolkit傳JSONDemo.htm" />
   </component>
 </project>
