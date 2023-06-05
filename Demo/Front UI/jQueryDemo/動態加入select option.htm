@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Handle Value Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+    var carList = [
+        {"name": "Ford", "model": "F 100"},
+        {"name": "Mazda", "model": "M 350"},
+        {"name": "Toyota", "model": "T 500"},
+    ]
+
+	//簡寫法
+	$(function(){
+
+        $("#loadList").click(function (){
+            $("#car").empty();
+            $("#car").append("<option value=''>請選擇</option>");
+
+            carList.forEach(function (element){
+                $('#car').append($('<option>', {
+                    value: element.model,
+                    text : element.name
+                }));
+            });
+        });
+	});
+</script>
+
+</head>
+<body>
+選項:
+<select id="car" name="car">
+    <option value=''>hello</option>
+</select>
+<button type="button" id="loadList" name="loadList">載入</button>
+
+
+</body>
+
+</html>
