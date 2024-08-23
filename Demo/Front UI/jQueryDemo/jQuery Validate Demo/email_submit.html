@@ -139,7 +139,7 @@
 					   },
 				phone: {
 						required: "請輸入行動電話!",
-					   	   email: "請輸入正確行動電話!"
+					   	   number: "請輸入數字!"
 				   	   },
 			 password: {
 				 			required:"請輸入密碼!",
@@ -147,7 +147,10 @@
 				 	   	 includeLowercaseLetter:"密碼要含有英文字母",
 					        includeNum:"密碼要含有數字",
 					        includeSpecialChar: "密碼要含有符號",
-			   	   		}
+			   	   		},
+			confirm_password:{
+						equalTo:"should enter matching pass"
+						}
 			},
 			invalidHandler: function(event, validator) {
 				var errors = validator.numberOfInvalids();
