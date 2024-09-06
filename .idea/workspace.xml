@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/使用手機鏡頭/camera-input.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/使用手機鏡頭/camera-javascript.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo/email_submit.html" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo/email_submit.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,27 +37,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/hongjie/PhpstormProjects/WebSampleCode/Demo/Front UI/jQueryDemo&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/sonny/PhpstormProjects/WebSampleCode/Demo/Front UI/使用手機鏡頭",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo/Front UI/使用手機鏡頭" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/dojoToolkit" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/Javascript 範例/檔案上傳格式判斷 Demo" />
       <recent name="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery 排序" />
-      <recent name="$PROJECT_DIR$/Demo/Front UI/Javascript 範例" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Demo/Front UI/dojoToolkit/css" />
@@ -193,13 +195,12 @@
       <workItem from="1684202302735" duration="44447000" />
       <workItem from="1685673107506" duration="125000" />
       <workItem from="1685673238536" duration="2219000" />
-    </task>
-    <task id="LOCAL-00003" summary="1. Add the rating demo.">
-      <created>1611035062320</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1611035062320</updated>
+      <workItem from="1724379958321" duration="487000" />
+      <workItem from="1724901456141" duration="493000" />
+      <workItem from="1724914598295" duration="401000" />
+      <workItem from="1725269377944" duration="248000" />
+      <workItem from="1725517180523" duration="829000" />
+      <workItem from="1725614324158" duration="2198000" />
     </task>
     <task id="LOCAL-00004" summary="1. Add the Rate Yo! rating demo.">
       <created>1611108835566</created>
@@ -537,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684820800929</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="1. Modify the email submit demo">
+      <created>1724380180981</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1724380180982</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,7 +564,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
-    <MESSAGE value="1. Add the date picker demo" />
     <MESSAGE value="1. Add the auto select and trigger change." />
     <MESSAGE value="1. Add Readonly Demo." />
     <MESSAGE value="1. Auto scroll to element." />
@@ -581,6 +588,7 @@
     <MESSAGE value="1. Modify the checking file extension." />
     <MESSAGE value="1. Develop the auto trigger demo.&#10;2. Develop the DojoToolkit傳JSONDemo.htm&#10;3. Develop the DojoToolkit檔案上傳Demo.htm" />
     <MESSAGE value="1. Develop the auto trigger demo.&#10;2. Modify the DojoToolkit傳JSONDemo.htm" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Develop the auto trigger demo.&#10;2. Modify the DojoToolkit傳JSONDemo.htm" />
+    <MESSAGE value="1. Modify the email submit demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Modify the email submit demo" />
   </component>
 </project>

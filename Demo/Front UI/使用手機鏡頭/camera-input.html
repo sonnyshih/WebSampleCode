@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+<h1>使用相機-拍照</h1>
+<form>
+    <img id="Im_image" width="250px" height="250px"><br>
+    <input type="file" accept="image/*" capture="camera" id="imageInput" name="imageInput">
+</form>
+<br>
+<br>
+<h1>使用相機-錄影</h1>
+<form>
+    <video id="Im_video" controls="controls" width="250px" height="250px"></video><br>
+    <input type="file" accept="video/*" capture="camera" id="videoInput" name="videoInput">
+</form>
+<script>
+    $(function() {
+        initImageInput();
+        initVideoInput()
+    });
+
+    function initImageInput(){
+        $("#imageInput").change(function(){
+            const fileData = this.files;
+            const reader = new FileReader();
+            reader.addEventListener('load', file => {
+                // const img = document.getElementById('Im_image');
+                const img = $('#Im_image')[0];
+                img.src = file.target.result;
+            });
+            reader.readAsDataURL(fileData[0]);
+        });
+    }
+
+    function initVideoInput(){
+        $("#videoInput").change(function(){
+            const fileData = this.files;
+            const reader = new FileReader();
+            reader.readAsArrayBuffer(fileData[0]);
+            reader.addEventListener('load', file => {
+                const buffer = file.target.result;
+                const videoBlob = new Blob([new Uint8Array(buffer)], { type: 'video/mp4' });
+                const url = window.URL.createObjectURL(videoBlob);
+                // const video = document.getElementById('Im_video');
+                const video = $('#Im_video')[0];
+                video.src = url;
+            });
+        });
+    }
+
+</script>
+</body>
+</html>

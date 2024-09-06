@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<h1>使用相機</h1>
+<video id="video" width="320" height="240" autoplay></video>
+<button id="capture">拍照</button>
+<canvas id="canvas" width="320" height="240"></canvas>
+
+<script>
+    $(document).ready(function() {
+        // 獲取 video 和 canvas 元素
+        const video = $('#video')[0];
+        const canvas = $('#canvas')[0];
+        const context = canvas.getContext('2d');
+
+        // 啟動相機
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function(stream) {
+                video.srcObject = stream;
+            })
+            .catch(function(err) {
+                console.error('Error accessing the camera: ', err);
+            });
+
+        // 點擊按鈕進行拍照
+        $('#capture').on('click', function() {
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+        });
+    });
+</script>
+</body>
+</html>
