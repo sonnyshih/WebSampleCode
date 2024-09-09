@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/使用手機鏡頭/camera-input.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/使用手機鏡頭/camera-javascript.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/使用手機鏡頭/camera-input-boostrap.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,21 +36,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/sonny/PhpstormProjects/WebSampleCode/Demo/Front UI/使用手機鏡頭",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/sonny/PhpstormProjects/WebSampleCode/Demo/Front UI/使用手機鏡頭&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Demo/Front UI/使用手機鏡頭" />
@@ -200,14 +199,8 @@
       <workItem from="1724914598295" duration="401000" />
       <workItem from="1725269377944" duration="248000" />
       <workItem from="1725517180523" duration="829000" />
-      <workItem from="1725614324158" duration="2198000" />
-    </task>
-    <task id="LOCAL-00004" summary="1. Add the Rate Yo! rating demo.">
-      <created>1611108835566</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1611108835566</updated>
+      <workItem from="1725614324158" duration="2375000" />
+      <workItem from="1725844231739" duration="1711000" />
     </task>
     <task id="LOCAL-00005" summary="1. Add the get chinese weekday.">
       <created>1611888114195</created>
@@ -545,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1724380180982</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="1. Develop the camera demo.">
+      <created>1725618977085</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1725618977085</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,7 +564,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
-    <MESSAGE value="1. Add the auto select and trigger change." />
     <MESSAGE value="1. Add Readonly Demo." />
     <MESSAGE value="1. Auto scroll to element." />
     <MESSAGE value="1. Modify the jQuery選擇器Demo.htm" />
@@ -589,6 +588,7 @@
     <MESSAGE value="1. Develop the auto trigger demo.&#10;2. Develop the DojoToolkit傳JSONDemo.htm&#10;3. Develop the DojoToolkit檔案上傳Demo.htm" />
     <MESSAGE value="1. Develop the auto trigger demo.&#10;2. Modify the DojoToolkit傳JSONDemo.htm" />
     <MESSAGE value="1. Modify the email submit demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Modify the email submit demo" />
+    <MESSAGE value="1. Develop the camera demo." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Develop the camera demo." />
   </component>
 </project>
