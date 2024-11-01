@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+	<title>JQuery-validation demo | Bootstrap</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+
+	<!-- jQuery Core -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	
+	<!-- jQuery UI -->
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" />
+	
+	<!-- jQuery Validate -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-validation-1.17.0/localization/messages_zh_TW.min.js"></script>
+
+	<!-- customer css -->
+	<link rel="stylesheet" href="./css/customer.css">
+
+</head>
+<body>
+
+	<div class="container">
+		<form id="register_form" method="post" action="register.php">
+			
+    		<div class="row">
+    			<div class="col-md-8 center no-padding">
+    				<div class="col-md-12 m-b-20">
+    					<h3>建立會員帳號</h3>
+    					<p class="m-b-20">立即加入會員即可查詢訂單狀態，追蹤出貨進度。</p>
+    				</div>
+    
+    				<div class="col-md-12 no-padding">
+    					<div class="col-md-6 form-group">
+    						<label class="sr-only">Email帳號</label>
+    						 <input type="text" id="email" name="email" class="form-control input-lg" placeholder="Email帳號" value=""> 
+    						 <small>請輸入電子信箱為註冊帳號</small>
+    					</div>
+    					<div class="col-md-6 form-group">
+    						<label class="sr-only">行動電話</label>
+    						 <input type="text" id="phone" name="phone" class="form-control input-lg" placeholder="行動電話" value="">
+    					</div>
+    				</div>
+    				<div class="col-md-12 no-padding">
+    					<div class="col-md-6 form-group">
+    						<label class="sr-only">密碼</label> 
+    						<input type="password" id="password" name="password" class="form-control input-lg" placeholder="密碼" value=""> <small>請混合使用
+    							8 個字元以上的英文字母、數字和符號</small>
+    					</div>
+    					<div class="col-md-6 form-group">
+    						<label class="sr-only">確認密碼</label>
+    						 <input type="password" id="confirm_password" name="confirm_password"	class="form-control input-lg" placeholder="確認密碼" value="">
+
+    					</div>
+    				</div>
+    				<div class="col-md-12 form-group m-t-20">
+    					<button type="submit" id="register_button" name="register_button" class="btn btn-default">繼續</button>
+    					<small class="m-l-20"><i class="fa fa-exclamation-circle"></i>
+    						點選「繼續」，表示您同意接受<strong><a href="#" target="_blank">「會員服務條款」</a></strong>及<strong><a
+    							href="#" target="_blank">「隱私權政策」</a></strong></small>
+    				</div>
+    			</div>
+    		</div>
+		</form>
+	</div>
+
+
+	<script type="text/javascript">
+
+	$(function() {
+		initValidateCheck();
+	});
+
+	function initResgisterButton(){
+		$("#register_button").click(function(){
+			/*
+			$.post("register.php", 
+					{  
+			 			  'act': 'is_mail_exist', 
+			 			'email': $("#email").val()
+					},
+		    	function (data, status) {
+		             if(status = "success"){
+		            	 if (data.IsEmailExist == true){
+			            	 alert("Email已被註冊!");
+			             } else {
+				             $("#register_form").submit();
+				         }
+			        }
+		       	});
+			*/
+		});
+	}
+
+	function initValidateCheck(){
+
+
+		$( "#register_form" ).validate( {
+			rules: {
+				"email": {required:true,
+						     email:true
+						 },
+				"phone": {required:true,
+						  number:true },
+
+			},
+			messages:{
+				email:{
+						required: "請輸入Email!",
+						   email: "請輸入正確Email!"
+					   },
+				phone: {
+						required: "請輸入行動電話!",
+					   	   number: "請輸入數字!"
+				   	   },
+
+			},
+			submitHandler: function(form){
+	       		form.submit();
+			}
+		} );
+
+		//增加 password 判斷條件與提示訊息(增加的條件一定要放在最後面)
+		$( "#register_form" ).validate().settings.rules["password"] = {'required' : true,
+																	   'minlength': 8 };
+
+		$( "#register_form" ).validate().settings.messages["password"] = {'required' : "請輸入密碼!",
+																		  'minlength': "密碼最少要8碼" };
+
+	}
+	</script>
+</body>
+</html>

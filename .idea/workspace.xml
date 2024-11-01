@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e880b2e7-e6e8-4154-a957-62c735b9fc30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Demo/Front UI/使用手機鏡頭/camera-input-boostrap.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demo/Front UI/jQueryDemo/jQuery Validate Demo/動態加入必填條件.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,14 +200,9 @@
       <workItem from="1725269377944" duration="248000" />
       <workItem from="1725517180523" duration="829000" />
       <workItem from="1725614324158" duration="2375000" />
-      <workItem from="1725844231739" duration="1711000" />
-    </task>
-    <task id="LOCAL-00005" summary="1. Add the get chinese weekday.">
-      <created>1611888114195</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1611888114195</updated>
+      <workItem from="1725844231739" duration="2516000" />
+      <workItem from="1725948850764" duration="1618000" />
+      <workItem from="1726113157441" duration="1542000" />
     </task>
     <task id="LOCAL-00006" summary="1. Add the checkbox_demo.html">
       <created>1634627553646</created>
@@ -545,7 +540,14 @@
       <option name="project" value="LOCAL" />
       <updated>1725618977085</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="1. Develop the camera demo by using boostrap fileinput.">
+      <created>1725846613784</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1725846613785</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,7 +566,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
-    <MESSAGE value="1. Add Readonly Demo." />
     <MESSAGE value="1. Auto scroll to element." />
     <MESSAGE value="1. Modify the jQuery選擇器Demo.htm" />
     <MESSAGE value="1. Add the Javascript array使用.htm" />
@@ -589,6 +590,7 @@
     <MESSAGE value="1. Develop the auto trigger demo.&#10;2. Modify the DojoToolkit傳JSONDemo.htm" />
     <MESSAGE value="1. Modify the email submit demo" />
     <MESSAGE value="1. Develop the camera demo." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Develop the camera demo." />
+    <MESSAGE value="1. Develop the camera demo by using boostrap fileinput." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Develop the camera demo by using boostrap fileinput." />
   </component>
 </project>
