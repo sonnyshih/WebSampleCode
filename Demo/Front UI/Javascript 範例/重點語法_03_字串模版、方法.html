@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字串模版</title>
+
+    <script type="text/javascript">
+        let city = "台北市";
+        let street = "博愛路300號";
+        let address = city + street;
+        console.log("小明住在" + address);
+
+        //字串模版(Template String)
+        let clothes = 300;
+        let pants = 700;
+        let discount = 0.8;
+        let total = (clothes + pants) * discount;
+        console.log("總價: " + total);
+
+        let msg = `小明今天花了 ${total} 元，其中衣服原價 ${clothes} 元，褲子原 ${pants} 元`;
+        console.log(msg);
+
+        //字串長度
+        strLen = msg.length
+        console.log(`字串長度：${strLen}`);
+        
+        //字串取代
+        newStr =  msg.replace("今天", "昨天");
+        console.log(newStr);
+
+        //取某一段字串, 起始位置index, 結束位置index
+        firstStr = msg.slice(0, 10);
+        console.log(firstStr);
+    </script>
+</head>
+<body>
+    <h1>字串模版</h1>
+    
+</body>
+</html>
