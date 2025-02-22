@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Tree</title>
+    <script src="familytree.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <!-- 套件網站 https://balkan.app/FamilyTreeJS/Docs/GettingStarted -->
+    <div id="tree"/>
+    <script>
+    let family = new FamilyTree("#tree", {
+        // options
+        nodeBinding: {
+            field_0: "name"
+        },
+        nodes: [
+            { id: 1, pids: [2], name: "Amber McKenzie 母", gender: "female" },
+            { id: 2, pids: [1], name: "Ava Field 父", gender: "male" },
+            { id: 3, mid: 1, fid: 2, name: "Peter Stevens", gender: "male" }
+        ]  
+    });
+    </script>
+</body>
+</html>
