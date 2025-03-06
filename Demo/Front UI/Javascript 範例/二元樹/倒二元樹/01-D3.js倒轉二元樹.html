@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>D3.js 倒轉二元樹</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        .node circle { fill: lightblue; stroke: black; stroke-width: 2px; }
+        .link { fill: none; stroke: #555; stroke-width: 2px; }
+    </style>
+</head>
+<body>
+    <svg width="600" height="400"></svg>
+    <script>
+        const treeData = {
+            name: "A",
+            children: [
+                {
+                    name: "父",
+                    children: [{ name: "父" }, { name: "母" }]
+                },
+                {
+                    name: "母",
+                    children: [{ name: "父" }, { name: "母" }]
+                }
+            ]
+        };
+
+        const width = 600, height = 400;
+        const svg = d3.select("svg").append("g").attr("transform", "translate(50, 350)"); // 讓樹的根節點在下
+        const treeLayout = d3.tree().size([width - 100, -height + 100]); // 倒轉 Y 軸
+        const root = d3.hierarchy(treeData);
+        treeLayout(root);
+
+        svg.selectAll(".link")
+            .data(root.links())
+            .enter()
+            .append("line")
+            .attr("class", "link")
+            .attr("x1", d => d.source.x)
+            .attr("y1", d => d.source.y)
+            .attr("x2", d => d.target.x)
+            .attr("y2", d => d.target.y);
+
+        const node = svg.selectAll(".node")
+            .data(root.descendants())
+            .enter()
+            .append("g")
+            .attr("class", "node")
+            .attr("transform", d => `translate(${d.x},${d.y})`);
+
+        node.append("circle").attr("r", 20);
+        node.append("text").attr("dy", 5).attr("text-anchor", "middle").text(d => d.data.name);
+    </script>
+</body>
+</html>
