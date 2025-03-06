@@ -27,8 +27,8 @@
         };
 
         const width = 600, height = 400;
-        const svg = d3.select("svg").append("g").attr("transform", "translate(50, 350)"); // 讓樹的根節點在下
-        const treeLayout = d3.tree().size([width - 100, -height + 100]); // 倒轉 Y 軸
+        const svg = d3.select("svg").append("g").attr("transform", "translate(50, 350)");
+        const treeLayout = d3.tree().size([width - 100, -height + 100]); // 倒轉 Y 軸, 讓樹的根節點在下
         const root = d3.hierarchy(treeData);
         treeLayout(root);
 
