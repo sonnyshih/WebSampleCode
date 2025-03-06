@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>變數宣告</title>
+
+    <!-- Font Awesome Icons http://fontawesome.io/ -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+
+    <!-- jQuery https://jquery.com/ -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Nestable2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nestable2/1.6.0/jquery.nestable.min.css"
+        type="text/css" />
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/nestable2/1.6.0/jquery.nestable.min.js"></script>
+    <link rel="stylesheet" href="nestable2-customer.css" media="all" type="text/css" />
+</head>
+
+<body>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+        <!-- Main content -->
+        <div class="content">
+            <div class="container-fluid">
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">血統樹</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-primary" onClick="expandAll();">
+                                <i class="fas fa-plus-circle"></i> 展開
+                            </button>
+                            <button type="button" class="btn btn-primary" onClick="collapseAll();">
+                                <i class="fas fa-minus-circle"></i> 合併
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="box">
+                            <div class="box-body table-responsive no-padding">
+
+                                <div class='dd' id='categoryTree'>
+                                    <ol class='dd-list'>
+
+                                        <li class='dd-item dd3-item' data-id='abb0396f-be75-4949-b600-82a11546f21f'>
+                                            <div class='dd-handle dd3-handle'>Drag</div>
+                                            <div class='dd3-content'>
+                                                <div class='form-group row'>
+                                                    <label class='col-sm-6 control-label'>蕃茄1號 代:1</label>
+                                                </div>
+                                            </div><!--/. dd3-content-->
+                                        </li>
+
+
+                                        <li class='dd-item dd3-item' data-id='a9774a47-50d0-47be-89a1-1902ccdbbedd'>
+                                            <div class='dd-handle dd3-handle'>Drag</div>
+                                            <div class='dd3-content'>
+                                                <div class='form-group row'>
+                                                    <label class='col-sm-6 control-label'>蕃茄2號 代:1</label>
+                                                </div>
+                                            </div><!--/. dd3-content-->
+                                            <ol class='dd-list'>
+
+
+
+                                                <li class='dd-item dd3-item'
+                                                    data-id='8b7c0740-93ae-49ad-88f8-8bd6f68b0876'>
+                                                    <div class='dd-handle dd3-handle'>Drag</div>
+                                                    <div class='dd3-content'>
+                                                        <div class='form-group row'>
+                                                            <label class='col-sm-6 control-label'>蕃茄2號- A01 代:2</label>
+                                                        </div>
+                                                    </div><!--/. dd3-content-->
+                                                </li>
+
+
+
+                                                <li class='dd-item dd3-item'
+                                                    data-id='e13ffdef-9b73-4a2d-ba7b-1b4b2a9d964b'>
+                                                    <div class='dd-handle dd3-handle'>Drag</div>
+                                                    <div class='dd3-content'>
+                                                        <div class='form-group row'>
+                                                            <label class='col-sm-6 control-label'>蕃茄2號-A02 代:2</label>
+                                                        </div>
+                                                    </div><!--/. dd3-content-->
+                                                    <ol class='dd-list'>
+
+
+
+                                                        <li class='dd-item dd3-item'
+                                                            data-id='5d331ab9-abf3-4106-a64a-6bff017c73f9'>
+                                                            <div class='dd-handle dd3-handle'>Drag</div>
+                                                            <div class='dd3-content'>
+                                                                <div class='form-group row'>
+                                                                    <label class='col-sm-6 control-label'>蕃茄2號-A02-B01
+                                                                        代:3</label>
+                                                                </div>
+                                                            </div><!--/. dd3-content-->
+                                                            <ol class='dd-list'>
+
+
+
+                                                                <li class='dd-item dd3-item'
+                                                                    data-id='44da5125-e2b0-4099-b893-c9613670d036'>
+                                                                    <div class='dd-handle dd3-handle'>Drag</div>
+                                                                    <div class='dd3-content'>
+                                                                        <div class='form-group row'>
+                                                                            <label
+                                                                                class='col-sm-6 control-label'>蕃茄2號-A02-B01-C01
+                                                                                代:4</label>
+                                                                        </div>
+                                                                    </div><!--/. dd3-content-->
+                                                                </li>
+                                                            </ol>
+                                                        </li>
+                                                    </ol>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+
+                                </div><!-- /.categoryTree-->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+
+                </div> <!--./card card-info-->
+
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+
+    <script type="text/javascript">
+        let jsonArray = [
+                    {
+                        "Child": [
+                            {
+                                "Child": [
+                                    {
+                                        "Child": [
+                                            {
+                                                "Child": null,
+                                                "Generation": "4",
+                                                "ID": "44da5125-e2b0-4099-b893-c9613670d036",
+                                                "Name": "蕃茄2號-A02-B01-C01",
+                                                "ParentID": "5d331ab9-abf3-4106-a64a-6bff017c73f9"
+                                            }
+                                        ],
+                                        "Generation": "3",
+                                        "ID": "5d331ab9-abf3-4106-a64a-6bff017c73f9",
+                                        "Name": "蕃茄2號-A02-B01",
+                                        "ParentID": "e13ffdef-9b73-4a2d-ba7b-1b4b2a9d964b"
+                                    }
+                                ],
+                                "Generation": "2",
+                                "ID": "e13ffdef-9b73-4a2d-ba7b-1b4b2a9d964b",
+                                "Name": "蕃茄2號-A02",
+                                "ParentID": "a9774a47-50d0-47be-89a1-1902ccdbbedd"
+                            }
+                        ],
+                        "Generation": "1",
+                        "ID": "a9774a47-50d0-47be-89a1-1902ccdbbedd",
+                        "Name": "蕃茄2號",
+                        "ParentID": ""
+                    }
+                ];
+
+        $(function () {
+            initNestable();
+        });
+
+        function initNestable() {
+            initTree();
+            $('#categoryTree').nestable({
+                "group": 2,
+                onDragStart: function (l, e) {
+                    return false;    // true: 可以移動, false: 不可移動
+                }
+            });
+        }
+
+        function initTree(){
+            $("#categoryTree").empty();
+            $("#categoryTree").append(layoutTree(jsonArray));
+        };
+
+        function layoutTree(list){
+            let layout = "<ol class='dd-list'>\n";
+            list.forEach((item, index) => {
+                // console.log(`索引 ${index}: 值 ${item}`);
+                layout+= `<li class='dd-item dd3-item' data-id='${item["ID"]}'>\n`;
+                layout+= `  <div class='dd-handle dd3-handle'>Drag</div>\n`;
+                layout+= `  <div class='dd3-content'>\n`;
+                layout+= `     <div class='form-group row'>\n`;
+                layout+= `          <label class='col-sm-6 control-label' style='margin: -10px 0px 0px 0px;'>\n`;
+                layout+= `              ${item["Name"]} 代:${item["Generation"]}`;
+                layout+= `              <button type='button' class='btn btn-primary' onClick='getParent("${item["ID"]}")'><i class='fas fa-plus-circle'></i></button>\n`;
+                layout+= `              <button type='button' class='btn btn-primary' onClick='showDeleteConfirmDialog("${item["ID"]}")'><i class='fas fa-minus-circle'></i></button>\n`;
+                layout+= `          </label>`;
+                layout+= `         <div class='col-sm-6'>\n`;
+                layout+= `             <div class='form-group float-right' style='margin: -10px 0px 0px 0px;'>\n`;
+                layout+= `                 <button type='button' class='btn btn-danger' onClick='showDeleteConfirmDialog("${item["ID"]}")'><i class='fas fa-trash'></i> 刪除</button>\n`;
+                layout+= `                 <button type='button' class='btn btn-info' onClick='editCategory("${item["ID"]}")'><i class='fas fa-pencil-alt'></i> 編輯</button>\n`;
+                layout+= `             </div>\n`;
+                layout+= `         </div>\n`;
+
+
+                layout+= `     </div><!--./form-group row -->`;
+                layout+= `  </div><!--/. dd3-content-->\n`;
+
+                if (item["Child"] != null){
+                    layout+= layoutTree(item["Child"]);
+                }
+
+                layout+= `</li><!--./dd3-item -->`;
+
+            });
+            layout += "</ol>\n";
+
+            return layout;
+        }
+
+        function expandAll() {
+            $('#categoryTree').nestable('expandAll');
+        }
+
+        function collapseAll() {
+            $('#categoryTree').nestable('collapseAll');
+        }
+
+    </script>
+</body>
+
+</html>
