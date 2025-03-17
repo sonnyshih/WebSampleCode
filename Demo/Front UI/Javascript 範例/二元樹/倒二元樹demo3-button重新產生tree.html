@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>D3.js 倒轉二元樹</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        .node circle { fill: lightblue; stroke: black; stroke-width: 2px; cursor: pointer; }
+        .node rect { fill: lightblue; stroke: black; stroke-width: 2px; cursor: pointer; }
+        .link { fill: none; stroke: #555; stroke-width: 2px; }
+    </style>
+</head>
+<body>
+    <button id="updateTree" class="btn btn-primary">更新二元樹</button>
+    
+    <svg width="800" height="600"></svg>
+    
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">節點資訊</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let treeData = {
+            id: "a",
+            name: "A",
+            children: [
+                {
+                    id: "b1",
+                    name: "父",
+                    children: [
+                        { id: "c1", name: "父" },
+                        { id: "c2", name: "母", children: [ {id: "d1", name: "甲"}, {id: "d2", name:"乙"} ] }
+                    ]
+                },
+                {
+                    id: "b2",
+                    name: "母",
+                    children: [ { id: "e1", name: "父" }, { id: "e2", name: "母" } ]
+                }
+            ]
+        };
+
+        const width = 800, height = 600;
+        const svg = d3.select("svg").append("g").attr("transform", "translate(50, 550)");
+
+        function updateTree(data) {
+            svg.selectAll("*").remove();
+            const treeLayout = d3.tree().size([width - 100, -height + 100]);
+            const root = d3.hierarchy(data);
+            treeLayout(root);
+
+            svg.selectAll(".link")
+                .data(root.links())
+                .enter()
+                .append("line")
+                .attr("class", "link")
+                .attr("x1", d => d.source.x)
+                .attr("y1", d => d.source.y)
+                .attr("x2", d => d.target.x)
+                .attr("y2", d => d.target.y);
+
+            const node = svg.selectAll(".node")
+                            .data(root.descendants())
+                            .enter()
+                            .append("g")
+                            .attr("class", "node")
+                            .attr("transform", d => `translate(${d.x},${d.y})`)
+                            .on("click", function(event, d) {
+                                $("#modalContent").text("節點 ID: " + d.data.id);
+                                $("#infoModal").modal("show");
+                            });
+
+            // 先新增文字元素，以獲取寬度
+            const text = node.append("text")
+                            .attr("dy", 5)
+                            .attr("text-anchor", "middle")
+                            .text(d => d.data.name);
+
+            // 取得文字寬度後動態調整矩形大小
+            node.append("rect")
+                .attr("height", 30)
+                .attr("y", -15)
+                .attr("rx", 5)  // 圓角矩形
+                .attr("ry", 5)
+                .lower();  // 確保矩形在文字底層
+
+            node.each(function(d) {
+                const textWidth = this.querySelector("text").getBBox().width + 20; // 文字寬度 + padding
+                d3.select(this).select("rect")
+                .attr("width", textWidth)
+                .attr("x", -textWidth / 2); // 使矩形保持居中
+            });
+
+            //在bootstrap顯示modal時要用以下寫法
+            // 原因: getBBox() 在元素尚未渲染時被調用getBBox() 
+            //      只能在元素真正渲染到 DOM 中後才能正確取得尺寸。
+            //      如果 getBBox() 在 text 元素尚未真正繪製出來前執行，會返回 0。
+            /*
+            requestAnimationFrame(() => {
+                node.each(function(d) {
+                    const textWidth = this.querySelector("text").getBBox().width + 20; // 文字寬度 + padding
+                    d3.select(this).select("rect")
+                    .attr("width", textWidth)
+                    .attr("x", -textWidth / 2); // 使矩形保持居中
+                });            
+            });
+            */
+
+        }
+
+        updateTree(treeData);
+
+        $("#updateTree").click(function() {
+            treeData = {
+                id: "hh",
+                name: "good",
+                children: [{
+                    id: "q",
+                    name: "hello",
+                    children: [
+                        {
+                            id: "a",
+                            name: "A",
+                            children: [
+                                {
+                                    id: "b1",
+                                    name: "父",
+                                    children: [
+                                        { id: "c1", name: "父" },
+                                        { id: "c2", name: "母", children: [ {id: "d1", name: "甲"}, {id: "d2", name:"乙"} ] }
+                                    ]
+                                },
+                                {
+                                    id: "b2",
+                                    name: "母",
+                                    children: [ { id: "e1", name: "父" }, { id: "e2", name: "母" } ]
+                                }
+                            ]
+                        },
+                        {
+                            id: "bb",
+                            name: "world123434",
+                            children: [{id:"ww", name:"www"}]
+                        }
+                    ]        
+                }]
+            };
+            updateTree(treeData);
+        });
+    </script>
+</body>
+</html>
